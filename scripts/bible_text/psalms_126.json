@@ -1,0 +1,23 @@
+{
+  "book": "Salmos",
+  "book_key": "psalms",
+  "chapter": 126,
+  "testament": "OT",
+  "total_verses": 6,
+  "verse_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "verses": [
+    "Cántico gradual. CUANDO Jehová hiciere tornar la cautividad de Sión, seremos como los que sueñan.",
+    "Entonces nuestra boca se henchirá de risa, y nuestra lengua de alabanza; entonces dirán entre las gentes: Grandes cosas ha hecho Jehová con éstos.",
+    "Grandes cosas ha hecho Jehová con nosotros; estaremos alegres.",
+    "Haz volver nuestra cautividad, oh Jehová, como los arroyos en el austro.",
+    "Los que sembraron con lágrimas, con regocijo segarán.",
+    "Irá andando y llorando el que lleva la preciosa simiente; mas volverá á venir con regocijo, trayendo sus gavillas."
+  ]
+}

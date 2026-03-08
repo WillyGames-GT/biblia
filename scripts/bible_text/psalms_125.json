@@ -1,0 +1,21 @@
+{
+  "book": "Salmos",
+  "book_key": "psalms",
+  "chapter": 125,
+  "testament": "OT",
+  "total_verses": 5,
+  "verse_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "verses": [
+    "Cántico gradual. LOS que confían en Jehová son como el monte de Sión, que no deslizará: estará para siempre.",
+    "Como Jerusalem tiene montes alrededor de ella, así Jehová alrededor de su pueblo desde ahora y para siempre.",
+    "Porque no reposará la vara de la impiedad sobre la suerte de los justos; porque no extiendan los justos sus manos á la iniquidad.",
+    "Haz bien, oh Jehová, á los buenos, y á los que son rectos en sus corazones.",
+    "Mas á los que se apartan tras sus perversidades, Jehová los llevará con los que obran iniquidad: y paz sea sobre Israel."
+  ]
+}

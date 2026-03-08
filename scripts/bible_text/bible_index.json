@@ -1,0 +1,470 @@
+{
+  "version": "Reina Valera 1909",
+  "source": "https://ebible.org/spaRV1909/",
+  "license": "Public Domain",
+  "total_books": 66,
+  "books": [
+    {
+      "name": "Génesis",
+      "key": "genesis",
+      "chapters": 50,
+      "testament": "OT",
+      "code": "GEN"
+    },
+    {
+      "name": "Éxodo",
+      "key": "exodus",
+      "chapters": 40,
+      "testament": "OT",
+      "code": "EXO"
+    },
+    {
+      "name": "Levítico",
+      "key": "leviticus",
+      "chapters": 27,
+      "testament": "OT",
+      "code": "LEV"
+    },
+    {
+      "name": "Números",
+      "key": "numbers",
+      "chapters": 36,
+      "testament": "OT",
+      "code": "NUM"
+    },
+    {
+      "name": "Deuteronomio",
+      "key": "deuteronomy",
+      "chapters": 34,
+      "testament": "OT",
+      "code": "DEU"
+    },
+    {
+      "name": "Josué",
+      "key": "joshua",
+      "chapters": 24,
+      "testament": "OT",
+      "code": "JOS"
+    },
+    {
+      "name": "Jueces",
+      "key": "judges",
+      "chapters": 21,
+      "testament": "OT",
+      "code": "JDG"
+    },
+    {
+      "name": "Rut",
+      "key": "ruth",
+      "chapters": 4,
+      "testament": "OT",
+      "code": "RUT"
+    },
+    {
+      "name": "1 Samuel",
+      "key": "1_samuel",
+      "chapters": 31,
+      "testament": "OT",
+      "code": "1SA"
+    },
+    {
+      "name": "2 Samuel",
+      "key": "2_samuel",
+      "chapters": 24,
+      "testament": "OT",
+      "code": "2SA"
+    },
+    {
+      "name": "1 Reyes",
+      "key": "1_kings",
+      "chapters": 22,
+      "testament": "OT",
+      "code": "1KI"
+    },
+    {
+      "name": "2 Reyes",
+      "key": "2_kings",
+      "chapters": 25,
+      "testament": "OT",
+      "code": "2KI"
+    },
+    {
+      "name": "1 Crónicas",
+      "key": "1_chronicles",
+      "chapters": 29,
+      "testament": "OT",
+      "code": "1CH"
+    },
+    {
+      "name": "2 Crónicas",
+      "key": "2_chronicles",
+      "chapters": 36,
+      "testament": "OT",
+      "code": "2CH"
+    },
+    {
+      "name": "Esdras",
+      "key": "ezra",
+      "chapters": 10,
+      "testament": "OT",
+      "code": "EZR"
+    },
+    {
+      "name": "Nehemías",
+      "key": "nehemiah",
+      "chapters": 13,
+      "testament": "OT",
+      "code": "NEH"
+    },
+    {
+      "name": "Ester",
+      "key": "esther",
+      "chapters": 10,
+      "testament": "OT",
+      "code": "EST"
+    },
+    {
+      "name": "Job",
+      "key": "job",
+      "chapters": 42,
+      "testament": "OT",
+      "code": "JOB"
+    },
+    {
+      "name": "Salmos",
+      "key": "psalms",
+      "chapters": 150,
+      "testament": "OT",
+      "code": "PSA"
+    },
+    {
+      "name": "Proverbios",
+      "key": "proverbs",
+      "chapters": 31,
+      "testament": "OT",
+      "code": "PRO"
+    },
+    {
+      "name": "Eclesiastés",
+      "key": "ecclesiastes",
+      "chapters": 12,
+      "testament": "OT",
+      "code": "ECC"
+    },
+    {
+      "name": "Cantares",
+      "key": "song_of_solomon",
+      "chapters": 8,
+      "testament": "OT",
+      "code": "SNG"
+    },
+    {
+      "name": "Isaías",
+      "key": "isaiah",
+      "chapters": 66,
+      "testament": "OT",
+      "code": "ISA"
+    },
+    {
+      "name": "Jeremías",
+      "key": "jeremiah",
+      "chapters": 52,
+      "testament": "OT",
+      "code": "JER"
+    },
+    {
+      "name": "Lamentaciones",
+      "key": "lamentations",
+      "chapters": 5,
+      "testament": "OT",
+      "code": "LAM"
+    },
+    {
+      "name": "Ezequiel",
+      "key": "ezekiel",
+      "chapters": 48,
+      "testament": "OT",
+      "code": "EZK"
+    },
+    {
+      "name": "Daniel",
+      "key": "daniel",
+      "chapters": 12,
+      "testament": "OT",
+      "code": "DAN"
+    },
+    {
+      "name": "Oseas",
+      "key": "hosea",
+      "chapters": 14,
+      "testament": "OT",
+      "code": "HOS"
+    },
+    {
+      "name": "Joel",
+      "key": "joel",
+      "chapters": 3,
+      "testament": "OT",
+      "code": "JOL"
+    },
+    {
+      "name": "Amós",
+      "key": "amos",
+      "chapters": 9,
+      "testament": "OT",
+      "code": "AMO"
+    },
+    {
+      "name": "Abdías",
+      "key": "obadiah",
+      "chapters": 1,
+      "testament": "OT",
+      "code": "OBA"
+    },
+    {
+      "name": "Jonás",
+      "key": "jonah",
+      "chapters": 4,
+      "testament": "OT",
+      "code": "JON"
+    },
+    {
+      "name": "Miqueas",
+      "key": "micah",
+      "chapters": 7,
+      "testament": "OT",
+      "code": "MIC"
+    },
+    {
+      "name": "Nahúm",
+      "key": "nahum",
+      "chapters": 3,
+      "testament": "OT",
+      "code": "NAM"
+    },
+    {
+      "name": "Habacuc",
+      "key": "habakkuk",
+      "chapters": 3,
+      "testament": "OT",
+      "code": "HAB"
+    },
+    {
+      "name": "Sofonías",
+      "key": "zephaniah",
+      "chapters": 3,
+      "testament": "OT",
+      "code": "ZEP"
+    },
+    {
+      "name": "Hageo",
+      "key": "haggai",
+      "chapters": 2,
+      "testament": "OT",
+      "code": "HAG"
+    },
+    {
+      "name": "Zacarías",
+      "key": "zechariah",
+      "chapters": 14,
+      "testament": "OT",
+      "code": "ZEC"
+    },
+    {
+      "name": "Malaquías",
+      "key": "malachi",
+      "chapters": 4,
+      "testament": "OT",
+      "code": "MAL"
+    },
+    {
+      "name": "Mateo",
+      "key": "matthew",
+      "chapters": 28,
+      "testament": "NT",
+      "code": "MAT"
+    },
+    {
+      "name": "Marcos",
+      "key": "mark",
+      "chapters": 16,
+      "testament": "NT",
+      "code": "MRK"
+    },
+    {
+      "name": "Lucas",
+      "key": "luke",
+      "chapters": 24,
+      "testament": "NT",
+      "code": "LUK"
+    },
+    {
+      "name": "Juan",
+      "key": "john",
+      "chapters": 21,
+      "testament": "NT",
+      "code": "JHN"
+    },
+    {
+      "name": "Hechos",
+      "key": "acts",
+      "chapters": 28,
+      "testament": "NT",
+      "code": "ACT"
+    },
+    {
+      "name": "Romanos",
+      "key": "romans",
+      "chapters": 16,
+      "testament": "NT",
+      "code": "ROM"
+    },
+    {
+      "name": "1 Corintios",
+      "key": "1_corinthians",
+      "chapters": 16,
+      "testament": "NT",
+      "code": "1CO"
+    },
+    {
+      "name": "2 Corintios",
+      "key": "2_corinthians",
+      "chapters": 13,
+      "testament": "NT",
+      "code": "2CO"
+    },
+    {
+      "name": "Gálatas",
+      "key": "galatians",
+      "chapters": 6,
+      "testament": "NT",
+      "code": "GAL"
+    },
+    {
+      "name": "Efesios",
+      "key": "ephesians",
+      "chapters": 6,
+      "testament": "NT",
+      "code": "EPH"
+    },
+    {
+      "name": "Filipenses",
+      "key": "philippians",
+      "chapters": 4,
+      "testament": "NT",
+      "code": "PHP"
+    },
+    {
+      "name": "Colosenses",
+      "key": "colossians",
+      "chapters": 4,
+      "testament": "NT",
+      "code": "COL"
+    },
+    {
+      "name": "1 Tesalonicenses",
+      "key": "1_thessalonians",
+      "chapters": 5,
+      "testament": "NT",
+      "code": "1TH"
+    },
+    {
+      "name": "2 Tesalonicenses",
+      "key": "2_thessalonians",
+      "chapters": 3,
+      "testament": "NT",
+      "code": "2TH"
+    },
+    {
+      "name": "1 Timoteo",
+      "key": "1_timothy",
+      "chapters": 6,
+      "testament": "NT",
+      "code": "1TI"
+    },
+    {
+      "name": "2 Timoteo",
+      "key": "2_timothy",
+      "chapters": 4,
+      "testament": "NT",
+      "code": "2TI"
+    },
+    {
+      "name": "Tito",
+      "key": "titus",
+      "chapters": 3,
+      "testament": "NT",
+      "code": "TIT"
+    },
+    {
+      "name": "Filemón",
+      "key": "philemon",
+      "chapters": 1,
+      "testament": "NT",
+      "code": "PHM"
+    },
+    {
+      "name": "Hebreos",
+      "key": "hebrews",
+      "chapters": 13,
+      "testament": "NT",
+      "code": "HEB"
+    },
+    {
+      "name": "Santiago",
+      "key": "james",
+      "chapters": 5,
+      "testament": "NT",
+      "code": "JAS"
+    },
+    {
+      "name": "1 Pedro",
+      "key": "1_peter",
+      "chapters": 5,
+      "testament": "NT",
+      "code": "1PE"
+    },
+    {
+      "name": "2 Pedro",
+      "key": "2_peter",
+      "chapters": 3,
+      "testament": "NT",
+      "code": "2PE"
+    },
+    {
+      "name": "1 Juan",
+      "key": "1_john",
+      "chapters": 5,
+      "testament": "NT",
+      "code": "1JN"
+    },
+    {
+      "name": "2 Juan",
+      "key": "2_john",
+      "chapters": 1,
+      "testament": "NT",
+      "code": "2JN"
+    },
+    {
+      "name": "3 Juan",
+      "key": "3_john",
+      "chapters": 1,
+      "testament": "NT",
+      "code": "3JN"
+    },
+    {
+      "name": "Judas",
+      "key": "jude",
+      "chapters": 1,
+      "testament": "NT",
+      "code": "JUD"
+    },
+    {
+      "name": "Apocalipsis",
+      "key": "revelation",
+      "chapters": 22,
+      "testament": "NT",
+      "code": "REV"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "book": "Salmos",
+  "book_key": "psalms",
+  "chapter": 131,
+  "testament": "OT",
+  "total_verses": 3,
+  "verse_numbers": [
+    1,
+    2,
+    3
+  ],
+  "verses": [
+    "Cántico gradual: de David. JEHOVÁ, no se ha envanecido mi corazón, ni mis ojos se enaltecieron; ni anduve en grandezas, ni en cosas para mí demasiado sublimes.",
+    "En verdad que me he comportado y he acallado mi alma, como un niño destetado de su madre: como un niño destetado está mi alma.",
+    "Espera, oh Israel, en Jehová desde ahora y para siempre."
+  ]
+}

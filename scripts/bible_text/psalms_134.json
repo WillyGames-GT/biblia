@@ -1,0 +1,17 @@
+{
+  "book": "Salmos",
+  "book_key": "psalms",
+  "chapter": 134,
+  "testament": "OT",
+  "total_verses": 3,
+  "verse_numbers": [
+    1,
+    2,
+    3
+  ],
+  "verses": [
+    "Cántico gradual. MIRAD, bendecid á Jehová, vosotros todos los siervos de Jehová, los que en la casa de Jehová estáis por las noches.",
+    "Alzad vuestras manos al santuario, y bendecid á Jehová.",
+    "Bendígate Jehová desde Sión, el cual ha hecho los cielos y la tierra."
+  ]
+}

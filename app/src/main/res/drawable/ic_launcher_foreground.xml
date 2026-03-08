@@ -1,0 +1,48 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Lomo del libro -->
+    <path
+        android:fillColor="#8B4513"
+        android:pathData="M24,28 L28,28 L28,80 L24,80 Z"/>
+    <!-- Portada -->
+    <path
+        android:fillColor="#A0522D"
+        android:pathData="M28,26 L80,26 L80,82 L28,82 Z"/>
+    <!-- Portada interior -->
+    <path
+        android:fillColor="#D2691E"
+        android:pathData="M30,28 L78,28 L78,80 L30,80 Z"/>
+    <!-- Páginas -->
+    <path
+        android:fillColor="#FFF8DC"
+        android:pathData="M34,32 L74,32 L74,76 L34,76 Z"/>
+    <!-- Texto líneas -->
+    <path
+        android:fillColor="#C0C0C0"
+        android:pathData="M38,38 L70,38 L70,40 L38,40 Z"/>
+    <path
+        android:fillColor="#C0C0C0"
+        android:pathData="M38,44 L70,44 L70,46 L38,46 Z"/>
+    <path
+        android:fillColor="#C0C0C0"
+        android:pathData="M38,50 L70,50 L70,52 L38,52 Z"/>
+    <path
+        android:fillColor="#C0C0C0"
+        android:pathData="M38,56 L70,56 L70,58 L38,58 Z"/>
+    <path
+        android:fillColor="#C0C0C0"
+        android:pathData="M38,62 L70,62 L70,64 L38,64 Z"/>
+    <path
+        android:fillColor="#C0C0C0"
+        android:pathData="M38,68 L70,68 L70,70 L38,70 Z"/>
+    <!-- Cruz dorada -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M52,22 L52,32 L56,32 L56,22 Z"/>
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M46,26 L62,26 L62,30 L46,30 Z"/>
+</vector>

@@ -1,0 +1,21 @@
+{
+  "book": "Salmos",
+  "book_key": "psalms",
+  "chapter": 93,
+  "testament": "OT",
+  "total_verses": 5,
+  "verse_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "verses": [
+    "JEHOVÁ reina, vistióse de magnificencia, vistióse Jehová, ciñóse de fortaleza; afirmó también el mundo, que no se moverá.",
+    "Firme es tu trono desde entonces: tú eres eternalmente.",
+    "Alzaron los ríos, oh Jehová, alzaron los ríos su sonido; alzaron los ríos sus ondas.",
+    "Jehová en las alturas es más poderoso que el estruendo de las muchas aguas, más que las recias ondas de la mar.",
+    "Tus testimonios son muy firmes: la santidad conviene á tu casa, oh Jehová, por los siglos y para siempre."
+  ]
+}
