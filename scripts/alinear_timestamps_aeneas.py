@@ -41,7 +41,7 @@ from aeneas.syncmap import SyncMapFormat
 
 # ── Configuración ─────────────────────────────────────────────────────────────
 BIBLE_JSON_DIR = Path(__file__).parent / "bible_text"
-AUDIO_DIR = Path.home() / "biblia" / "biblia_mp3"
+AUDIO_DIR = Path.home() / "biblia" / "biblia_mp3_cbr"
 OUTPUT_DB = Path.home() / "biblia" / "bible_timestamps.db"
 
 # Mapeo de idioma para AENEAS
@@ -192,11 +192,17 @@ def align_with_aeneas(audio_file: Path, verses: List[str], temp_dir: Path) -> Li
     # Preparar texto en formato mplain (id|texto)
     prepare_text_for_aeneas(verses, text_file)
     
-    # AENEAS requiere WAV, no MP3 - convertir
-    from pydub import AudioSegment
-    audio = AudioSegment.from_mp3(audio_file)
+    # AENEAS requiere WAV, no MP3 - convertir usando ffmpeg directamente
     wav_file = temp_dir / "audio.wav"
-    audio.export(wav_file, format="wav")
+    subprocess.run([
+        "ffmpeg", "-y", "-i", str(audio_file),
+        "-acodec", "pcm_s16le", "-ac", "1", "-ar", "22050",
+        str(wav_file)
+    ], capture_output=True)
+    
+    # Obtener duración del audio para fallback si es necesario
+    from pydub import AudioSegment
+    audio = AudioSegment.from_file(wav_file)
     
     # Ejecutar AENEAS usando CLI
     try:
@@ -217,7 +223,8 @@ def align_with_aeneas(audio_file: Path, verses: List[str], temp_dir: Path) -> Li
         )
         
         if result.returncode != 0:
-            print(f"    ⚠ AENEAS error: {result.stderr[:200]}")
+            print(f"    ⚠ AENEAS stderr: {result.stderr}")
+            print(f"    ⚠ AENEAS stdout: {result.stdout}")
             raise RuntimeError(f"AENEAS falló: {result.returncode}")
         
         # Parsear resultados JSON

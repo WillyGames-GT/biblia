@@ -9,7 +9,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.willy.bibliareinavalera.data.local.BibleData
-import com.willy.bibliareinavalera.domain.model.Book
 import com.willy.bibliareinavalera.presentation.books.BooksScreen
 import com.willy.bibliareinavalera.presentation.player.PlayerScreen
 
@@ -19,7 +18,7 @@ import com.willy.bibliareinavalera.presentation.player.PlayerScreen
 sealed class Screen(val route: String) {
     data object Books : Screen("books")
     data object Player : Screen("player/{bookId}/{startChapter}/{startVerse}") {
-        fun createRoute(bookId: Int, startChapter: Int = 1, startVerse: Int = 1) = 
+        fun createRoute(bookId: String, startChapter: Int = 1, startVerse: Int = 1) = 
             "player/$bookId/$startChapter/$startVerse"
     }
 }
@@ -54,7 +53,7 @@ fun BibleNavHost(
             route = Screen.Player.route,
             arguments = listOf(
                 navArgument("bookId") {
-                    type = NavType.IntType
+                    type = NavType.StringType
                 },
                 navArgument("startChapter") {
                     type = NavType.IntType
@@ -66,7 +65,7 @@ fun BibleNavHost(
                 }
             )
         ) { backStackEntry ->
-            val bookId = backStackEntry.arguments?.getInt("bookId") ?: 1
+            val bookId = backStackEntry.arguments?.getString("bookId") ?: "GEN"
             val startChapter = backStackEntry.arguments?.getInt("startChapter") ?: 1
             val startVerse = backStackEntry.arguments?.getInt("startVerse") ?: 1
             

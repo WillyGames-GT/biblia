@@ -5,22 +5,20 @@ import androidx.room.Index
 import androidx.room.PrimaryKey
 
 /**
- * Entidad que almacena el timestamp de cada versículo en el audio generado.
- * Esto permite saltar al versículo exacto durante la reproducción.
- *
- * El índice único (bookId, chapter, verse) coincide con el que tiene el
- * archivo bible_timestamps.db pre-generado en assets/.
+ * Entidad que almacena el timestamp de inicio de cada versículo en un capítulo de audio.
  */
 @Entity(
     tableName = "verse_timestamps",
-    indices = [Index(value = ["bookId", "chapter", "verse"], unique = true, name = "idx_book_chapter_verse")]
+    indices = [
+        Index(value = ["book", "chapter"], unique = false, name = "idx_book_chapter")
+    ]
 )
 data class VerseTimestamp(
     @PrimaryKey(autoGenerate = true)
     val id: Long = 0,
 
-    /** Identificador del libro (1-66) */
-    val bookId: Int,
+    /** Código del libro (ej. "GEN", "PSA") */
+    val book: String,
 
     /** Número del capítulo */
     val chapter: Int,
@@ -28,20 +26,6 @@ data class VerseTimestamp(
     /** Número del versículo */
     val verse: Int,
 
-    /** Posición en milisegundos donde comienza este versículo en el audio */
-    val startTimeMs: Long,
-
-    /** Posición en milisegundos donde termina este versículo */
-    val endTimeMs: Long? = null,
-
-    /** Texto del versículo (opcional, para referencia) */
-    val verseText: String? = null
-) {
-    fun getCompositeId(): String = "${bookId}_${chapter}_${verse}"
-
-    companion object {
-        fun createCompositeId(bookId: Int, chapter: Int, verse: Int): String {
-            return "${bookId}_${chapter}_${verse}"
-        }
-    }
-}
+    /** Posición en milisegundos donde comienza este versículo */
+    val startMs: Long
+)

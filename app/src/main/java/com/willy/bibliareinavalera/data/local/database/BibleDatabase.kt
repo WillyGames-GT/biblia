@@ -6,28 +6,24 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 /**
- * Base de datos Room pre-poblada con timestamps de todos los versículos.
- *
- * El archivo bible_timestamps.db en assets/ fue generado offline con
- * generar_db_timestamps.py y contiene los 31.102 versículos de la Biblia RV1909.
- *
- * Room lo copia automáticamente al almacenamiento del dispositivo en la
- * primera instalación — sin necesidad de internet ni lógica de descarga.
+ * Base de datos principal de la aplicación Biblia Reina Valera 1909.
+ * Almacena metadatos de los libros y caché de timestamps de versículos.
  */
 @Database(
-    entities = [VerseTimestamp::class],
-    version = 9,  // v9: Timestamps generados con MP3 CBR (seeking preciso)
+    entities = [BibleBook::class, VerseTimestamp::class],
+    version = 10, // Incrementado de v9 a v10 para reflejar el nuevo esquema (books + timestamps dinámicos)
     exportSchema = false
 )
 abstract class BibleDatabase : RoomDatabase() {
 
-    abstract fun verseDao(): VerseDao
+    abstract fun bookDao(): BookDao
+    abstract fun timestampDao(): TimestampDao
 
     companion object {
         @Volatile
         private var INSTANCE: BibleDatabase? = null
 
-        private const val DB_NAME = "bible_timestamps.db"
+        private const val DB_NAME = "bible_rv1909.db"
 
         fun getDatabase(context: Context): BibleDatabase {
             return INSTANCE ?: synchronized(this) {
@@ -36,13 +32,8 @@ abstract class BibleDatabase : RoomDatabase() {
                     BibleDatabase::class.java,
                     DB_NAME
                 )
-                    // Carga el .db pre-poblado desde assets/bible_timestamps.db
-                    // Si el archivo no existe en assets, Room lanza una excepción clara.
-                    .createFromAsset(DB_NAME)
-                    // Si en el futuro cambias el schema (version > 1), Room
-                    // destruye y re-copia desde assets en lugar de migrar.
-                    .fallbackToDestructiveMigration()
-                    .build()
+                .fallbackToDestructiveMigration() // Útil en desarrollo al cambiar esquemas
+                .build()
                 INSTANCE = instance
                 instance
             }

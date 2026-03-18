@@ -1,0 +1,2457 @@
+Usando edge-tts 7.2.7
+Base de datos: /home/willy/biblia/bible_timestamps.db
+
+Capítulos a procesar: 1189 | Forzar: True
+
+  ⏳ GEN   1 ( 31 versículos)...   Audio: 264.9s, segmentos detectados: 145
+✓  (31/31 versículos, ~255s)
+  ⏳ GEN   2 ( 25 versículos)...   Audio: 198.6s, segmentos detectados: 105
+✓  (25/25 versículos, ~191s)
+  ⏳ GEN   3 ( 24 versículos)...   Audio: 215.8s, segmentos detectados: 116
+✓  (24/24 versículos, ~205s)
+  ⏳ GEN   4 ( 26 versículos)...   Audio: 220.1s, segmentos detectados: 121
+✓  (26/26 versículos, ~209s)
+  ⏳ GEN   5 ( 32 versículos)...   Audio: 214.2s, segmentos detectados: 128
+✓  (32/32 versículos, ~209s)
+  ⏳ GEN   6 ( 22 versículos)...   Audio: 190.7s, segmentos detectados: 95
+✓  (22/22 versículos, ~181s)
+  ⏳ GEN   7 ( 24 versículos)...   Audio: 204.5s, segmentos detectados: 106
+✓  (24/24 versículos, ~193s)
+  ⏳ GEN   8 ( 22 versículos)...   Audio: 196.7s, segmentos detectados: 104
+✓  (22/22 versículos, ~190s)
+  ⏳ GEN   9 ( 29 versículos)...   Audio: 228.0s, segmentos detectados: 118
+✓  (29/29 versículos, ~217s)
+  ⏳ GEN  10 ( 32 versículos)...   Audio: 212.0s, segmentos detectados: 157
+✓  (32/32 versículos, ~201s)
+  ⏳ GEN  11 ( 32 versículos)...   Audio: 239.0s, segmentos detectados: 143
+✓  (32/32 versículos, ~230s)
+  ⏳ GEN  12 ( 20 versículos)...   Audio: 173.4s, segmentos detectados: 100
+✓  (20/20 versículos, ~164s)
+  ⏳ GEN  13 ( 18 versículos)...   Audio: 150.9s, segmentos detectados: 83
+✓  (18/18 versículos, ~143s)
+  ⏳ GEN  14 ( 24 versículos)...   Audio: 218.6s, segmentos detectados: 136
+✓  (24/24 versículos, ~209s)
+  ⏳ GEN  15 ( 21 versículos)...   Audio: 161.6s, segmentos detectados: 92
+✓  (21/21 versículos, ~155s)
+  ⏳ GEN  16 ( 16 versículos)...   Audio: 140.2s, segmentos detectados: 80
+✓  (16/16 versículos, ~130s)
+  ⏳ GEN  17 ( 27 versículos)...   Audio: 232.7s, segmentos detectados: 119
+✓  (27/27 versículos, ~223s)
+  ⏳ GEN  18 ( 33 versículos)...   Audio: 300.8s, segmentos detectados: 160
+✓  (33/33 versículos, ~292s)
+  ⏳ GEN  19 ( 38 versículos)...   Audio: 372.9s, segmentos detectados: 208
+✓  (38/38 versículos, ~361s)
+  ⏳ GEN  20 ( 18 versículos)...   Audio: 165.9s, segmentos detectados: 95
+✓  (18/18 versículos, ~154s)
+  ⏳ GEN  21 ( 34 versículos)...   Audio: 260.9s, segmentos detectados: 148
+✓  (34/34 versículos, ~249s)
+  ⏳ GEN  22 ( 24 versículos)...   Audio: 218.2s, segmentos detectados: 133
+✓  (24/24 versículos, ~211s)
+  ⏳ GEN  23 ( 20 versículos)...   Audio: 172.4s, segmentos detectados: 96
+✓  (20/20 versículos, ~162s)
+  ⏳ GEN  24 ( 67 versículos)...   Audio: 613.0s, segmentos detectados: 353
+✓  (67/67 versículos, ~601s)
+  ⏳ GEN  25 ( 34 versículos)...   Audio: 268.4s, segmentos detectados: 167
+✓  (34/34 versículos, ~258s)
+  ⏳ GEN  26 ( 35 versículos)...   Audio: 306.8s, segmentos detectados: 178
+✓  (35/35 versículos, ~294s)
+  ⏳ GEN  27 ( 46 versículos)...   Audio: 425.7s, segmentos detectados: 271
+✓  (46/46 versículos, ~415s)
+  ⏳ GEN  28 ( 22 versículos)...   Audio: 198.0s, segmentos detectados: 115
+✓  (22/22 versículos, ~187s)
+  ⏳ GEN  29 ( 35 versículos)...   Audio: 294.5s, segmentos detectados: 178
+✓  (35/35 versículos, ~286s)
+  ⏳ GEN  30 ( 43 versículos)...   Audio: 365.3s, segmentos detectados: 207
+✓  (43/43 versículos, ~357s)
+  ⏳ GEN  31 ( 55 versículos)...   Audio: 494.4s, segmentos detectados: 264
+✓  (55/55 versículos, ~486s)
+  ⏳ GEN  32 ( 32 versículos)...   Audio: 273.8s, segmentos detectados: 165
+✓  (32/32 versículos, ~261s)
+  ⏳ GEN  33 ( 20 versículos)...   Audio: 171.6s, segmentos detectados: 106
+✓  (20/20 versículos, ~163s)
+  ⏳ GEN  34 ( 31 versículos)...   Audio: 271.8s, segmentos detectados: 139
+✓  (31/31 versículos, ~262s)
+  ⏳ GEN  35 ( 29 versículos)...   Audio: 239.5s, segmentos detectados: 140
+✓  (29/29 versículos, ~230s)
+  ⏳ GEN  36 ( 43 versículos)...   Audio: 341.9s, segmentos detectados: 238
+✓  (43/43 versículos, ~329s)
+  ⏳ GEN  37 ( 36 versículos)...   Audio: 329.8s, segmentos detectados: 181
+✓  (36/36 versículos, ~316s)
+  ⏳ GEN  38 ( 30 versículos)...   Audio: 276.5s, segmentos detectados: 169
+✓  (30/30 versículos, ~265s)
+  ⏳ GEN  39 ( 23 versículos)...   Audio: 204.1s, segmentos detectados: 113
+✓  (23/23 versículos, ~195s)
+  ⏳ GEN  40 ( 23 versículos)...   Audio: 202.2s, segmentos detectados: 102
+✓  (23/23 versículos, ~191s)
+  ⏳ GEN  41 ( 57 versículos)...   Audio: 495.5s, segmentos detectados: 242
+✓  (57/57 versículos, ~483s)
+  ⏳ GEN  42 ( 38 versículos)...   Audio: 345.3s, segmentos detectados: 195
+✓  (38/38 versículos, ~332s)
+  ⏳ GEN  43 ( 34 versículos)...   Audio: 338.9s, segmentos detectados: 184
+✓  (34/34 versículos, ~323s)
+  ⏳ GEN  44 ( 34 versículos)...   Audio: 294.8s, segmentos detectados: 166
+✓  (34/34 versículos, ~284s)
+  ⏳ GEN  45 ( 28 versículos)...   Audio: 254.8s, segmentos detectados: 141
+✓  (28/28 versículos, ~247s)
+  ⏳ GEN  46 ( 34 versículos)...   Audio: 287.9s, segmentos detectados: 199
+✓  (34/34 versículos, ~274s)
+  ⏳ GEN  47 ( 31 versículos)...   Audio: 331.0s, segmentos detectados: 162
+✓  (31/31 versículos, ~320s)
+  ⏳ GEN  48 ( 22 versículos)...   Audio: 220.8s, segmentos detectados: 126
+✓  (22/22 versículos, ~207s)
+  ⏳ GEN  49 ( 33 versículos)...   Audio: 261.3s, segmentos detectados: 149
+✓  (33/33 versículos, ~252s)
+  ⏳ GEN  50 ( 26 versículos)...   Audio: 240.2s, segmentos detectados: 135
+✓  (26/26 versículos, ~228s)
+
+  ── Progreso: 50/1189 (50 exitosos) ──
+
+  ⏳ EXO   1 ( 22 versículos)...   Audio: 168.0s, segmentos detectados: 96
+✓  (22/22 versículos, ~159s)
+  ⏳ EXO   2 ( 25 versículos)...   Audio: 217.8s, segmentos detectados: 125
+✓  (25/25 versículos, ~209s)
+  ⏳ EXO   3 ( 22 versículos)...   Audio: 242.6s, segmentos detectados: 145
+✓  (22/22 versículos, ~228s)
+  ⏳ EXO   4 ( 31 versículos)...   Audio: 284.5s, segmentos detectados: 166
+✓  (31/31 versículos, ~271s)
+  ⏳ EXO   5 ( 23 versículos)...   Audio: 213.4s, segmentos detectados: 117
+✓  (23/23 versículos, ~202s)
+  ⏳ EXO   6 ( 30 versículos)...   Audio: 265.0s, segmentos detectados: 151
+✓  (30/30 versículos, ~253s)
+  ⏳ EXO   7 ( 25 versículos)...   Audio: 227.4s, segmentos detectados: 118
+✓  (25/25 versículos, ~215s)
+  ⏳ EXO   8 ( 32 versículos)...   Audio: 317.9s, segmentos detectados: 174
+✓  (32/32 versículos, ~308s)
+  ⏳ EXO   9 ( 35 versículos)...   Audio: 317.8s, segmentos detectados: 164
+✓  (35/35 versículos, ~307s)
+  ⏳ EXO  10 ( 29 versículos)...   Audio: 295.1s, segmentos detectados: 141
+✓  (29/29 versículos, ~288s)
+  ⏳ EXO  11 ( 10 versículos)...   Audio: 99.4s, segmentos detectados: 49
+✓  (10/10 versículos, ~85s)
+  ⏳ EXO  12 ( 51 versículos)...   Audio: 477.7s, segmentos detectados: 219
+✓  (51/51 versículos, ~464s)
+  ⏳ EXO  13 ( 22 versículos)...   Audio: 208.9s, segmentos detectados: 102
+✓  (22/22 versículos, ~196s)
+  ⏳ EXO  14 ( 31 versículos)...   Audio: 309.8s, segmentos detectados: 155
+✓  (31/31 versículos, ~296s)
+  ⏳ EXO  15 ( 27 versículos)...   Audio: 242.0s, segmentos detectados: 132
+✓  (27/27 versículos, ~234s)
+  ⏳ EXO  16 ( 36 versículos)...   Audio: 343.1s, segmentos detectados: 176
+✓  (36/36 versículos, ~330s)
+  ⏳ EXO  17 ( 16 versículos)...   Audio: 154.2s, segmentos detectados: 87
+✓  (16/16 versículos, ~141s)
+  ⏳ EXO  18 ( 27 versículos)...   Audio: 242.6s, segmentos detectados: 130
+✓  (27/27 versículos, ~232s)
+  ⏳ EXO  19 ( 25 versículos)...   Audio: 232.1s, segmentos detectados: 126
+✓  (25/25 versículos, ~219s)
+  ⏳ EXO  20 ( 26 versículos)...   Audio: 195.3s, segmentos detectados: 109
+✓  (26/26 versículos, ~185s)
+  ⏳ EXO  21 ( 36 versículos)...   Audio: 274.4s, segmentos detectados: 156
+✓  (36/36 versículos, ~264s)
+  ⏳ EXO  22 ( 31 versículos)...   Audio: 248.7s, segmentos detectados: 136
+✓  (31/31 versículos, ~238s)
+  ⏳ EXO  23 ( 33 versículos)...   Audio: 272.8s, segmentos detectados: 133
+✓  (33/33 versículos, ~263s)
+  ⏳ EXO  24 ( 18 versículos)...   Audio: 159.8s, segmentos detectados: 85
+✓  (18/18 versículos, ~149s)
+  ⏳ EXO  25 ( 40 versículos)...   Audio: 310.0s, segmentos detectados: 169
+✓  (40/40 versículos, ~302s)
+  ⏳ EXO  26 ( 37 versículos)...   Audio: 318.7s, segmentos detectados: 150
+✓  (37/37 versículos, ~307s)
+  ⏳ EXO  27 ( 21 versículos)...   Audio: 190.6s, segmentos detectados: 103
+✓  (21/21 versículos, ~176s)
+  ⏳ EXO  28 ( 43 versículos)...   Audio: 389.4s, segmentos detectados: 203
+✓  (43/43 versículos, ~379s)
+  ⏳ EXO  29 ( 46 versículos)...   Audio: 436.3s, segmentos detectados: 208
+✓  (46/46 versículos, ~427s)
+  ⏳ EXO  30 ( 38 versículos)...   Audio: 318.9s, segmentos detectados: 159
+✓  (38/38 versículos, ~308s)
+  ⏳ EXO  31 ( 18 versículos)...   Audio: 151.0s, segmentos detectados: 85
+✓  (18/18 versículos, ~141s)
+  ⏳ EXO  32 ( 35 versículos)...   Audio: 348.3s, segmentos detectados: 191
+✓  (35/35 versículos, ~334s)
+  ⏳ EXO  33 ( 23 versículos)...   Audio: 226.0s, segmentos detectados: 130
+✓  (23/23 versículos, ~214s)
+  ⏳ EXO  34 ( 35 versículos)...   Audio: 343.3s, segmentos detectados: 172
+✓  (35/35 versículos, ~331s)
+  ⏳ EXO  35 ( 35 versículos)...   Audio: 300.7s, segmentos detectados: 185
+✓  (35/35 versículos, ~293s)
+  ⏳ EXO  36 ( 38 versículos)...   Audio: 331.8s, segmentos detectados: 153
+✓  (38/38 versículos, ~321s)
+  ⏳ EXO  37 ( 29 versículos)...   Audio: 239.3s, segmentos detectados: 117
+✓  (29/29 versículos, ~230s)
+  ⏳ EXO  38 ( 31 versículos)...   Audio: 284.5s, segmentos detectados: 154
+✓  (31/31 versículos, ~274s)
+  ⏳ EXO  39 ( 43 versículos)...   Audio: 382.9s, segmentos detectados: 217
+✓  (43/43 versículos, ~368s)
+  ⏳ EXO  40 ( 38 versículos)...   Audio: 282.4s, segmentos detectados: 137
+✓  (38/38 versículos, ~273s)
+  ⏳ LEV   1 ( 17 versículos)...   Audio: 157.6s, segmentos detectados: 82
+✓  (17/17 versículos, ~147s)
+  ⏳ LEV   2 ( 16 versículos)...   Audio: 142.1s, segmentos detectados: 71
+✓  (16/16 versículos, ~133s)
+  ⏳ LEV   3 ( 17 versículos)...   Audio: 158.1s, segmentos detectados: 74
+✓  (17/17 versículos, ~147s)
+  ⏳ LEV   4 ( 35 versículos)...   Audio: 340.4s, segmentos detectados: 145
+✓  (35/35 versículos, ~326s)
+  ⏳ LEV   5 ( 19 versículos)...   Audio: 210.9s, segmentos detectados: 106
+✓  (19/19 versículos, ~198s)
+  ⏳ LEV   6 ( 30 versículos)...   Audio: 278.4s, segmentos detectados: 138
+✓  (30/30 versículos, ~266s)
+  ⏳ LEV   7 ( 38 versículos)...   Audio: 342.1s, segmentos detectados: 169
+✓  (38/38 versículos, ~327s)
+  ⏳ LEV   8 ( 36 versículos)...   Audio: 347.3s, segmentos detectados: 179
+✓  (36/36 versículos, ~335s)
+  ⏳ LEV   9 ( 24 versículos)...   Audio: 209.8s, segmentos detectados: 113
+✓  (24/24 versículos, ~200s)
+  ⏳ LEV  10 ( 20 versículos)...   Audio: 215.2s, segmentos detectados: 112
+✓  (20/20 versículos, ~204s)
+
+  ── Progreso: 100/1189 (100 exitosos) ──
+
+  ⏳ LEV  11 ( 47 versículos)...   Audio: 397.8s, segmentos detectados: 223
+✓  (47/47 versículos, ~383s)
+  ⏳ LEV  12 (  8 versículos)...   Audio: 79.1s, segmentos detectados: 38
+✓  (8/8 versículos, ~70s)
+  ⏳ LEV  13 ( 59 versículos)...   Audio: 584.2s, segmentos detectados: 306
+✓  (59/59 versículos, ~572s)
+  ⏳ LEV  14 ( 57 versículos)...   Audio: 539.7s, segmentos detectados: 257
+✓  (57/57 versículos, ~530s)
+  ⏳ LEV  15 ( 33 versículos)...   Audio: 312.6s, segmentos detectados: 162
+✓  (33/33 versículos, ~303s)
+  ⏳ LEV  16 ( 34 versículos)...   Audio: 362.0s, segmentos detectados: 167
+✓  (34/34 versículos, ~348s)
+  ⏳ LEV  17 ( 16 versículos)...   Audio: 165.6s, segmentos detectados: 81
+✓  (16/16 versículos, ~157s)
+  ⏳ LEV  18 ( 30 versículos)...   Audio: 238.1s, segmentos detectados: 129
+✓  (30/30 versículos, ~228s)
+  ⏳ LEV  19 ( 37 versículos)...   Audio: 299.6s, segmentos detectados: 163
+✓  (37/37 versículos, ~292s)
+  ⏳ LEV  20 ( 27 versículos)...   Audio: 269.8s, segmentos detectados: 145
+✓  (27/27 versículos, ~258s)
+  ⏳ LEV  21 ( 24 versículos)...   Audio: 187.6s, segmentos detectados: 109
+✓  (24/24 versículos, ~178s)
+  ⏳ LEV  22 ( 33 versículos)...   Audio: 291.2s, segmentos detectados: 157
+✓  (33/33 versículos, ~283s)
+  ⏳ LEV  23 ( 44 versículos)...   Audio: 391.6s, segmentos detectados: 191
+✓  (44/44 versículos, ~377s)
+  ⏳ LEV  24 ( 23 versículos)...   Audio: 186.5s, segmentos detectados: 101
+✓  (23/23 versículos, ~174s)
+  ⏳ LEV  25 ( 55 versículos)...   Audio: 488.7s, segmentos detectados: 241
+✓  (55/55 versículos, ~479s)
+  ⏳ LEV  26 ( 46 versículos)...   Audio: 423.4s, segmentos detectados: 201
+✓  (46/46 versículos, ~411s)
+  ⏳ LEV  27 ( 34 versículos)...   Audio: 296.2s, segmentos detectados: 148
+✓  (34/34 versículos, ~287s)
+  ⏳ NUM   1 ( 54 versículos)...   Audio: 460.6s, segmentos detectados: 262
+✓  (54/54 versículos, ~445s)
+  ⏳ NUM   2 ( 34 versículos)...   Audio: 257.3s, segmentos detectados: 147
+✓  (34/34 versículos, ~244s)
+  ⏳ NUM   3 ( 51 versículos)...   Audio: 440.9s, segmentos detectados: 230
+✓  (51/51 versículos, ~429s)
+  ⏳ NUM   4 ( 49 versículos)...   Audio: 471.7s, segmentos detectados: 223
+✓  (49/49 versículos, ~462s)
+  ⏳ NUM   5 ( 31 versículos)...   Audio: 299.6s, segmentos detectados: 146
+✓  (31/31 versículos, ~288s)
+  ⏳ NUM   6 ( 27 versículos)...   Audio: 240.8s, segmentos detectados: 123
+✓  (27/27 versículos, ~232s)
+  ⏳ NUM   7 ( 89 versículos)...   Audio: 720.2s, segmentos detectados: 403
+✓  (89/89 versículos, ~707s)
+  ⏳ NUM   8 ( 26 versículos)...   Audio: 235.0s, segmentos detectados: 105
+✓  (26/26 versículos, ~223s)
+  ⏳ NUM   9 ( 23 versículos)...   Audio: 225.5s, segmentos detectados: 112
+✓  (23/23 versículos, ~215s)
+  ⏳ NUM  10 ( 36 versículos)...   Audio: 297.2s, segmentos detectados: 151
+✓  (36/36 versículos, ~291s)
+  ⏳ NUM  11 ( 35 versículos)...   Audio: 344.4s, segmentos detectados: 192
+✓  (35/35 versículos, ~332s)
+  ⏳ NUM  12 ( 15 versículos)...   Audio: 123.3s, segmentos detectados: 68
+✓  (15/15 versículos, ~112s)
+  ⏳ NUM  13 ( 33 versículos)...   Audio: 262.5s, segmentos detectados: 155
+✓  (33/33 versículos, ~255s)
+  ⏳ NUM  14 ( 45 versículos)...   Audio: 410.6s, segmentos detectados: 202
+✓  (45/45 versículos, ~401s)
+  ⏳ NUM  15 ( 41 versículos)...   Audio: 347.4s, segmentos detectados: 171
+✓  (41/41 versículos, ~339s)
+  ⏳ NUM  16 ( 50 versículos)...   Audio: 473.0s, segmentos detectados: 250
+✓  (50/50 versículos, ~458s)
+  ⏳ NUM  17 ( 13 versículos)...   Audio: 118.3s, segmentos detectados: 59
+✓  (13/13 versículos, ~108s)
+  ⏳ NUM  18 ( 32 versículos)...   Audio: 346.6s, segmentos detectados: 165
+✓  (32/32 versículos, ~330s)
+  ⏳ NUM  19 ( 22 versículos)...   Audio: 222.8s, segmentos detectados: 116
+✓  (22/22 versículos, ~213s)
+  ⏳ NUM  20 ( 29 versículos)...   Audio: 266.9s, segmentos detectados: 141
+✓  (29/29 versículos, ~253s)
+  ⏳ NUM  21 ( 35 versículos)...   Audio: 308.3s, segmentos detectados: 181
+✓  (35/35 versículos, ~300s)
+  ⏳ NUM  22 ( 41 versículos)...   Audio: 389.5s, segmentos detectados: 217
+✓  (41/41 versículos, ~377s)
+  ⏳ NUM  23 ( 30 versículos)...   Audio: 252.0s, segmentos detectados: 151
+✓  (30/30 versículos, ~238s)
+  ⏳ NUM  24 ( 25 versículos)...   Audio: 214.7s, segmentos detectados: 125
+✓  (25/25 versículos, ~207s)
+  ⏳ NUM  25 ( 18 versículos)...   Audio: 149.9s, segmentos detectados: 79
+✓  (18/18 versículos, ~139s)
+  ⏳ NUM  26 ( 65 versículos)...   Audio: 540.1s, segmentos detectados: 321
+✓  (65/65 versículos, ~532s)
+  ⏳ NUM  27 ( 23 versículos)...   Audio: 201.4s, segmentos detectados: 108
+✓  (23/23 versículos, ~192s)
+  ⏳ NUM  28 ( 31 versículos)...   Audio: 250.8s, segmentos detectados: 129
+✓  (31/31 versículos, ~242s)
+  ⏳ NUM  29 ( 39 versículos)...   Audio: 326.3s, segmentos detectados: 190
+✓  (39/39 versículos, ~317s)
+  ⏳ NUM  30 ( 16 versículos)...   Audio: 157.7s, segmentos detectados: 81
+✓  (16/16 versículos, ~143s)
+  ⏳ NUM  31 ( 54 versículos)...   Audio: 446.0s, segmentos detectados: 243
+✓  (54/54 versículos, ~435s)
+  ⏳ NUM  32 ( 42 versículos)...   Audio: 364.5s, segmentos detectados: 185
+✓  (42/42 versículos, ~355s)
+  ⏳ NUM  33 ( 56 versículos)...   Audio: 366.7s, segmentos detectados: 205
+✓  (56/56 versículos, ~355s)
+
+  ── Progreso: 150/1189 (150 exitosos) ──
+
+  ⏳ NUM  34 ( 29 versículos)...   Audio: 208.8s, segmentos detectados: 105
+✓  (29/29 versículos, ~196s)
+  ⏳ NUM  35 ( 34 versículos)...   Audio: 304.8s, segmentos detectados: 153
+✓  (34/34 versículos, ~295s)
+  ⏳ NUM  36 ( 13 versículos)...   Audio: 139.1s, segmentos detectados: 61
+✓  (13/13 versículos, ~125s)
+  ⏳ DEU   1 ( 46 versículos)...   Audio: 431.9s, segmentos detectados: 242
+✓  (46/46 versículos, ~420s)
+  ⏳ DEU   2 ( 37 versículos)...   Audio: 339.0s, segmentos detectados: 177
+✓  (37/37 versículos, ~323s)
+  ⏳ DEU   3 ( 29 versículos)...   Audio: 274.0s, segmentos detectados: 149
+✓  (29/29 versículos, ~262s)
+  ⏳ DEU   4 ( 49 versículos)...   Audio: 493.3s, segmentos detectados: 247
+✓  (49/49 versículos, ~483s)
+  ⏳ DEU   5 ( 33 versículos)...   Audio: 291.4s, segmentos detectados: 157
+✓  (33/33 versículos, ~281s)
+  ⏳ DEU   6 ( 25 versículos)...   Audio: 210.3s, segmentos detectados: 116
+✓  (25/25 versículos, ~199s)
+  ⏳ DEU   7 ( 26 versículos)...   Audio: 263.6s, segmentos detectados: 137
+✓  (26/26 versículos, ~251s)
+  ⏳ DEU   8 ( 20 versículos)...   Audio: 189.9s, segmentos detectados: 106
+✓  (20/20 versículos, ~177s)
+  ⏳ DEU   9 ( 29 versículos)...   Audio: 297.6s, segmentos detectados: 141
+✓  (29/29 versículos, ~286s)
+  ⏳ DEU  10 ( 22 versículos)...   Audio: 195.1s, segmentos detectados: 104
+✓  (22/22 versículos, ~181s)
+  ⏳ DEU  11 ( 32 versículos)...   Audio: 306.8s, segmentos detectados: 155
+✓  (32/32 versículos, ~297s)
+  ⏳ DEU  12 ( 32 versículos)...   Audio: 336.0s, segmentos detectados: 162
+✓  (32/32 versículos, ~323s)
+  ⏳ DEU  13 ( 18 versículos)...   Audio: 190.5s, segmentos detectados: 104
+✓  (18/18 versículos, ~177s)
+  ⏳ DEU  14 ( 29 versículos)...   Audio: 227.9s, segmentos detectados: 134
+✓  (29/29 versículos, ~218s)
+  ⏳ DEU  15 ( 23 versículos)...   Audio: 211.7s, segmentos detectados: 104
+✓  (23/23 versículos, ~200s)
+  ⏳ DEU  16 ( 22 versículos)...   Audio: 212.9s, segmentos detectados: 102
+✓  (22/22 versículos, ~202s)
+  ⏳ DEU  17 ( 20 versículos)...   Audio: 206.6s, segmentos detectados: 103
+✓  (20/20 versículos, ~195s)
+  ⏳ DEU  18 ( 22 versículos)...   Audio: 183.0s, segmentos detectados: 97
+✓  (22/22 versículos, ~174s)
+  ⏳ DEU  19 ( 21 versículos)...   Audio: 199.7s, segmentos detectados: 101
+✓  (21/21 versículos, ~194s)
+  ⏳ DEU  20 ( 20 versículos)...   Audio: 200.2s, segmentos detectados: 112
+✓  (20/20 versículos, ~185s)
+  ⏳ DEU  21 ( 23 versículos)...   Audio: 220.5s, segmentos detectados: 104
+✓  (23/23 versículos, ~209s)
+  ⏳ DEU  22 ( 30 versículos)...   Audio: 270.8s, segmentos detectados: 143
+✓  (30/30 versículos, ~261s)
+  ⏳ DEU  23 ( 25 versículos)...   Audio: 200.5s, segmentos detectados: 96
+✓  (25/25 versículos, ~192s)
+  ⏳ DEU  24 ( 22 versículos)...   Audio: 199.2s, segmentos detectados: 104
+✓  (22/22 versículos, ~190s)
+  ⏳ DEU  25 ( 19 versículos)...   Audio: 167.7s, segmentos detectados: 85
+✓  (19/19 versículos, ~155s)
+  ⏳ DEU  26 ( 19 versículos)...   Audio: 201.7s, segmentos detectados: 105
+✓  (19/19 versículos, ~192s)
+  ⏳ DEU  27 ( 26 versículos)...   Audio: 213.5s, segmentos detectados: 125
+✓  (26/26 versículos, ~204s)
+  ⏳ DEU  28 ( 68 versículos)... ERROR generando audio
+  ⏳ DEU  29 ( 29 versículos)...   Audio: 283.6s, segmentos detectados: 145
+✓  (29/29 versículos, ~271s)
+  ⏳ DEU  30 ( 20 versículos)...   Audio: 204.7s, segmentos detectados: 101
+✓  (20/20 versículos, ~194s)
+  ⏳ DEU  31 ( 30 versículos)...   Audio: 316.4s, segmentos detectados: 155
+✓  (30/30 versículos, ~297s)
+  ⏳ DEU  32 ( 52 versículos)...   Audio: 445.6s, segmentos detectados: 246
+✓  (52/52 versículos, ~434s)
+  ⏳ DEU  33 ( 29 versículos)...   Audio: 257.5s, segmentos detectados: 154
+✓  (29/29 versículos, ~246s)
+  ⏳ DEU  34 ( 12 versículos)...   Audio: 103.3s, segmentos detectados: 55
+✓  (12/12 versículos, ~92s)
+  ⏳ JOS   1 ( 18 versículos)...   Audio: 191.1s, segmentos detectados: 90
+✓  (18/18 versículos, ~181s)
+  ⏳ JOS   2 ( 24 versículos)...   Audio: 258.6s, segmentos detectados: 126
+✓  (24/24 versículos, ~242s)
+  ⏳ JOS   3 ( 17 versículos)...   Audio: 186.0s, segmentos detectados: 93
+✓  (17/17 versículos, ~173s)
+  ⏳ JOS   4 ( 24 versículos)...   Audio: 231.8s, segmentos detectados: 106
+✓  (24/24 versículos, ~219s)
+  ⏳ JOS   5 ( 15 versículos)...   Audio: 181.6s, segmentos detectados: 86
+✓  (15/15 versículos, ~169s)
+  ⏳ JOS   6 ( 27 versículos)...   Audio: 297.9s, segmentos detectados: 150
+✓  (27/27 versículos, ~282s)
+  ⏳ JOS   7 ( 26 versículos)...   Audio: 308.0s, segmentos detectados: 172
+✓  (26/26 versículos, ~293s)
+  ⏳ JOS   8 ( 35 versículos)...   Audio: 392.5s, segmentos detectados: 200
+✓  (35/35 versículos, ~376s)
+  ⏳ JOS   9 ( 27 versículos)...   Audio: 275.8s, segmentos detectados: 134
+✓  (27/27 versículos, ~263s)
+  ⏳ JOS  10 ( 43 versículos)...   Audio: 450.0s, segmentos detectados: 234
+✓  (43/43 versículos, ~438s)
+  ⏳ JOS  11 ( 23 versículos)...   Audio: 242.3s, segmentos detectados: 124
+✓  (23/23 versículos, ~230s)
+  ⏳ JOS  12 ( 24 versículos)...   Audio: 184.6s, segmentos detectados: 132
+✓  (24/24 versículos, ~176s)
+  ⏳ JOS  13 ( 33 versículos)...   Audio: 301.0s, segmentos detectados: 171
+✓  (33/33 versículos, ~286s)
+
+  ── Progreso: 200/1189 (199 exitosos) ──
+
+  ⏳ JOS  14 ( 15 versículos)...   Audio: 159.4s, segmentos detectados: 83
+✓  (15/15 versículos, ~145s)
+  ⏳ JOS  15 ( 63 versículos)...   Audio: 429.8s, segmentos detectados: 297
+✓  (63/63 versículos, ~419s)
+  ⏳ JOS  16 ( 10 versículos)...   Audio: 81.9s, segmentos detectados: 40
+✓  (10/10 versículos, ~74s)
+  ⏳ JOS  17 ( 18 versículos)...   Audio: 214.7s, segmentos detectados: 115
+✓  (18/18 versículos, ~203s)
+  ⏳ JOS  18 ( 28 versículos)...   Audio: 270.5s, segmentos detectados: 140
+✓  (28/28 versículos, ~261s)
+  ⏳ JOS  19 ( 51 versículos)...   Audio: 368.8s, segmentos detectados: 228
+✓  (51/51 versículos, ~355s)
+  ⏳ JOS  20 (  9 versículos)...   Audio: 100.2s, segmentos detectados: 45
+✓  (9/9 versículos, ~84s)
+  ⏳ JOS  21 ( 45 versículos)...   Audio: 363.3s, segmentos detectados: 190
+✓  (45/45 versículos, ~350s)
+  ⏳ JOS  22 ( 34 versículos)...   Audio: 431.3s, segmentos detectados: 198
+✓  (34/34 versículos, ~413s)
+  ⏳ JOS  23 ( 16 versículos)...   Audio: 179.0s, segmentos detectados: 77
+✓  (16/16 versículos, ~164s)
+  ⏳ JOS  24 ( 33 versículos)...   Audio: 359.1s, segmentos detectados: 187
+✓  (33/33 versículos, ~347s)
+  ⏳ JDG   1 ( 36 versículos)...   Audio: 325.7s, segmentos detectados: 172
+✓  (36/36 versículos, ~317s)
+  ⏳ JDG   2 ( 23 versículos)...   Audio: 225.4s, segmentos detectados: 104
+✓  (23/23 versículos, ~217s)
+  ⏳ JDG   3 ( 31 versículos)...   Audio: 297.3s, segmentos detectados: 150
+✓  (31/31 versículos, ~285s)
+  ⏳ JDG   4 ( 24 versículos)...   Audio: 247.1s, segmentos detectados: 133
+✓  (24/24 versículos, ~233s)
+  ⏳ JDG   5 ( 31 versículos)...   Audio: 287.2s, segmentos detectados: 160
+✓  (31/31 versículos, ~276s)
+  ⏳ JDG   6 ( 40 versículos)...   Audio: 425.2s, segmentos detectados: 221
+✓  (40/40 versículos, ~412s)
+  ⏳ JDG   7 ( 25 versículos)...   Audio: 309.6s, segmentos detectados: 158
+✓  (25/25 versículos, ~293s)
+  ⏳ JDG   8 ( 35 versículos)...   Audio: 337.9s, segmentos detectados: 172
+✓  (35/35 versículos, ~322s)
+  ⏳ JDG   9 ( 57 versículos)...   Audio: 569.6s, segmentos detectados: 285
+✓  (57/57 versículos, ~560s)
+  ⏳ JDG  10 ( 18 versículos)...   Audio: 167.0s, segmentos detectados: 89
+✓  (18/18 versículos, ~153s)
+  ⏳ JDG  11 ( 40 versículos)...   Audio: 396.6s, segmentos detectados: 193
+✓  (40/40 versículos, ~381s)
+  ⏳ JDG  12 ( 15 versículos)...   Audio: 144.0s, segmentos detectados: 82
+✓  (15/15 versículos, ~136s)
+  ⏳ JDG  13 ( 25 versículos)...   Audio: 245.7s, segmentos detectados: 130
+✓  (25/25 versículos, ~231s)
+  ⏳ JDG  14 ( 20 versículos)...   Audio: 219.5s, segmentos detectados: 99
+✓  (20/20 versículos, ~206s)
+  ⏳ JDG  15 ( 20 versículos)...   Audio: 209.0s, segmentos detectados: 117
+✓  (20/20 versículos, ~199s)
+  ⏳ JDG  16 ( 31 versículos)...   Audio: 376.8s, segmentos detectados: 197
+✓  (31/31 versículos, ~363s)
+  ⏳ JDG  17 ( 13 versículos)...   Audio: 125.5s, segmentos detectados: 65
+✓  (13/13 versículos, ~114s)
+  ⏳ JDG  18 ( 31 versículos)...   Audio: 344.9s, segmentos detectados: 181
+✓  (31/31 versículos, ~331s)
+  ⏳ JDG  19 ( 30 versículos)...   Audio: 351.1s, segmentos detectados: 195
+✓  (30/30 versículos, ~338s)
+  ⏳ JDG  20 ( 48 versículos)...   Audio: 506.5s, segmentos detectados: 232
+✓  (48/48 versículos, ~495s)
+  ⏳ JDG  21 ( 25 versículos)...   Audio: 246.9s, segmentos detectados: 112
+✓  (25/25 versículos, ~235s)
+  ⏳ RUT   1 ( 22 versículos)...   Audio: 215.5s, segmentos detectados: 120
+✓  (22/22 versículos, ~201s)
+  ⏳ RUT   2 ( 23 versículos)...   Audio: 242.3s, segmentos detectados: 132
+✓  (23/23 versículos, ~228s)
+  ⏳ RUT   3 ( 18 versículos)...   Audio: 173.2s, segmentos detectados: 104
+✓  (18/18 versículos, ~163s)
+  ⏳ RUT   4 ( 22 versículos)...   Audio: 215.3s, segmentos detectados: 116
+✓  (22/22 versículos, ~206s)
+  ⏳ 1SA   1 ( 28 versículos)...   Audio: 265.3s, segmentos detectados: 153
+✓  (28/28 versículos, ~255s)
+  ⏳ 1SA   2 ( 36 versículos)...   Audio: 362.7s, segmentos detectados: 181
+✓  (36/36 versículos, ~350s)
+  ⏳ 1SA   3 ( 21 versículos)...   Audio: 194.9s, segmentos detectados: 118
+✓  (21/21 versículos, ~181s)
+  ⏳ 1SA   4 ( 22 versículos)...   Audio: 250.2s, segmentos detectados: 130
+✓  (22/22 versículos, ~238s)
+  ⏳ 1SA   5 ( 12 versículos)...   Audio: 131.9s, segmentos detectados: 60
+✓  (12/12 versículos, ~122s)
+  ⏳ 1SA   6 ( 21 versículos)...   Audio: 241.5s, segmentos detectados: 112
+✓  (21/21 versículos, ~231s)
+  ⏳ 1SA   7 ( 17 versículos)...   Audio: 177.6s, segmentos detectados: 85
+✓  (17/17 versículos, ~169s)
+  ⏳ 1SA   8 ( 22 versículos)...   Audio: 184.3s, segmentos detectados: 96
+✓  (22/22 versículos, ~174s)
+  ⏳ 1SA   9 ( 27 versículos)...   Audio: 320.5s, segmentos detectados: 176
+✓  (27/27 versículos, ~307s)
+  ⏳ 1SA  10 ( 27 versículos)...   Audio: 287.8s, segmentos detectados: 148
+✓  (27/27 versículos, ~278s)
+  ⏳ 1SA  11 ( 15 versículos)...   Audio: 162.6s, segmentos detectados: 80
+✓  (15/15 versículos, ~145s)
+  ⏳ 1SA  12 ( 25 versículos)...   Audio: 260.3s, segmentos detectados: 128
+✓  (25/25 versículos, ~246s)
+  ⏳ 1SA  13 ( 23 versículos)...   Audio: 234.6s, segmentos detectados: 111
+✓  (23/23 versículos, ~219s)
+  ⏳ 1SA  14 ( 52 versículos)...   Audio: 565.6s, segmentos detectados: 281
+✓  (52/52 versículos, ~552s)
+
+  ── Progreso: 250/1189 (249 exitosos) ──
+
+  ⏳ 1SA  15 ( 35 versículos)...   Audio: 333.6s, segmentos detectados: 169
+✓  (35/35 versículos, ~320s)
+  ⏳ 1SA  16 ( 23 versículos)...   Audio: 239.8s, segmentos detectados: 133
+✓  (23/23 versículos, ~228s)
+  ⏳ 1SA  17 ( 58 versículos)...   Audio: 599.0s, segmentos detectados: 303
+✓  (58/58 versículos, ~589s)
+  ⏳ 1SA  18 ( 30 versículos)...   Audio: 282.4s, segmentos detectados: 150
+✓  (30/30 versículos, ~272s)
+  ⏳ 1SA  19 ( 24 versículos)...   Audio: 248.0s, segmentos detectados: 133
+✓  (24/24 versículos, ~235s)
+  ⏳ 1SA  20 ( 42 versículos)...   Audio: 432.9s, segmentos detectados: 238
+✓  (42/42 versículos, ~422s)
+  ⏳ 1SA  21 ( 15 versículos)...   Audio: 158.7s, segmentos detectados: 86
+✓  (15/15 versículos, ~146s)
+  ⏳ 1SA  22 ( 23 versículos)...   Audio: 254.1s, segmentos detectados: 132
+✓  (23/23 versículos, ~246s)
+  ⏳ 1SA  23 ( 28 versículos)...   Audio: 287.3s, segmentos detectados: 147
+✓  (28/28 versículos, ~272s)
+  ⏳ 1SA  24 ( 22 versículos)...   Audio: 219.1s, segmentos detectados: 118
+✓  (22/22 versículos, ~204s)
+  ⏳ 1SA  25 ( 44 versículos)...   Audio: 474.7s, segmentos detectados: 236
+✓  (44/44 versículos, ~462s)
+  ⏳ 1SA  26 ( 25 versículos)...   Audio: 285.2s, segmentos detectados: 156
+✓  (25/25 versículos, ~273s)
+  ⏳ 1SA  27 ( 12 versículos)...   Audio: 126.6s, segmentos detectados: 66
+✓  (12/12 versículos, ~114s)
+  ⏳ 1SA  28 ( 25 versículos)...   Audio: 273.3s, segmentos detectados: 148
+✓  (25/25 versículos, ~262s)
+  ⏳ 1SA  29 ( 11 versículos)...   Audio: 128.2s, segmentos detectados: 61
+✓  (11/11 versículos, ~117s)
+  ⏳ 1SA  30 ( 31 versículos)...   Audio: 312.5s, segmentos detectados: 162
+✓  (31/31 versículos, ~300s)
+  ⏳ 1SA  31 ( 13 versículos)...   Audio: 123.7s, segmentos detectados: 66
+✓  (13/13 versículos, ~114s)
+  ⏳ 2SA   1 ( 27 versículos)...   Audio: 246.9s, segmentos detectados: 138
+✓  (27/27 versículos, ~236s)
+  ⏳ 2SA   2 ( 32 versículos)...   Audio: 319.1s, segmentos detectados: 161
+✓  (32/32 versículos, ~306s)
+  ⏳ 2SA   3 ( 39 versículos)...   Audio: 389.3s, segmentos detectados: 208
+✓  (39/39 versículos, ~379s)
+  ⏳ 2SA   4 ( 12 versículos)...   Audio: 145.0s, segmentos detectados: 69
+✓  (12/12 versículos, ~133s)
+  ⏳ 2SA   5 ( 25 versículos)...   Audio: 70.7s, segmentos detectados: 36
+✓  (25/25 versículos, ~69s)
+  ⏳ 2SA   6 ( 23 versículos)...   Audio: 225.1s, segmentos detectados: 108
+✓  (23/23 versículos, ~213s)
+  ⏳ 2SA   7 ( 29 versículos)...   Audio: 290.6s, segmentos detectados: 159
+✓  (29/29 versículos, ~279s)
+  ⏳ 2SA   8 ( 18 versículos)...   Audio: 161.9s, segmentos detectados: 81
+✓  (18/18 versículos, ~152s)
+  ⏳ 2SA   9 ( 13 versículos)...   Audio: 138.2s, segmentos detectados: 80
+✓  (13/13 versículos, ~122s)
+  ⏳ 2SA  10 ( 19 versículos)...   Audio: 202.2s, segmentos detectados: 98
+✓  (19/19 versículos, ~188s)
+  ⏳ 2SA  11 ( 27 versículos)...   Audio: 270.7s, segmentos detectados: 145
+✓  (27/27 versículos, ~259s)
+  ⏳ 2SA  12 ( 31 versículos)...   Audio: 322.2s, segmentos detectados: 174
+✓  (31/31 versículos, ~308s)
+  ⏳ 2SA  13 ( 39 versículos)...   Audio: 408.6s, segmentos detectados: 222
+✓  (39/39 versículos, ~396s)
+  ⏳ 2SA  14 ( 33 versículos)...   Audio: 355.2s, segmentos detectados: 190
+✓  (33/33 versículos, ~344s)
+  ⏳ 2SA  15 ( 37 versículos)...   Audio: 378.3s, segmentos detectados: 199
+✓  (37/37 versículos, ~365s)
+  ⏳ 2SA  16 ( 23 versículos)...   Audio: 244.3s, segmentos detectados: 135
+✓  (23/23 versículos, ~230s)
+  ⏳ 2SA  17 ( 29 versículos)...   Audio: 326.3s, segmentos detectados: 171
+✓  (29/29 versículos, ~318s)
+  ⏳ 2SA  18 ( 33 versículos)...   Audio: 380.2s, segmentos detectados: 197
+✓  (33/33 versículos, ~372s)
+  ⏳ 2SA  19 ( 43 versículos)...   Audio: 474.2s, segmentos detectados: 232
+✓  (43/43 versículos, ~456s)
+  ⏳ 2SA  20 ( 25 versículos)...   Audio: 284.7s, segmentos detectados: 148
+✓  (25/25 versículos, ~276s)
+  ⏳ 2SA  21 ( 22 versículos)...   Audio: 259.8s, segmentos detectados: 122
+✓  (22/22 versículos, ~248s)
+  ⏳ 2SA  22 ( 51 versículos)...   Audio: 338.1s, segmentos detectados: 197
+✓  (51/51 versículos, ~333s)
+  ⏳ 2SA  23 ( 39 versículos)...   Audio: 318.4s, segmentos detectados: 171
+✓  (39/39 versículos, ~311s)
+  ⏳ 2SA  24 ( 25 versículos)...   Audio: 267.9s, segmentos detectados: 140
+✓  (25/25 versículos, ~253s)
+  ⏳ 1KI   1 ( 53 versículos)...   Audio: 529.8s, segmentos detectados: 292
+✓  (53/53 versículos, ~520s)
+  ⏳ 1KI   2 ( 46 versículos)...   Audio: 505.7s, segmentos detectados: 269
+✓  (46/46 versículos, ~489s)
+  ⏳ 1KI   3 ( 28 versículos)...   Audio: 288.2s, segmentos detectados: 157
+✓  (28/28 versículos, ~276s)
+  ⏳ 1KI   4 ( 34 versículos)...   Audio: 278.6s, segmentos detectados: 148
+✓  (34/34 versículos, ~267s)
+  ⏳ 1KI   5 ( 18 versículos)...   Audio: 170.3s, segmentos detectados: 75
+✓  (18/18 versículos, ~159s)
+  ⏳ 1KI   6 ( 38 versículos)...   Audio: 347.5s, segmentos detectados: 160
+✓  (38/38 versículos, ~337s)
+  ⏳ 1KI   7 ( 51 versículos)...   Audio: 546.2s, segmentos detectados: 261
+✓  (51/51 versículos, ~536s)
+  ⏳ 1KI   8 ( 66 versículos)...   Audio: 716.5s, segmentos detectados: 335
+✓  (66/66 versículos, ~701s)
+  ⏳ 1KI   9 ( 28 versículos)...   Audio: 278.8s, segmentos detectados: 138
+✓  (28/28 versículos, ~271s)
+
+  ── Progreso: 300/1189 (299 exitosos) ──
+
+  ⏳ 1KI  10 ( 29 versículos)...   Audio: 286.4s, segmentos detectados: 137
+✓  (29/29 versículos, ~275s)
+  ⏳ 1KI  11 ( 43 versículos)...   Audio: 437.9s, segmentos detectados: 228
+✓  (43/43 versículos, ~424s)
+  ⏳ 1KI  12 ( 33 versículos)...   Audio: 351.8s, segmentos detectados: 177
+✓  (33/33 versículos, ~338s)
+  ⏳ 1KI  13 ( 34 versículos)...   Audio: 351.6s, segmentos detectados: 183
+✓  (34/34 versículos, ~335s)
+  ⏳ 1KI  14 ( 31 versículos)...   Audio: 322.4s, segmentos detectados: 160
+✓  (31/31 versículos, ~310s)
+  ⏳ 1KI  15 ( 34 versículos)...   Audio: 321.2s, segmentos detectados: 157
+✓  (34/34 versículos, ~310s)
+  ⏳ 1KI  16 ( 34 versículos)...   Audio: 338.7s, segmentos detectados: 160
+✓  (34/34 versículos, ~324s)
+  ⏳ 1KI  17 ( 24 versículos)...   Audio: 221.9s, segmentos detectados: 129
+✓  (24/24 versículos, ~211s)
+  ⏳ 1KI  18 ( 46 versículos)...   Audio: 488.1s, segmentos detectados: 279
+✓  (46/46 versículos, ~474s)
+  ⏳ 1KI  19 ( 21 versículos)...   Audio: 242.3s, segmentos detectados: 144
+✓  (21/21 versículos, ~230s)
+  ⏳ 1KI  20 ( 43 versículos)...   Audio: 490.8s, segmentos detectados: 272
+✓  (43/43 versículos, ~476s)
+  ⏳ 1KI  21 ( 29 versículos)...   Audio: 298.7s, segmentos detectados: 160
+✓  (29/29 versículos, ~285s)
+  ⏳ 1KI  22 ( 53 versículos)...   Audio: 520.4s, segmentos detectados: 269
+✓  (53/53 versículos, ~508s)
+  ⏳ 2KI   1 ( 18 versículos)...   Audio: 212.4s, segmentos detectados: 113
+✓  (18/18 versículos, ~197s)
+  ⏳ 2KI   2 ( 25 versículos)...   Audio: 274.8s, segmentos detectados: 165
+✓  (25/25 versículos, ~260s)
+  ⏳ 2KI   3 ( 27 versículos)...   Audio: 287.2s, segmentos detectados: 140
+✓  (27/27 versículos, ~274s)
+  ⏳ 2KI   4 ( 44 versículos)...   Audio: 461.1s, segmentos detectados: 282
+✓  (44/44 versículos, ~451s)
+  ⏳ 2KI   5 ( 27 versículos)...   Audio: 325.4s, segmentos detectados: 182
+✓  (27/27 versículos, ~313s)
+  ⏳ 2KI   6 ( 33 versículos)...   Audio: 348.5s, segmentos detectados: 204
+✓  (33/33 versículos, ~333s)
+  ⏳ 2KI   7 ( 20 versículos)...   Audio: 270.2s, segmentos detectados: 147
+✓  (20/20 versículos, ~258s)
+  ⏳ 2KI   8 ( 29 versículos)...   Audio: 317.5s, segmentos detectados: 165
+✓  (29/29 versículos, ~301s)
+  ⏳ 2KI   9 ( 37 versículos)...   Audio: 420.6s, segmentos detectados: 244
+✓  (37/37 versículos, ~403s)
+  ⏳ 2KI  10 ( 36 versículos)...   Audio: 403.6s, segmentos detectados: 206
+✓  (36/36 versículos, ~391s)
+  ⏳ 2KI  11 ( 21 versículos)...   Audio: 242.6s, segmentos detectados: 121
+✓  (21/21 versículos, ~229s)
+  ⏳ 2KI  12 ( 21 versículos)...   Audio: 227.1s, segmentos detectados: 102
+✓  (21/21 versículos, ~218s)
+  ⏳ 2KI  13 ( 25 versículos)...   Audio: 268.2s, segmentos detectados: 138
+✓  (25/25 versículos, ~253s)
+  ⏳ 2KI  14 ( 29 versículos)...   Audio: 289.5s, segmentos detectados: 139
+✓  (29/29 versículos, ~278s)
+  ⏳ 2KI  15 ( 38 versículos)...   Audio: 359.7s, segmentos detectados: 170
+✓  (38/38 versículos, ~348s)
+  ⏳ 2KI  16 ( 20 versículos)...   Audio: 217.2s, segmentos detectados: 99
+✓  (20/20 versículos, ~202s)
+  ⏳ 2KI  17 ( 41 versículos)...   Audio: 429.0s, segmentos detectados: 201
+✓  (41/41 versículos, ~419s)
+  ⏳ 2KI  18 ( 37 versículos)...   Audio: 398.3s, segmentos detectados: 204
+✓  (37/37 versículos, ~389s)
+  ⏳ 2KI  19 ( 37 versículos)...   Audio: 381.7s, segmentos detectados: 209
+✓  (37/37 versículos, ~368s)
+  ⏳ 2KI  20 ( 21 versículos)...   Audio: 215.0s, segmentos detectados: 121
+✓  (21/21 versículos, ~202s)
+  ⏳ 2KI  21 ( 26 versículos)...   Audio: 247.3s, segmentos detectados: 109
+✓  (26/26 versículos, ~235s)
+  ⏳ 2KI  22 ( 20 versículos)...   Audio: 224.2s, segmentos detectados: 110
+✓  (20/20 versículos, ~211s)
+  ⏳ 2KI  23 ( 37 versículos)...   Audio: 468.9s, segmentos detectados: 204
+✓  (37/37 versículos, ~455s)
+  ⏳ 2KI  24 ( 20 versículos)...   Audio: 199.3s, segmentos detectados: 97
+✓  (20/20 versículos, ~187s)
+  ⏳ 2KI  25 ( 30 versículos)...   Audio: 319.7s, segmentos detectados: 156
+✓  (30/30 versículos, ~306s)
+  ⏳ 1CH   1 ( 54 versículos)...   Audio: 331.0s, segmentos detectados: 283
+✓  (54/54 versículos, ~322s)
+  ⏳ 1CH   2 ( 55 versículos)...   Audio: 374.6s, segmentos detectados: 253
+✓  (55/55 versículos, ~367s)
+  ⏳ 1CH   3 ( 24 versículos)...   Audio: 170.1s, segmentos detectados: 134
+✓  (24/24 versículos, ~165s)
+  ⏳ 1CH   4 ( 43 versículos)...   Audio: 352.4s, segmentos detectados: 244
+✓  (43/43 versículos, ~342s)
+  ⏳ 1CH   5 ( 26 versículos)...   Audio: 244.7s, segmentos detectados: 145
+✓  (26/26 versículos, ~232s)
+  ⏳ 1CH   6 ( 81 versículos)...   Audio: 543.3s, segmentos detectados: 345
+✓  (81/81 versículos, ~534s)
+  ⏳ 1CH   7 ( 40 versículos)...   Audio: 333.2s, segmentos detectados: 240
+✓  (40/40 versículos, ~321s)
+  ⏳ 1CH   8 ( 40 versículos)...   Audio: 235.3s, segmentos detectados: 187
+✓  (40/40 versículos, ~224s)
+  ⏳ 1CH   9 ( 44 versículos)...   Audio: 368.4s, segmentos detectados: 222
+✓  (44/44 versículos, ~362s)
+  ⏳ 1CH  10 ( 14 versículos)...   Audio: 130.7s, segmentos detectados: 70
+✓  (14/14 versículos, ~123s)
+  ⏳ 1CH  11 ( 47 versículos)...   Audio: 353.4s, segmentos detectados: 195
+✓  (47/47 versículos, ~347s)
+  ⏳ 1CH  12 ( 40 versículos)...   Audio: 359.7s, segmentos detectados: 208
+✓  (40/40 versículos, ~351s)
+
+  ── Progreso: 350/1189 (349 exitosos) ──
+
+  ⏳ 1CH  13 ( 14 versículos)...   Audio: 124.8s, segmentos detectados: 59
+✓  (14/14 versículos, ~116s)
+  ⏳ 1CH  14 ( 17 versículos)...   Audio: 129.3s, segmentos detectados: 67
+✓  (17/17 versículos, ~117s)
+  ⏳ 1CH  15 ( 29 versículos)...   Audio: 270.3s, segmentos detectados: 170
+✓  (29/29 versículos, ~259s)
+  ⏳ 1CH  16 ( 43 versículos)...   Audio: 326.2s, segmentos detectados: 190
+✓  (43/43 versículos, ~316s)
+  ⏳ 1CH  17 ( 27 versículos)...   Audio: 253.5s, segmentos detectados: 135
+✓  (27/27 versículos, ~246s)
+  ⏳ 1CH  18 ( 17 versículos)...   Audio: 146.5s, segmentos detectados: 75
+✓  (17/17 versículos, ~136s)
+  ⏳ 1CH  19 ( 19 versículos)...   Audio: 211.1s, segmentos detectados: 102
+✓  (19/19 versículos, ~198s)
+  ⏳ 1CH  20 (  8 versículos)...   Audio: 93.0s, segmentos detectados: 45
+✓  (8/8 versículos, ~81s)
+  ⏳ 1CH  21 ( 30 versículos)...   Audio: 296.9s, segmentos detectados: 148
+✓  (30/30 versículos, ~282s)
+  ⏳ 1CH  22 ( 19 versículos)...   Audio: 205.8s, segmentos detectados: 105
+✓  (19/19 versículos, ~191s)
+  ⏳ 1CH  23 ( 32 versículos)...   Audio: 258.6s, segmentos detectados: 151
+✓  (32/32 versículos, ~247s)
+  ⏳ 1CH  24 ( 31 versículos)...   Audio: 221.2s, segmentos detectados: 138
+✓  (31/31 versículos, ~208s)
+  ⏳ 1CH  25 ( 31 versículos)...   Audio: 227.6s, segmentos detectados: 163
+✓  (31/31 versículos, ~219s)
+  ⏳ 1CH  26 ( 32 versículos)...   Audio: 291.4s, segmentos detectados: 169
+✓  (32/32 versículos, ~280s)
+  ⏳ 1CH  27 ( 34 versículos)...   Audio: 280.3s, segmentos detectados: 146
+✓  (34/34 versículos, ~269s)
+  ⏳ 1CH  28 ( 21 versículos)...   Audio: 277.7s, segmentos detectados: 136
+✓  (21/21 versículos, ~260s)
+  ⏳ 1CH  29 ( 30 versículos)...   Audio: 342.7s, segmentos detectados: 177
+✓  (30/30 versículos, ~333s)
+  ⏳ 2CH   1 ( 17 versículos)...   Audio: 172.8s, segmentos detectados: 81
+✓  (17/17 versículos, ~160s)
+  ⏳ 2CH   2 ( 18 versículos)...   Audio: 209.3s, segmentos detectados: 106
+✓  (18/18 versículos, ~192s)
+  ⏳ 2CH   3 ( 17 versículos)...   Audio: 161.9s, segmentos detectados: 76
+✓  (17/17 versículos, ~154s)
+  ⏳ 2CH   4 ( 22 versículos)...   Audio: 203.2s, segmentos detectados: 103
+✓  (22/22 versículos, ~194s)
+  ⏳ 2CH   5 ( 14 versículos)...   Audio: 160.8s, segmentos detectados: 72
+✓  (14/14 versículos, ~148s)
+  ⏳ 2CH   6 ( 42 versículos)...   Audio: 461.8s, segmentos detectados: 218
+✓  (42/42 versículos, ~450s)
+  ⏳ 2CH   7 ( 22 versículos)...   Audio: 242.6s, segmentos detectados: 115
+✓  (22/22 versículos, ~229s)
+  ⏳ 2CH   8 ( 18 versículos)...   Audio: 187.1s, segmentos detectados: 91
+✓  (18/18 versículos, ~172s)
+  ⏳ 2CH   9 ( 31 versículos)...   Audio: 306.1s, segmentos detectados: 140
+✓  (31/31 versículos, ~293s)
+  ⏳ 2CH  10 ( 19 versículos)...   Audio: 190.6s, segmentos detectados: 101
+✓  (19/19 versículos, ~177s)
+  ⏳ 2CH  11 ( 23 versículos)...   Audio: 187.6s, segmentos detectados: 105
+✓  (23/23 versículos, ~176s)
+  ⏳ 2CH  12 ( 16 versículos)...   Audio: 159.2s, segmentos detectados: 82
+✓  (16/16 versículos, ~146s)
+  ⏳ 2CH  13 ( 22 versículos)...   Audio: 223.8s, segmentos detectados: 100
+✓  (22/22 versículos, ~214s)
+  ⏳ 2CH  14 ( 15 versículos)...   Audio: 154.1s, segmentos detectados: 78
+✓  (15/15 versículos, ~141s)
+  ⏳ 2CH  15 ( 19 versículos)...   Audio: 170.3s, segmentos detectados: 85
+✓  (19/19 versículos, ~158s)
+  ⏳ 2CH  16 ( 14 versículos)...   Audio: 150.4s, segmentos detectados: 70
+✓  (14/14 versículos, ~136s)
+  ⏳ 2CH  17 ( 19 versículos)...   Audio: 162.9s, segmentos detectados: 88
+✓  (19/19 versículos, ~151s)
+  ⏳ 2CH  18 ( 34 versículos)...   Audio: 354.5s, segmentos detectados: 189
+✓  (34/34 versículos, ~341s)
+  ⏳ 2CH  19 ( 11 versículos)...   Audio: 122.9s, segmentos detectados: 58
+✓  (11/11 versículos, ~111s)
+  ⏳ 2CH  20 ( 37 versículos)...   Audio: 407.2s, segmentos detectados: 207
+✓  (37/37 versículos, ~396s)
+  ⏳ 2CH  21 ( 20 versículos)...   Audio: 215.4s, segmentos detectados: 107
+✓  (20/20 versículos, ~202s)
+  ⏳ 2CH  22 ( 12 versículos)...   Audio: 151.9s, segmentos detectados: 76
+✓  (12/12 versículos, ~137s)
+  ⏳ 2CH  23 ( 21 versículos)...   Audio: 247.6s, segmentos detectados: 120
+✓  (21/21 versículos, ~233s)
+  ⏳ 2CH  24 ( 27 versículos)...   Audio: 300.5s, segmentos detectados: 136
+✓  (27/27 versículos, ~287s)
+  ⏳ 2CH  25 ( 28 versículos)...   Audio: 309.6s, segmentos detectados: 153
+✓  (28/28 versículos, ~298s)
+  ⏳ 2CH  26 ( 23 versículos)...   Audio: 252.4s, segmentos detectados: 128
+✓  (23/23 versículos, ~240s)
+  ⏳ 2CH  27 (  9 versículos)...   Audio: 82.6s, segmentos detectados: 40
+✓  (9/9 versículos, ~72s)
+  ⏳ 2CH  28 ( 27 versículos)...   Audio: 305.1s, segmentos detectados: 147
+✓  (27/27 versículos, ~289s)
+  ⏳ 2CH  29 ( 36 versículos)...   Audio: 391.2s, segmentos detectados: 193
+✓  (36/36 versículos, ~379s)
+  ⏳ 2CH  30 ( 27 versículos)...   Audio: 306.1s, segmentos detectados: 132
+✓  (27/27 versículos, ~296s)
+  ⏳ 2CH  31 ( 21 versículos)...   Audio: 257.4s, segmentos detectados: 134
+✓  (21/21 versículos, ~245s)
+  ⏳ 2CH  32 ( 33 versículos)...   Audio: 360.2s, segmentos detectados: 167
+✓  (33/33 versículos, ~344s)
+  ⏳ 2CH  33 ( 24 versículos)...   Audio: 249.6s, segmentos detectados: 110
+✓  (24/24 versículos, ~236s)
+
+  ── Progreso: 400/1189 (399 exitosos) ──
+
+  ⏳ 2CH  34 ( 33 versículos)...   Audio: 399.1s, segmentos detectados: 188
+✓  (33/33 versículos, ~381s)
+  ⏳ 2CH  35 ( 27 versículos)...   Audio: 324.2s, segmentos detectados: 153
+✓  (27/27 versículos, ~312s)
+  ⏳ 2CH  36 ( 23 versículos)...   Audio: 246.4s, segmentos detectados: 114
+✓  (23/23 versículos, ~236s)
+  ⏳ EZR   1 ( 11 versículos)...   Audio: 121.7s, segmentos detectados: 58
+✓  (11/11 versículos, ~107s)
+  ⏳ EZR   2 ( 70 versículos)...   Audio: 429.5s, segmentos detectados: 282
+✓  (70/70 versículos, ~422s)
+  ⏳ EZR   3 ( 13 versículos)...   Audio: 173.7s, segmentos detectados: 82
+✓  (13/13 versículos, ~158s)
+  ⏳ EZR   4 ( 24 versículos)...   Audio: 260.4s, segmentos detectados: 136
+✓  (24/24 versículos, ~245s)
+  ⏳ EZR   5 ( 17 versículos)...   Audio: 195.9s, segmentos detectados: 85
+✓  (17/17 versículos, ~180s)
+  ⏳ EZR   6 ( 22 versículos)...   Audio: 261.2s, segmentos detectados: 124
+✓  (22/22 versículos, ~246s)
+  ⏳ EZR   7 ( 28 versículos)...   Audio: 277.4s, segmentos detectados: 145
+✓  (28/28 versículos, ~262s)
+  ⏳ EZR   8 ( 36 versículos)...   Audio: 342.3s, segmentos detectados: 199
+✓  (36/36 versículos, ~327s)
+  ⏳ EZR   9 ( 15 versículos)...   Audio: 213.2s, segmentos detectados: 104
+✓  (15/15 versículos, ~200s)
+  ⏳ EZR  10 ( 44 versículos)...   Audio: 380.1s, segmentos detectados: 255
+✓  (44/44 versículos, ~370s)
+  ⏳ NEH   1 ( 11 versículos)...   Audio: 131.3s, segmentos detectados: 73
+✓  (11/11 versículos, ~115s)
+  ⏳ NEH   2 ( 20 versículos)...   Audio: 229.2s, segmentos detectados: 121
+✓  (20/20 versículos, ~217s)
+  ⏳ NEH   3 ( 32 versículos)...   Audio: 316.9s, segmentos detectados: 153
+✓  (32/32 versículos, ~305s)
+  ⏳ NEH   4 ( 23 versículos)...   Audio: 234.9s, segmentos detectados: 118
+✓  (23/23 versículos, ~225s)
+  ⏳ NEH   5 ( 19 versículos)...   Audio: 216.6s, segmentos detectados: 107
+✓  (19/19 versículos, ~204s)
+  ⏳ NEH   6 ( 19 versículos)...   Audio: 196.6s, segmentos detectados: 102
+✓  (19/19 versículos, ~182s)
+  ⏳ NEH   7 ( 73 versículos)...   Audio: 487.2s, segmentos detectados: 305
+✓  (73/73 versículos, ~478s)
+  ⏳ NEH   8 ( 18 versículos)...   Audio: 234.3s, segmentos detectados: 138
+✓  (18/18 versículos, ~217s)
+  ⏳ NEH   9 ( 38 versículos)...   Audio: 469.8s, segmentos detectados: 248
+✓  (38/38 versículos, ~456s)
+  ⏳ NEH  10 ( 39 versículos)...   Audio: 290.1s, segmentos detectados: 197
+✓  (39/39 versículos, ~279s)
+  ⏳ NEH  11 ( 36 versículos)...   Audio: 294.1s, segmentos detectados: 187
+✓  (36/36 versículos, ~285s)
+  ⏳ NEH  12 ( 47 versículos)...   Audio: 399.5s, segmentos detectados: 265
+✓  (47/47 versículos, ~385s)
+  ⏳ NEH  13 ( 31 versículos)...   Audio: 326.5s, segmentos detectados: 163
+✓  (31/31 versículos, ~317s)
+  ⏳ EST   1 ( 22 versículos)...   Audio: 244.0s, segmentos detectados: 115
+✓  (22/22 versículos, ~230s)
+  ⏳ EST   2 ( 23 versículos)...   Audio: 267.3s, segmentos detectados: 128
+✓  (23/23 versículos, ~254s)
+  ⏳ EST   3 ( 15 versículos)...   Audio: 184.6s, segmentos detectados: 86
+✓  (15/15 versículos, ~168s)
+  ⏳ EST   4 ( 17 versículos)...   Audio: 173.3s, segmentos detectados: 81
+✓  (17/17 versículos, ~165s)
+  ⏳ EST   5 ( 14 versículos)...   Audio: 149.7s, segmentos detectados: 76
+✓  (14/14 versículos, ~136s)
+  ⏳ EST   6 ( 14 versículos)...   Audio: 153.7s, segmentos detectados: 74
+✓  (14/14 versículos, ~140s)
+  ⏳ EST   7 ( 10 versículos)...   Audio: 117.6s, segmentos detectados: 57
+✓  (10/10 versículos, ~105s)
+  ⏳ EST   8 ( 17 versículos)...   Audio: 212.6s, segmentos detectados: 93
+✓  (17/17 versículos, ~196s)
+  ⏳ EST   9 ( 32 versículos)...   Audio: 341.3s, segmentos detectados: 166
+✓  (32/32 versículos, ~324s)
+  ⏳ EST  10 (  3 versículos)...   Audio: 30.2s, segmentos detectados: 14
+✓  (3/3 versículos, ~18s)
+  ⏳ JOB   1 ( 22 versículos)...   Audio: 217.5s, segmentos detectados: 118
+✓  (22/22 versículos, ~207s)
+  ⏳ JOB   2 ( 13 versículos)...   Audio: 128.6s, segmentos detectados: 68
+✓  (13/13 versículos, ~114s)
+  ⏳ JOB   3 ( 26 versículos)...   Audio: 154.8s, segmentos detectados: 86
+✓  (26/26 versículos, ~148s)
+  ⏳ JOB   4 ( 21 versículos)...   Audio: 131.2s, segmentos detectados: 78
+✓  (21/21 versículos, ~125s)
+  ⏳ JOB   5 ( 27 versículos)...   Audio: 168.6s, segmentos detectados: 88
+✓  (27/27 versículos, ~163s)
+  ⏳ JOB   6 ( 30 versículos)...   Audio: 178.2s, segmentos detectados: 102
+✓  (30/30 versículos, ~169s)
+  ⏳ JOB   7 ( 21 versículos)...   Audio: 133.0s, segmentos detectados: 79
+✓  (21/21 versículos, ~126s)
+  ⏳ JOB   8 ( 22 versículos)...   Audio: 133.5s, segmentos detectados: 75
+✓  (22/22 versículos, ~127s)
+  ⏳ JOB   9 ( 35 versículos)...   Audio: 206.2s, segmentos detectados: 128
+✓  (35/35 versículos, ~201s)
+  ⏳ JOB  10 ( 22 versículos)...   Audio: 134.2s, segmentos detectados: 79
+✓  (22/22 versículos, ~128s)
+  ⏳ JOB  11 ( 20 versículos)...   Audio: 124.8s, segmentos detectados: 70
+✓  (20/20 versículos, ~117s)
+  ⏳ JOB  12 ( 25 versículos)...   Audio: 161.5s, segmentos detectados: 91
+✓  (25/25 versículos, ~152s)
+  ⏳ JOB  13 ( 28 versículos)...   Audio: 164.9s, segmentos detectados: 90
+✓  (28/28 versículos, ~156s)
+  ⏳ JOB  14 ( 22 versículos)...   Audio: 144.3s, segmentos detectados: 86
+✓  (22/22 versículos, ~137s)
+
+  ── Progreso: 450/1189 (449 exitosos) ──
+
+  ⏳ JOB  15 ( 35 versículos)...   Audio: 207.3s, segmentos detectados: 108
+✓  (35/35 versículos, ~201s)
+  ⏳ JOB  16 ( 22 versículos)...   Audio: 137.3s, segmentos detectados: 78
+✓  (22/22 versículos, ~129s)
+  ⏳ JOB  17 ( 16 versículos)...   Audio: 97.3s, segmentos detectados: 56
+✓  (16/16 versículos, ~89s)
+  ⏳ JOB  18 ( 21 versículos)...   Audio: 121.7s, segmentos detectados: 65
+✓  (21/21 versículos, ~112s)
+  ⏳ JOB  19 ( 29 versículos)...   Audio: 178.2s, segmentos detectados: 96
+✓  (29/29 versículos, ~169s)
+  ⏳ JOB  20 ( 29 versículos)...   Audio: 177.4s, segmentos detectados: 95
+✓  (29/29 versículos, ~167s)
+  ⏳ JOB  21 ( 34 versículos)...   Audio: 206.1s, segmentos detectados: 113
+✓  (34/34 versículos, ~197s)
+  ⏳ JOB  22 ( 30 versículos)...   Audio: 180.2s, segmentos detectados: 101
+✓  (30/30 versículos, ~171s)
+  ⏳ JOB  23 ( 17 versículos)...   Audio: 97.0s, segmentos detectados: 59
+✓  (17/17 versículos, ~88s)
+  ⏳ JOB  24 ( 25 versículos)...   Audio: 170.8s, segmentos detectados: 96
+✓  (25/25 versículos, ~165s)
+  ⏳ JOB  25 (  6 versículos)...   Audio: 33.2s, segmentos detectados: 19
+✓  (6/6 versículos, ~27s)
+  ⏳ JOB  26 ( 14 versículos)...   Audio: 79.8s, segmentos detectados: 45
+✓  (14/14 versículos, ~71s)
+  ⏳ JOB  27 ( 23 versículos)...   Audio: 137.6s, segmentos detectados: 75
+✓  (23/23 versículos, ~130s)
+  ⏳ JOB  28 ( 28 versículos)...   Audio: 161.9s, segmentos detectados: 92
+✓  (28/28 versículos, ~154s)
+  ⏳ JOB  29 ( 25 versículos)...   Audio: 148.1s, segmentos detectados: 85
+✓  (25/25 versículos, ~140s)
+  ⏳ JOB  30 ( 31 versículos)...   Audio: 193.7s, segmentos detectados: 110
+✓  (31/31 versículos, ~185s)
+  ⏳ JOB  31 ( 40 versículos)...   Audio: 246.1s, segmentos detectados: 130
+✓  (40/40 versículos, ~238s)
+  ⏳ JOB  32 ( 22 versículos)...   Audio: 149.9s, segmentos detectados: 85
+✓  (22/22 versículos, ~141s)
+  ⏳ JOB  33 ( 33 versículos)...   Audio: 199.6s, segmentos detectados: 119
+✓  (33/33 versículos, ~195s)
+  ⏳ JOB  34 ( 37 versículos)...   Audio: 235.4s, segmentos detectados: 135
+✓  (37/37 versículos, ~228s)
+  ⏳ JOB  35 ( 15 versículos)...   Audio: 90.1s, segmentos detectados: 55
+✓  (15/15 versículos, ~82s)
+  ⏳ JOB  36 ( 33 versículos)...   Audio: 203.3s, segmentos detectados: 113
+✓  (33/33 versículos, ~196s)
+  ⏳ JOB  37 ( 24 versículos)...   Audio: 156.8s, segmentos detectados: 82
+✓  (24/24 versículos, ~147s)
+  ⏳ JOB  38 ( 38 versículos)...   Audio: 227.7s, segmentos detectados: 120
+✓  (38/38 versículos, ~219s)
+  ⏳ JOB  39 ( 30 versículos)...   Audio: 214.6s, segmentos detectados: 117
+✓  (30/30 versículos, ~209s)
+  ⏳ JOB  40 ( 19 versículos)...   Audio: 109.9s, segmentos detectados: 61
+✓  (19/19 versículos, ~101s)
+  ⏳ JOB  41 ( 34 versículos)...   Audio: 195.4s, segmentos detectados: 103
+✓  (34/34 versículos, ~188s)
+  ⏳ JOB  42 ( 17 versículos)...   Audio: 145.5s, segmentos detectados: 83
+✓  (17/17 versículos, ~137s)
+  ⏳ PSA   1 (  6 versículos)...   Audio: 42.3s, segmentos detectados: 21
+✓  (6/6 versículos, ~33s)
+  ⏳ PSA   2 ( 12 versículos)...   Audio: 73.0s, segmentos detectados: 46
+✓  (12/12 versículos, ~64s)
+  ⏳ PSA   3 (  8 versículos)...   Audio: 56.6s, segmentos detectados: 36
+✓  (8/8 versículos, ~48s)
+  ⏳ PSA   4 (  8 versículos)...   Audio: 64.2s, segmentos detectados: 42
+✓  (8/8 versículos, ~57s)
+  ⏳ PSA   5 ( 12 versículos)...   Audio: 89.9s, segmentos detectados: 53
+✓  (12/12 versículos, ~83s)
+  ⏳ PSA   6 ( 10 versículos)...   Audio: 69.0s, segmentos detectados: 43
+✓  (10/10 versículos, ~57s)
+  ⏳ PSA   7 ( 17 versículos)...   Audio: 120.6s, segmentos detectados: 69
+✓  (17/17 versículos, ~108s)
+  ⏳ PSA   8 (  9 versículos)...   Audio: 65.2s, segmentos detectados: 40
+✓  (9/9 versículos, ~55s)
+  ⏳ PSA   9 ( 20 versículos)...   Audio: 138.2s, segmentos detectados: 79
+✓  (20/20 versículos, ~132s)
+  ⏳ PSA  10 ( 18 versículos)...   Audio: 127.5s, segmentos detectados: 75
+✓  (18/18 versículos, ~117s)
+  ⏳ PSA  11 (  7 versículos)...   Audio: 52.6s, segmentos detectados: 29
+✓  (7/7 versículos, ~43s)
+  ⏳ PSA  12 (  8 versículos)...   Audio: 63.3s, segmentos detectados: 38
+✓  (8/8 versículos, ~53s)
+  ⏳ PSA  13 (  6 versículos)...   Audio: 41.8s, segmentos detectados: 27
+✓  (6/6 versículos, ~33s)
+  ⏳ PSA  14 (  7 versículos)...   Audio: 55.9s, segmentos detectados: 31
+✓  (7/7 versículos, ~46s)
+  ⏳ PSA  15 (  5 versículos)...   Audio: 39.5s, segmentos detectados: 23
+✓  (5/5 versículos, ~30s)
+  ⏳ PSA  16 ( 11 versículos)...   Audio: 73.3s, segmentos detectados: 41
+✓  (11/11 versículos, ~66s)
+  ⏳ PSA  17 ( 15 versículos)...   Audio: 105.4s, segmentos detectados: 59
+✓  (15/15 versículos, ~97s)
+  ⏳ PSA  18 ( 50 versículos)...   Audio: 337.5s, segmentos detectados: 196
+✓  (50/50 versículos, ~330s)
+  ⏳ PSA  19 ( 14 versículos)...   Audio: 105.7s, segmentos detectados: 64
+✓  (14/14 versículos, ~97s)
+  ⏳ PSA  20 (  9 versículos)...   Audio: 62.7s, segmentos detectados: 34
+✓  (9/9 versículos, ~56s)
+  ⏳ PSA  21 ( 13 versículos)...   Audio: 84.6s, segmentos detectados: 45
+✓  (13/13 versículos, ~78s)
+  ⏳ PSA  22 ( 31 versículos)...   Audio: 214.5s, segmentos detectados: 131
+✓  (31/31 versículos, ~205s)
+
+  ── Progreso: 500/1189 (499 exitosos) ──
+
+  ⏳ PSA  23 (  6 versículos)...   Audio: 43.2s, segmentos detectados: 22
+✓  (6/6 versículos, ~31s)
+  ⏳ PSA  24 ( 10 versículos)...   Audio: 70.4s, segmentos detectados: 46
+✓  (10/10 versículos, ~62s)
+  ⏳ PSA  25 ( 22 versículos)...   Audio: 136.5s, segmentos detectados: 82
+✓  (22/22 versículos, ~131s)
+  ⏳ PSA  26 ( 12 versículos)...   Audio: 72.6s, segmentos detectados: 44
+✓  (12/12 versículos, ~65s)
+  ⏳ PSA  27 ( 14 versículos)...   Audio: 115.4s, segmentos detectados: 67
+✓  (14/14 versículos, ~109s)
+  ⏳ PSA  28 (  9 versículos)...   Audio: 69.2s, segmentos detectados: 42
+✓  (9/9 versículos, ~59s)
+  ⏳ PSA  29 ( 11 versículos)...   Audio: 66.0s, segmentos detectados: 35
+✓  (11/11 versículos, ~57s)
+  ⏳ PSA  30 ( 12 versículos)...   Audio: 85.8s, segmentos detectados: 58
+✓  (12/12 versículos, ~78s)
+  ⏳ PSA  31 ( 24 versículos)...   Audio: 182.5s, segmentos detectados: 105
+✓  (24/24 versículos, ~171s)
+  ⏳ PSA  32 ( 11 versículos)...   Audio: 86.7s, segmentos detectados: 50
+✓  (11/11 versículos, ~80s)
+  ⏳ PSA  33 ( 22 versículos)...   Audio: 129.8s, segmentos detectados: 71
+✓  (22/22 versículos, ~124s)
+  ⏳ PSA  34 ( 22 versículos)...   Audio: 131.7s, segmentos detectados: 81
+✓  (22/22 versículos, ~122s)
+  ⏳ PSA  35 ( 28 versículos)...   Audio: 193.2s, segmentos detectados: 114
+✓  (28/28 versículos, ~184s)
+  ⏳ PSA  36 ( 12 versículos)...   Audio: 81.7s, segmentos detectados: 47
+✓  (12/12 versículos, ~75s)
+  ⏳ PSA  37 ( 40 versículos)...   Audio: 259.4s, segmentos detectados: 146
+✓  (40/40 versículos, ~253s)
+  ⏳ PSA  38 ( 22 versículos)...   Audio: 137.1s, segmentos detectados: 81
+✓  (22/22 versículos, ~133s)
+  ⏳ PSA  39 ( 13 versículos)...   Audio: 100.5s, segmentos detectados: 61
+✓  (13/13 versículos, ~92s)
+  ⏳ PSA  40 ( 17 versículos)...   Audio: 140.0s, segmentos detectados: 83
+✓  (17/17 versículos, ~132s)
+  ⏳ PSA  41 ( 13 versículos)...   Audio: 91.4s, segmentos detectados: 58
+✓  (13/13 versículos, ~84s)
+  ⏳ PSA  42 ( 11 versículos)...   Audio: 99.0s, segmentos detectados: 60
+✓  (11/11 versículos, ~89s)
+  ⏳ PSA  43 (  5 versículos)...   Audio: 42.7s, segmentos detectados: 28
+✓  (5/5 versículos, ~33s)
+  ⏳ PSA  44 ( 26 versículos)...   Audio: 172.1s, segmentos detectados: 98
+✓  (26/26 versículos, ~164s)
+  ⏳ PSA  45 ( 17 versículos)...   Audio: 127.1s, segmentos detectados: 70
+✓  (17/17 versículos, ~112s)
+  ⏳ PSA  46 ( 11 versículos)...   Audio: 80.8s, segmentos detectados: 46
+✓  (11/11 versículos, ~71s)
+  ⏳ PSA  47 (  9 versículos)...   Audio: 57.9s, segmentos detectados: 35
+✓  (9/9 versículos, ~49s)
+  ⏳ PSA  48 ( 14 versículos)...   Audio: 91.6s, segmentos detectados: 56
+✓  (14/14 versículos, ~82s)
+  ⏳ PSA  49 ( 20 versículos)...   Audio: 133.8s, segmentos detectados: 70
+✓  (20/20 versículos, ~126s)
+  ⏳ PSA  50 ( 23 versículos)...   Audio: 149.5s, segmentos detectados: 95
+✓  (23/23 versículos, ~140s)
+  ⏳ PSA  51 ( 19 versículos)...   Audio: 129.2s, segmentos detectados: 78
+✓  (19/19 versículos, ~117s)
+  ⏳ PSA  52 (  9 versículos)...   Audio: 71.9s, segmentos detectados: 41
+✓  (9/9 versículos, ~64s)
+  ⏳ PSA  53 (  6 versículos)...   Audio: 56.0s, segmentos detectados: 29
+✓  (6/6 versículos, ~44s)
+  ⏳ PSA  54 (  7 versículos)...   Audio: 51.0s, segmentos detectados: 33
+✓  (7/7 versículos, ~43s)
+  ⏳ PSA  55 ( 23 versículos)...   Audio: 158.2s, segmentos detectados: 95
+✓  (23/23 versículos, ~147s)
+  ⏳ PSA  56 ( 13 versículos)...   Audio: 88.8s, segmentos detectados: 51
+✓  (13/13 versículos, ~81s)
+  ⏳ PSA  57 ( 11 versículos)...   Audio: 85.8s, segmentos detectados: 57
+✓  (11/11 versículos, ~75s)
+  ⏳ PSA  58 ( 11 versículos)...   Audio: 79.8s, segmentos detectados: 45
+✓  (11/11 versículos, ~67s)
+  ⏳ PSA  59 ( 17 versículos)...   Audio: 130.2s, segmentos detectados: 82
+✓  (17/17 versículos, ~123s)
+  ⏳ PSA  60 ( 12 versículos)...   Audio: 88.8s, segmentos detectados: 59
+✓  (12/12 versículos, ~79s)
+  ⏳ PSA  61 (  8 versículos)...   Audio: 52.9s, segmentos detectados: 32
+✓  (8/8 versículos, ~44s)
+  ⏳ PSA  62 ( 12 versículos)...   Audio: 93.8s, segmentos detectados: 60
+✓  (12/12 versículos, ~87s)
+  ⏳ PSA  63 ( 11 versículos)...   Audio: 72.5s, segmentos detectados: 38
+✓  (11/11 versículos, ~64s)
+  ⏳ PSA  64 ( 10 versículos)...   Audio: 69.5s, segmentos detectados: 40
+✓  (10/10 versículos, ~63s)
+  ⏳ PSA  65 ( 13 versículos)...   Audio: 99.9s, segmentos detectados: 60
+✓  (13/13 versículos, ~92s)
+  ⏳ PSA  66 ( 20 versículos)...   Audio: 125.8s, segmentos detectados: 78
+✓  (20/20 versículos, ~120s)
+  ⏳ PSA  67 (  7 versículos)...   Audio: 47.5s, segmentos detectados: 32
+✓  (7/7 versículos, ~39s)
+  ⏳ PSA  68 ( 35 versículos)...   Audio: 266.1s, segmentos detectados: 151
+✓  (35/35 versículos, ~258s)
+  ⏳ PSA  69 ( 36 versículos)...   Audio: 247.2s, segmentos detectados: 145
+✓  (36/36 versículos, ~238s)
+  ⏳ PSA  70 (  5 versículos)...   Audio: 40.9s, segmentos detectados: 29
+✓  (5/5 versículos, ~32s)
+  ⏳ PSA  71 ( 24 versículos)...   Audio: 165.9s, segmentos detectados: 102
+✓  (24/24 versículos, ~154s)
+  ⏳ PSA  72 ( 20 versículos)...   Audio: 132.0s, segmentos detectados: 71
+✓  (20/20 versículos, ~126s)
+
+  ── Progreso: 550/1189 (549 exitosos) ──
+
+  ⏳ PSA  73 ( 28 versículos)...   Audio: 171.4s, segmentos detectados: 99
+✓  (28/28 versículos, ~163s)
+  ⏳ PSA  74 ( 23 versículos)...   Audio: 156.0s, segmentos detectados: 79
+✓  (23/23 versículos, ~145s)
+  ⏳ PSA  75 ( 10 versículos)...   Audio: 69.5s, segmentos detectados: 44
+✓  (10/10 versículos, ~58s)
+  ⏳ PSA  76 ( 12 versículos)...   Audio: 82.0s, segmentos detectados: 53
+✓  (12/12 versículos, ~72s)
+  ⏳ PSA  77 ( 20 versículos)...   Audio: 132.5s, segmentos detectados: 81
+✓  (20/20 versículos, ~122s)
+  ⏳ PSA  78 ( 72 versículos)...   Audio: 462.6s, segmentos detectados: 252
+✓  (72/72 versículos, ~454s)
+  ⏳ PSA  79 ( 13 versículos)...   Audio: 103.2s, segmentos detectados: 56
+✓  (13/13 versículos, ~94s)
+  ⏳ PSA  80 ( 19 versículos)...   Audio: 124.8s, segmentos detectados: 79
+✓  (19/19 versículos, ~117s)
+  ⏳ PSA  81 ( 16 versículos)...   Audio: 105.4s, segmentos detectados: 64
+✓  (16/16 versículos, ~96s)
+  ⏳ PSA  82 (  8 versículos)...   Audio: 49.7s, segmentos detectados: 30
+✓  (8/8 versículos, ~44s)
+  ⏳ PSA  83 ( 18 versículos)...   Audio: 109.2s, segmentos detectados: 67
+✓  (18/18 versículos, ~102s)
+  ⏳ PSA  84 ( 12 versículos)...   Audio: 87.2s, segmentos detectados: 49
+✓  (12/12 versículos, ~77s)
+  ⏳ PSA  85 ( 13 versículos)...   Audio: 80.0s, segmentos detectados: 46
+✓  (13/13 versículos, ~72s)
+  ⏳ PSA  86 ( 17 versículos)...   Audio: 119.7s, segmentos detectados: 83
+✓  (17/17 versículos, ~114s)
+  ⏳ PSA  87 (  7 versículos)...   Audio: 45.4s, segmentos detectados: 28
+✓  (7/7 versículos, ~38s)
+  ⏳ PSA  88 ( 18 versículos)...   Audio: 118.5s, segmentos detectados: 68
+✓  (18/18 versículos, ~110s)
+  ⏳ PSA  89 ( 52 versículos)...   Audio: 333.0s, segmentos detectados: 181
+✓  (52/52 versículos, ~327s)
+  ⏳ PSA  90 ( 17 versículos)...   Audio: 117.1s, segmentos detectados: 65
+✓  (17/17 versículos, ~108s)
+  ⏳ PSA  91 ( 16 versículos)...   Audio: 94.4s, segmentos detectados: 58
+✓  (16/16 versículos, ~87s)
+  ⏳ PSA  92 ( 15 versículos)...   Audio: 94.0s, segmentos detectados: 55
+✓  (15/15 versículos, ~86s)
+  ⏳ PSA  93 (  5 versículos)...   Audio: 36.3s, segmentos detectados: 23
+✓  (5/5 versículos, ~29s)
+  ⏳ PSA  94 ( 23 versículos)...   Audio: 137.8s, segmentos detectados: 89
+✓  (23/23 versículos, ~130s)
+  ⏳ PSA  95 ( 11 versículos)...   Audio: 68.4s, segmentos detectados: 40
+✓  (11/11 versículos, ~60s)
+  ⏳ PSA  96 ( 13 versículos)...   Audio: 85.1s, segmentos detectados: 52
+✓  (13/13 versículos, ~77s)
+  ⏳ PSA  97 ( 12 versículos)...   Audio: 76.9s, segmentos detectados: 45
+✓  (12/12 versículos, ~71s)
+  ⏳ PSA  98 (  9 versículos)...   Audio: 58.5s, segmentos detectados: 33
+✓  (9/9 versículos, ~51s)
+  ⏳ PSA  99 (  9 versículos)...   Audio: 60.7s, segmentos detectados: 35
+✓  (9/9 versículos, ~51s)
+  ⏳ PSA 100 (  5 versículos)...   Audio: 35.8s, segmentos detectados: 21
+✓  (5/5 versículos, ~27s)
+  ⏳ PSA 101 (  8 versículos)...   Audio: 60.9s, segmentos detectados: 30
+✓  (8/8 versículos, ~49s)
+  ⏳ PSA 102 ( 28 versículos)...   Audio: 178.4s, segmentos detectados: 99
+✓  (28/28 versículos, ~170s)
+  ⏳ PSA 103 ( 22 versículos)...   Audio: 143.2s, segmentos detectados: 79
+✓  (22/22 versículos, ~137s)
+  ⏳ PSA 104 ( 35 versículos)...   Audio: 222.3s, segmentos detectados: 132
+✓  (35/35 versículos, ~218s)
+  ⏳ PSA 105 ( 45 versículos)...   Audio: 257.8s, segmentos detectados: 147
+✓  (45/45 versículos, ~251s)
+  ⏳ PSA 106 ( 48 versículos)...   Audio: 298.8s, segmentos detectados: 161
+✓  (48/48 versículos, ~293s)
+  ⏳ PSA 107 ( 43 versículos)...   Audio: 257.1s, segmentos detectados: 139
+✓  (43/43 versículos, ~248s)
+  ⏳ PSA 108 ( 13 versículos)...   Audio: 82.1s, segmentos detectados: 53
+✓  (13/13 versículos, ~73s)
+  ⏳ PSA 109 ( 31 versículos)...   Audio: 191.5s, segmentos detectados: 109
+✓  (31/31 versículos, ~183s)
+  ⏳ PSA 110 (  7 versículos)...   Audio: 48.8s, segmentos detectados: 25
+✓  (7/7 versículos, ~41s)
+  ⏳ PSA 111 ( 10 versículos)...   Audio: 61.8s, segmentos detectados: 33
+✓  (10/10 versículos, ~53s)
+  ⏳ PSA 112 ( 10 versículos)...   Audio: 65.5s, segmentos detectados: 38
+✓  (10/10 versículos, ~59s)
+  ⏳ PSA 113 (  9 versículos)...   Audio: 49.2s, segmentos detectados: 29
+✓  (9/9 versículos, ~42s)
+  ⏳ PSA 114 (  8 versículos)...   Audio: 44.6s, segmentos detectados: 32
+✓  (8/8 versículos, ~37s)
+  ⏳ PSA 115 ( 18 versículos)...   Audio: 104.3s, segmentos detectados: 69
+✓  (18/18 versículos, ~97s)
+  ⏳ PSA 116 ( 19 versículos)...   Audio: 105.1s, segmentos detectados: 66
+✓  (19/19 versículos, ~99s)
+  ⏳ PSA 117 (  2 versículos)...   Audio: 13.5s, segmentos detectados: 9
+✓  (2/2 versículos, ~4s)
+  ⏳ PSA 118 ( 29 versículos)...   Audio: 164.3s, segmentos detectados: 96
+✓  (29/29 versículos, ~157s)
+  ⏳ PSA 119 (176 versículos)...   Audio: 1069.2s, segmentos detectados: 589
+✓  (176/176 versículos, ~1061s)
+  ⏳ PSA 120 (  7 versículos)...   Audio: 36.6s, segmentos detectados: 27
+✓  (7/7 versículos, ~32s)
+  ⏳ PSA 121 (  8 versículos)...   Audio: 40.4s, segmentos detectados: 25
+✓  (8/8 versículos, ~33s)
+  ⏳ PSA 122 (  9 versículos)...   Audio: 51.5s, segmentos detectados: 29
+✓  (9/9 versículos, ~42s)
+
+  ── Progreso: 600/1189 (599 exitosos) ──
+
+  ⏳ PSA 123 (  4 versículos)...   Audio: 33.3s, segmentos detectados: 16
+✓  (4/4 versículos, ~22s)
+  ⏳ PSA 124 (  8 versículos)...   Audio: 48.0s, segmentos detectados: 26
+✓  (8/8 versículos, ~41s)
+  ⏳ PSA 125 (  5 versículos)...   Audio: 38.4s, segmentos detectados: 20
+✓  (5/5 versículos, ~30s)
+  ⏳ PSA 126 (  6 versículos)...   Audio: 41.1s, segmentos detectados: 22
+✓  (6/6 versículos, ~31s)
+  ⏳ PSA 127 (  5 versículos)...   Audio: 40.1s, segmentos detectados: 22
+✓  (5/5 versículos, ~27s)
+  ⏳ PSA 128 (  6 versículos)...   Audio: 36.3s, segmentos detectados: 19
+✓  (6/6 versículos, ~28s)
+  ⏳ PSA 129 (  8 versículos)...   Audio: 45.9s, segmentos detectados: 22
+✓  (8/8 versículos, ~39s)
+  ⏳ PSA 130 (  8 versículos)...   Audio: 45.9s, segmentos detectados: 30
+✓  (8/8 versículos, ~37s)
+  ⏳ PSA 131 (  3 versículos)...   Audio: 25.9s, segmentos detectados: 15
+✓  (3/3 versículos, ~16s)
+  ⏳ PSA 132 ( 18 versículos)...   Audio: 103.5s, segmentos detectados: 62
+✓  (18/18 versículos, ~95s)
+  ⏳ PSA 133 (  3 versículos)...   Audio: 24.9s, segmentos detectados: 13
+✓  (3/3 versículos, ~14s)
+  ⏳ PSA 134 (  3 versículos)...   Audio: 20.2s, segmentos detectados: 12
+✓  (3/3 versículos, ~13s)
+  ⏳ PSA 135 ( 21 versículos)...   Audio: 127.7s, segmentos detectados: 83
+✓  (21/21 versículos, ~122s)
+  ⏳ PSA 136 ( 26 versículos)...   Audio: 149.1s, segmentos detectados: 80
+✓  (26/26 versículos, ~141s)
+  ⏳ PSA 137 (  9 versículos)...   Audio: 61.8s, segmentos detectados: 33
+✓  (9/9 versículos, ~51s)
+  ⏳ PSA 138 (  8 versículos)...   Audio: 59.5s, segmentos detectados: 35
+✓  (8/8 versículos, ~52s)
+  ⏳ PSA 139 ( 24 versículos)...   Audio: 155.6s, segmentos detectados: 95
+✓  (24/24 versículos, ~147s)
+  ⏳ PSA 140 ( 13 versículos)...   Audio: 93.7s, segmentos detectados: 57
+✓  (13/13 versículos, ~82s)
+  ⏳ PSA 141 ( 10 versículos)...   Audio: 72.8s, segmentos detectados: 42
+✓  (10/10 versículos, ~62s)
+  ⏳ PSA 142 (  7 versículos)...   Audio: 55.1s, segmentos detectados: 31
+✓  (7/7 versículos, ~45s)
+  ⏳ PSA 143 ( 12 versículos)...   Audio: 88.4s, segmentos detectados: 49
+✓  (12/12 versículos, ~78s)
+  ⏳ PSA 144 ( 15 versículos)...   Audio: 109.5s, segmentos detectados: 66
+✓  (15/15 versículos, ~99s)
+  ⏳ PSA 145 ( 21 versículos)...   Audio: 128.3s, segmentos detectados: 72
+✓  (21/21 versículos, ~118s)
+  ⏳ PSA 146 ( 10 versículos)...   Audio: 66.0s, segmentos detectados: 41
+✓  (10/10 versículos, ~59s)
+  ⏳ PSA 147 ( 20 versículos)...   Audio: 116.6s, segmentos detectados: 68
+✓  (20/20 versículos, ~110s)
+  ⏳ PSA 148 ( 14 versículos)...   Audio: 86.4s, segmentos detectados: 56
+✓  (14/14 versículos, ~80s)
+  ⏳ PSA 149 (  9 versículos)...   Audio: 53.4s, segmentos detectados: 28
+✓  (9/9 versículos, ~46s)
+  ⏳ PSA 150 (  6 versículos)...   Audio: 33.6s, segmentos detectados: 19
+✓  (6/6 versículos, ~26s)
+  ⏳ PRO   1 ( 33 versículos)...   Audio: 207.5s, segmentos detectados: 119
+✓  (33/33 versículos, ~201s)
+  ⏳ PRO   2 ( 22 versículos)...   Audio: 126.2s, segmentos detectados: 68
+✓  (22/22 versículos, ~116s)
+  ⏳ PRO   3 ( 35 versículos)...   Audio: 203.8s, segmentos detectados: 114
+✓  (35/35 versículos, ~196s)
+  ⏳ PRO   4 ( 27 versículos)...   Audio: 161.5s, segmentos detectados: 100
+✓  (27/27 versículos, ~156s)
+  ⏳ PRO   5 ( 23 versículos)...   Audio: 134.9s, segmentos detectados: 74
+✓  (23/23 versículos, ~126s)
+  ⏳ PRO   6 ( 35 versículos)...   Audio: 216.4s, segmentos detectados: 124
+✓  (35/35 versículos, ~209s)
+  ⏳ PRO   7 ( 27 versículos)...   Audio: 160.8s, segmentos detectados: 95
+✓  (27/27 versículos, ~151s)
+  ⏳ PRO   8 ( 36 versículos)...   Audio: 230.7s, segmentos detectados: 138
+✓  (36/36 versículos, ~225s)
+  ⏳ PRO   9 ( 18 versículos)...   Audio: 104.6s, segmentos detectados: 67
+✓  (18/18 versículos, ~95s)
+  ⏳ PRO  10 ( 32 versículos)...   Audio: 203.6s, segmentos detectados: 104
+✓  (32/32 versículos, ~194s)
+  ⏳ PRO  11 ( 31 versículos)...   Audio: 202.9s, segmentos detectados: 109
+✓  (31/31 versículos, ~195s)
+  ⏳ PRO  12 ( 28 versículos)...   Audio: 181.5s, segmentos detectados: 91
+✓  (28/28 versículos, ~172s)
+  ⏳ PRO  13 ( 25 versículos)...   Audio: 163.1s, segmentos detectados: 86
+✓  (25/25 versículos, ~154s)
+  ⏳ PRO  14 ( 35 versículos)...   Audio: 221.4s, segmentos detectados: 112
+✓  (35/35 versículos, ~211s)
+  ⏳ PRO  15 ( 33 versículos)...   Audio: 212.6s, segmentos detectados: 105
+✓  (33/33 versículos, ~204s)
+  ⏳ PRO  16 ( 33 versículos)...   Audio: 206.6s, segmentos detectados: 104
+✓  (33/33 versículos, ~199s)
+  ⏳ PRO  17 ( 28 versículos)...   Audio: 182.0s, segmentos detectados: 95
+✓  (28/28 versículos, ~175s)
+  ⏳ PRO  18 ( 24 versículos)...   Audio: 147.0s, segmentos detectados: 77
+✓  (24/24 versículos, ~140s)
+  ⏳ PRO  19 ( 29 versículos)...   Audio: 185.1s, segmentos detectados: 100
+✓  (29/29 versículos, ~174s)
+  ⏳ PRO  20 ( 30 versículos)...   Audio: 188.2s, segmentos detectados: 105
+✓  (30/30 versículos, ~178s)
+  ⏳ PRO  21 ( 31 versículos)...   Audio: 194.3s, segmentos detectados: 101
+✓  (31/31 versículos, ~187s)
+  ⏳ PRO  22 ( 29 versículos)...   Audio: 183.0s, segmentos detectados: 97
+✓  (29/29 versículos, ~175s)
+
+  ── Progreso: 650/1189 (649 exitosos) ──
+
+  ⏳ PRO  23 ( 35 versículos)...   Audio: 218.9s, segmentos detectados: 132
+✓  (35/35 versículos, ~213s)
+  ⏳ PRO  24 ( 34 versículos)...   Audio: 218.8s, segmentos detectados: 123
+✓  (34/34 versículos, ~209s)
+  ⏳ PRO  25 ( 28 versículos)...   Audio: 180.2s, segmentos detectados: 92
+✓  (28/28 versículos, ~171s)
+  ⏳ PRO  26 ( 28 versículos)...   Audio: 172.1s, segmentos detectados: 91
+✓  (28/28 versículos, ~164s)
+  ⏳ PRO  27 ( 27 versículos)...   Audio: 171.6s, segmentos detectados: 97
+✓  (27/27 versículos, ~163s)
+  ⏳ PRO  28 ( 28 versículos)...   Audio: 193.9s, segmentos detectados: 109
+✓  (28/28 versículos, ~187s)
+  ⏳ PRO  29 ( 27 versículos)...   Audio: 168.1s, segmentos detectados: 92
+✓  (27/27 versículos, ~158s)
+  ⏳ PRO  30 ( 33 versículos)...   Audio: 229.9s, segmentos detectados: 140
+✓  (33/33 versículos, ~222s)
+  ⏳ PRO  31 ( 31 versículos)...   Audio: 177.9s, segmentos detectados: 107
+✓  (31/31 versículos, ~171s)
+  ⏳ ECC   1 ( 18 versículos)...   Audio: 137.1s, segmentos detectados: 72
+✓  (18/18 versículos, ~130s)
+  ⏳ ECC   2 ( 26 versículos)...   Audio: 248.5s, segmentos detectados: 117
+✓  (26/26 versículos, ~237s)
+  ⏳ ECC   3 ( 22 versículos)...   Audio: 171.6s, segmentos detectados: 102
+✓  (22/22 versículos, ~157s)
+  ⏳ ECC   4 ( 16 versículos)...   Audio: 129.7s, segmentos detectados: 62
+✓  (16/16 versículos, ~119s)
+  ⏳ ECC   5 ( 20 versículos)...   Audio: 178.4s, segmentos detectados: 95
+✓  (20/20 versículos, ~168s)
+  ⏳ ECC   6 ( 12 versículos)...   Audio: 101.3s, segmentos detectados: 52
+✓  (12/12 versículos, ~89s)
+  ⏳ ECC   7 ( 29 versículos)...   Audio: 214.3s, segmentos detectados: 108
+✓  (29/29 versículos, ~207s)
+  ⏳ ECC   8 ( 17 versículos)...   Audio: 164.6s, segmentos detectados: 75
+✓  (17/17 versículos, ~153s)
+  ⏳ ECC   9 ( 18 versículos)...   Audio: 186.1s, segmentos detectados: 100
+✓  (18/18 versículos, ~173s)
+  ⏳ ECC  10 ( 20 versículos)...   Audio: 144.8s, segmentos detectados: 77
+✓  (20/20 versículos, ~134s)
+  ⏳ ECC  11 ( 10 versículos)...   Audio: 91.4s, segmentos detectados: 50
+✓  (10/10 versículos, ~80s)
+  ⏳ ECC  12 ( 14 versículos)...   Audio: 126.3s, segmentos detectados: 73
+✓  (14/14 versículos, ~115s)
+  ⏳ SNG   1 ( 17 versículos)...   Audio: 121.0s, segmentos detectados: 72
+✓  (17/17 versículos, ~112s)
+  ⏳ SNG   2 ( 17 versículos)...   Audio: 130.7s, segmentos detectados: 82
+✓  (17/17 versículos, ~124s)
+  ⏳ SNG   3 ( 11 versículos)...   Audio: 88.9s, segmentos detectados: 53
+✓  (11/11 versículos, ~79s)
+  ⏳ SNG   4 ( 16 versículos)...   Audio: 139.5s, segmentos detectados: 90
+✓  (16/16 versículos, ~131s)
+  ⏳ SNG   5 ( 16 versículos)...   Audio: 142.6s, segmentos detectados: 92
+✓  (16/16 versículos, ~134s)
+  ⏳ SNG   6 ( 13 versículos)...   Audio: 107.3s, segmentos detectados: 67
+✓  (13/13 versículos, ~98s)
+  ⏳ SNG   7 ( 13 versículos)...   Audio: 101.4s, segmentos detectados: 64
+✓  (13/13 versículos, ~94s)
+  ⏳ SNG   8 ( 14 versículos)...   Audio: 118.6s, segmentos detectados: 70
+✓  (14/14 versículos, ~111s)
+  ⏳ ISA   1 ( 31 versículos)...   Audio: 278.4s, segmentos detectados: 163
+✓  (31/31 versículos, ~267s)
+  ⏳ ISA   2 ( 22 versículos)...   Audio: 186.4s, segmentos detectados: 98
+✓  (22/22 versículos, ~178s)
+  ⏳ ISA   3 ( 26 versículos)...   Audio: 207.4s, segmentos detectados: 120
+✓  (26/26 versículos, ~198s)
+  ⏳ ISA   4 (  6 versículos)...   Audio: 65.4s, segmentos detectados: 29
+✓  (6/6 versículos, ~52s)
+  ⏳ ISA   5 ( 30 versículos)...   Audio: 292.2s, segmentos detectados: 154
+✓  (30/30 versículos, ~279s)
+  ⏳ ISA   6 ( 13 versículos)...   Audio: 128.9s, segmentos detectados: 80
+✓  (13/13 versículos, ~116s)
+  ⏳ ISA   7 ( 25 versículos)...   Audio: 230.9s, segmentos detectados: 123
+✓  (25/25 versículos, ~220s)
+  ⏳ ISA   8 ( 22 versículos)...   Audio: 195.1s, segmentos detectados: 115
+✓  (22/22 versículos, ~184s)
+  ⏳ ISA   9 ( 21 versículos)...   Audio: 200.9s, segmentos detectados: 104
+✓  (21/21 versículos, ~191s)
+  ⏳ ISA  10 ( 34 versículos)...   Audio: 295.2s, segmentos detectados: 151
+✓  (34/34 versículos, ~284s)
+  ⏳ ISA  11 ( 16 versículos)...   Audio: 159.1s, segmentos detectados: 74
+✓  (16/16 versículos, ~147s)
+  ⏳ ISA  12 (  6 versículos)...   Audio: 47.0s, segmentos detectados: 28
+✓  (6/6 versículos, ~37s)
+  ⏳ ISA  13 ( 22 versículos)...   Audio: 187.7s, segmentos detectados: 102
+✓  (22/22 versículos, ~178s)
+  ⏳ ISA  14 ( 32 versículos)...   Audio: 287.4s, segmentos detectados: 154
+✓  (32/32 versículos, ~275s)
+  ⏳ ISA  15 (  9 versículos)...   Audio: 85.9s, segmentos detectados: 46
+✓  (9/9 versículos, ~74s)
+  ⏳ ISA  16 ( 14 versículos)...   Audio: 137.0s, segmentos detectados: 74
+✓  (14/14 versículos, ~127s)
+  ⏳ ISA  17 ( 14 versículos)...   Audio: 133.8s, segmentos detectados: 65
+✓  (14/14 versículos, ~123s)
+  ⏳ ISA  18 (  7 versículos)...   Audio: 82.8s, segmentos detectados: 41
+✓  (7/7 versículos, ~70s)
+  ⏳ ISA  19 ( 25 versículos)...   Audio: 236.7s, segmentos detectados: 116
+✓  (25/25 versículos, ~227s)
+  ⏳ ISA  20 (  6 versículos)...   Audio: 59.7s, segmentos detectados: 28
+✓  (6/6 versículos, ~48s)
+  ⏳ ISA  21 ( 17 versículos)...   Audio: 150.9s, segmentos detectados: 97
+✓  (17/17 versículos, ~139s)
+
+  ── Progreso: 700/1189 (699 exitosos) ──
+
+  ⏳ ISA  22 ( 25 versículos)...   Audio: 214.8s, segmentos detectados: 119
+✓  (25/25 versículos, ~206s)
+  ⏳ ISA  23 ( 18 versículos)...   Audio: 162.4s, segmentos detectados: 93
+✓  (18/18 versículos, ~149s)
+  ⏳ ISA  24 ( 23 versículos)...   Audio: 202.1s, segmentos detectados: 114
+✓  (23/23 versículos, ~191s)
+  ⏳ ISA  25 ( 12 versículos)...   Audio: 114.6s, segmentos detectados: 59
+✓  (12/12 versículos, ~104s)
+  ⏳ ISA  26 ( 21 versículos)...   Audio: 181.2s, segmentos detectados: 108
+✓  (21/21 versículos, ~168s)
+  ⏳ ISA  27 ( 13 versículos)...   Audio: 128.4s, segmentos detectados: 65
+✓  (13/13 versículos, ~116s)
+  ⏳ ISA  28 ( 29 versículos)...   Audio: 280.2s, segmentos detectados: 153
+✓  (29/29 versículos, ~265s)
+  ⏳ ISA  29 ( 24 versículos)...   Audio: 234.1s, segmentos detectados: 125
+✓  (24/24 versículos, ~221s)
+  ⏳ ISA  30 ( 33 versículos)...   Audio: 348.5s, segmentos detectados: 179
+✓  (33/33 versículos, ~340s)
+  ⏳ ISA  31 (  9 versículos)...   Audio: 102.5s, segmentos detectados: 57
+✓  (9/9 versículos, ~90s)
+  ⏳ ISA  32 ( 20 versículos)...   Audio: 157.3s, segmentos detectados: 83
+✓  (20/20 versículos, ~146s)
+  ⏳ ISA  33 ( 24 versículos)...   Audio: 217.1s, segmentos detectados: 120
+✓  (24/24 versículos, ~208s)
+  ⏳ ISA  34 ( 17 versículos)...   Audio: 162.0s, segmentos detectados: 84
+✓  (17/17 versículos, ~153s)
+  ⏳ ISA  35 ( 10 versículos)...   Audio: 94.1s, segmentos detectados: 51
+✓  (10/10 versículos, ~82s)
+  ⏳ ISA  36 ( 22 versículos)...   Audio: 224.6s, segmentos detectados: 115
+✓  (22/22 versículos, ~213s)
+  ⏳ ISA  37 ( 38 versículos)...   Audio: 370.9s, segmentos detectados: 205
+✓  (38/38 versículos, ~360s)
+  ⏳ ISA  38 ( 22 versículos)...   Audio: 192.1s, segmentos detectados: 101
+✓  (22/22 versículos, ~183s)
+  ⏳ ISA  39 (  8 versículos)...   Audio: 89.8s, segmentos detectados: 51
+✓  (8/8 versículos, ~80s)
+  ⏳ ISA  40 ( 31 versículos)...   Audio: 272.6s, segmentos detectados: 152
+✓  (31/31 versículos, ~266s)
+  ⏳ ISA  41 ( 29 versículos)...   Audio: 276.6s, segmentos detectados: 175
+✓  (29/29 versículos, ~266s)
+  ⏳ ISA  42 ( 25 versículos)...   Audio: 222.9s, segmentos detectados: 132
+✓  (25/25 versículos, ~212s)
+  ⏳ ISA  43 ( 28 versículos)...   Audio: 243.0s, segmentos detectados: 157
+✓  (28/28 versículos, ~232s)
+  ⏳ ISA  44 ( 28 versículos)...   Audio: 304.1s, segmentos detectados: 201
+✓  (28/28 versículos, ~294s)
+  ⏳ ISA  45 ( 25 versículos)...   Audio: 255.8s, segmentos detectados: 160
+✓  (25/25 versículos, ~241s)
+  ⏳ ISA  46 ( 13 versículos)...   Audio: 114.9s, segmentos detectados: 72
+✓  (13/13 versículos, ~106s)
+  ⏳ ISA  47 ( 15 versículos)...   Audio: 150.7s, segmentos detectados: 90
+✓  (15/15 versículos, ~139s)
+  ⏳ ISA  48 ( 22 versículos)...   Audio: 201.3s, segmentos detectados: 126
+✓  (22/22 versículos, ~192s)
+  ⏳ ISA  49 ( 26 versículos)...   Audio: 274.2s, segmentos detectados: 155
+✓  (26/26 versículos, ~261s)
+  ⏳ ISA  50 ( 11 versículos)...   Audio: 121.5s, segmentos detectados: 65
+✓  (11/11 versículos, ~108s)
+  ⏳ ISA  51 ( 23 versículos)...   Audio: 243.9s, segmentos detectados: 141
+✓  (23/23 versículos, ~232s)
+  ⏳ ISA  52 ( 15 versículos)...   Audio: 144.7s, segmentos detectados: 81
+✓  (15/15 versículos, ~131s)
+  ⏳ ISA  53 ( 12 versículos)...   Audio: 126.7s, segmentos detectados: 67
+✓  (12/12 versículos, ~113s)
+  ⏳ ISA  54 ( 17 versículos)...   Audio: 164.0s, segmentos detectados: 90
+✓  (17/17 versículos, ~151s)
+  ⏳ ISA  55 ( 13 versículos)...   Audio: 127.3s, segmentos detectados: 74
+✓  (13/13 versículos, ~113s)
+  ⏳ ISA  56 ( 12 versículos)...   Audio: 116.5s, segmentos detectados: 63
+✓  (12/12 versículos, ~108s)
+  ⏳ ISA  57 ( 21 versículos)...   Audio: 192.4s, segmentos detectados: 110
+✓  (21/21 versículos, ~183s)
+  ⏳ ISA  58 ( 14 versículos)...   Audio: 163.2s, segmentos detectados: 91
+✓  (14/14 versículos, ~148s)
+  ⏳ ISA  59 ( 21 versículos)...   Audio: 212.7s, segmentos detectados: 115
+✓  (21/21 versículos, ~202s)
+  ⏳ ISA  60 ( 22 versículos)...   Audio: 214.8s, segmentos detectados: 115
+✓  (22/22 versículos, ~205s)
+  ⏳ ISA  61 ( 11 versículos)...   Audio: 123.9s, segmentos detectados: 61
+✓  (11/11 versículos, ~109s)
+  ⏳ ISA  62 ( 12 versículos)...   Audio: 113.9s, segmentos detectados: 63
+✓  (12/12 versículos, ~104s)
+  ⏳ ISA  63 ( 19 versículos)...   Audio: 182.1s, segmentos detectados: 97
+✓  (19/19 versículos, ~168s)
+  ⏳ ISA  64 ( 12 versículos)...   Audio: 111.2s, segmentos detectados: 63
+✓  (12/12 versículos, ~104s)
+  ⏳ ISA  65 ( 25 versículos)...   Audio: 253.7s, segmentos detectados: 139
+✓  (25/25 versículos, ~241s)
+  ⏳ ISA  66 ( 24 versículos)...   Audio: 265.1s, segmentos detectados: 150
+✓  (24/24 versículos, ~252s)
+  ⏳ JER   1 ( 19 versículos)...   Audio: 173.3s, segmentos detectados: 102
+✓  (19/19 versículos, ~166s)
+  ⏳ JER   2 ( 37 versículos)...   Audio: 365.9s, segmentos detectados: 210
+✓  (37/37 versículos, ~352s)
+  ⏳ JER   3 ( 25 versículos)...   Audio: 266.4s, segmentos detectados: 139
+✓  (25/25 versículos, ~253s)
+  ⏳ JER   4 ( 31 versículos)...   Audio: 303.4s, segmentos detectados: 173
+✓  (31/31 versículos, ~291s)
+  ⏳ JER   5 ( 31 versículos)...   Audio: 293.2s, segmentos detectados: 165
+✓  (31/31 versículos, ~280s)
+
+  ── Progreso: 750/1189 (749 exitosos) ──
+
+  ⏳ JER   6 ( 30 versículos)...   Audio: 295.4s, segmentos detectados: 164
+✓  (30/30 versículos, ~284s)
+  ⏳ JER   7 ( 34 versículos)...   Audio: 324.7s, segmentos detectados: 177
+✓  (34/34 versículos, ~313s)
+  ⏳ JER   8 ( 22 versículos)...   Audio: 233.4s, segmentos detectados: 128
+✓  (22/22 versículos, ~222s)
+  ⏳ JER   9 ( 26 versículos)...   Audio: 267.4s, segmentos detectados: 147
+✓  (26/26 versículos, ~254s)
+  ⏳ JER  10 ( 25 versículos)...   Audio: 221.9s, segmentos detectados: 129
+✓  (25/25 versículos, ~211s)
+  ⏳ JER  11 ( 23 versículos)...   Audio: 244.0s, segmentos detectados: 128
+✓  (23/23 versículos, ~231s)
+  ⏳ JER  12 ( 17 versículos)...   Audio: 178.7s, segmentos detectados: 99
+✓  (17/17 versículos, ~171s)
+  ⏳ JER  13 ( 27 versículos)...   Audio: 256.9s, segmentos detectados: 140
+✓  (27/27 versículos, ~245s)
+  ⏳ JER  14 ( 22 versículos)...   Audio: 233.8s, segmentos detectados: 142
+✓  (22/22 versículos, ~222s)
+  ⏳ JER  15 ( 21 versículos)...   Audio: 216.8s, segmentos detectados: 120
+✓  (21/21 versículos, ~205s)
+  ⏳ JER  16 ( 21 versículos)...   Audio: 223.1s, segmentos detectados: 114
+✓  (21/21 versículos, ~214s)
+  ⏳ JER  17 ( 27 versículos)...   Audio: 272.7s, segmentos detectados: 152
+✓  (27/27 versículos, ~258s)
+  ⏳ JER  18 ( 23 versículos)...   Audio: 215.8s, segmentos detectados: 119
+✓  (23/23 versículos, ~204s)
+  ⏳ JER  19 ( 15 versículos)...   Audio: 169.0s, segmentos detectados: 86
+✓  (15/15 versículos, ~156s)
+  ⏳ JER  20 ( 18 versículos)...   Audio: 193.0s, segmentos detectados: 108
+✓  (18/18 versículos, ~181s)
+  ⏳ JER  21 ( 14 versículos)...   Audio: 154.5s, segmentos detectados: 87
+✓  (14/14 versículos, ~140s)
+  ⏳ JER  22 ( 30 versículos)...   Audio: 287.6s, segmentos detectados: 165
+✓  (30/30 versículos, ~272s)
+  ⏳ JER  23 ( 40 versículos)...   Audio: 405.5s, segmentos detectados: 228
+✓  (40/40 versículos, ~391s)
+  ⏳ JER  24 ( 10 versículos)...   Audio: 109.3s, segmentos detectados: 65
+✓  (10/10 versículos, ~95s)
+  ⏳ JER  25 ( 38 versículos)...   Audio: 380.3s, segmentos detectados: 206
+✓  (38/38 versículos, ~367s)
+  ⏳ JER  26 ( 24 versículos)...   Audio: 256.2s, segmentos detectados: 124
+✓  (24/24 versículos, ~242s)
+  ⏳ JER  27 ( 22 versículos)...   Audio: 240.5s, segmentos detectados: 128
+✓  (22/22 versículos, ~230s)
+  ⏳ JER  28 ( 17 versículos)...   Audio: 181.0s, segmentos detectados: 91
+✓  (17/17 versículos, ~168s)
+  ⏳ JER  29 ( 32 versículos)...   Audio: 329.3s, segmentos detectados: 171
+✓  (32/32 versículos, ~317s)
+  ⏳ JER  30 ( 24 versículos)...   Audio: 232.2s, segmentos detectados: 131
+✓  (24/24 versículos, ~218s)
+  ⏳ JER  31 ( 40 versículos)...   Audio: 416.7s, segmentos detectados: 231
+✓  (40/40 versículos, ~403s)
+  ⏳ JER  32 ( 44 versículos)...   Audio: 462.5s, segmentos detectados: 245
+✓  (44/44 versículos, ~451s)
+  ⏳ JER  33 ( 26 versículos)...   Audio: 265.5s, segmentos detectados: 130
+✓  (26/26 versículos, ~255s)
+  ⏳ JER  34 ( 22 versículos)...   Audio: 260.1s, segmentos detectados: 132
+✓  (22/22 versículos, ~250s)
+  ⏳ JER  35 ( 19 versículos)...   Audio: 226.1s, segmentos detectados: 118
+✓  (19/19 versículos, ~215s)
+  ⏳ JER  36 ( 32 versículos)...   Audio: 356.7s, segmentos detectados: 176
+✓  (32/32 versículos, ~338s)
+  ⏳ JER  37 ( 21 versículos)...   Audio: 216.7s, segmentos detectados: 109
+✓  (21/21 versículos, ~201s)
+  ⏳ JER  38 ( 28 versículos)...   Audio: 312.5s, segmentos detectados: 160
+✓  (28/28 versículos, ~295s)
+  ⏳ JER  39 ( 18 versículos)...   Audio: 184.1s, segmentos detectados: 101
+✓  (18/18 versículos, ~174s)
+  ⏳ JER  40 ( 16 versículos)...   Audio: 217.2s, segmentos detectados: 111
+✓  (16/16 versículos, ~202s)
+  ⏳ JER  41 ( 18 versículos)...   Audio: 212.4s, segmentos detectados: 105
+✓  (18/18 versículos, ~198s)
+  ⏳ JER  42 ( 22 versículos)...   Audio: 240.4s, segmentos detectados: 125
+✓  (22/22 versículos, ~224s)
+  ⏳ JER  43 ( 13 versículos)...   Audio: 141.9s, segmentos detectados: 71
+✓  (13/13 versículos, ~131s)
+  ⏳ JER  44 ( 30 versículos)...   Audio: 400.9s, segmentos detectados: 200
+✓  (30/30 versículos, ~385s)
+  ⏳ JER  45 (  5 versículos)...   Audio: 48.2s, segmentos detectados: 28
+✓  (5/5 versículos, ~35s)
+  ⏳ JER  46 ( 28 versículos)...   Audio: 276.7s, segmentos detectados: 159
+✓  (28/28 versículos, ~264s)
+  ⏳ JER  47 (  7 versículos)...   Audio: 67.2s, segmentos detectados: 37
+✓  (7/7 versículos, ~58s)
+  ⏳ JER  48 ( 47 versículos)...   Audio: 417.8s, segmentos detectados: 239
+✓  (47/47 versículos, ~404s)
+  ⏳ JER  49 ( 39 versículos)...   Audio: 408.6s, segmentos detectados: 226
+✓  (39/39 versículos, ~397s)
+  ⏳ JER  50 ( 46 versículos)...   Audio: 484.8s, segmentos detectados: 272
+✓  (46/46 versículos, ~468s)
+  ⏳ JER  51 ( 64 versículos)...   Audio: 628.2s, segmentos detectados: 323
+✓  (64/64 versículos, ~617s)
+  ⏳ JER  52 ( 34 versículos)...   Audio: 356.7s, segmentos detectados: 174
+✓  (34/34 versículos, ~341s)
+  ⏳ LAM   1 ( 22 versículos)...   Audio: 259.3s, segmentos detectados: 131
+✓  (22/22 versículos, ~247s)
+  ⏳ LAM   2 ( 22 versículos)...   Audio: 267.8s, segmentos detectados: 129
+✓  (22/22 versículos, ~256s)
+  ⏳ LAM   3 ( 66 versículos)...   Audio: 342.7s, segmentos detectados: 200
+✓  (66/66 versículos, ~337s)
+
+  ── Progreso: 800/1189 (799 exitosos) ──
+
+  ⏳ LAM   4 ( 22 versículos)...   Audio: 204.5s, segmentos detectados: 108
+✓  (22/22 versículos, ~196s)
+  ⏳ LAM   5 ( 22 versículos)...   Audio: 124.9s, segmentos detectados: 71
+✓  (22/22 versículos, ~116s)
+  ⏳ EZK   1 ( 28 versículos)...   Audio: 282.5s, segmentos detectados: 139
+✓  (28/28 versículos, ~270s)
+  ⏳ EZK   2 ( 10 versículos)...   Audio: 86.8s, segmentos detectados: 51
+✓  (10/10 versículos, ~78s)
+  ⏳ EZK   3 ( 27 versículos)...   Audio: 256.0s, segmentos detectados: 152
+✓  (27/27 versículos, ~249s)
+  ⏳ EZK   4 ( 17 versículos)...   Audio: 165.6s, segmentos detectados: 88
+✓  (17/17 versículos, ~154s)
+  ⏳ EZK   5 ( 17 versículos)...   Audio: 197.4s, segmentos detectados: 96
+✓  (17/17 versículos, ~186s)
+  ⏳ EZK   6 ( 14 versículos)...   Audio: 156.5s, segmentos detectados: 79
+✓  (14/14 versículos, ~145s)
+  ⏳ EZK   7 ( 27 versículos)...   Audio: 252.3s, segmentos detectados: 145
+✓  (27/27 versículos, ~239s)
+  ⏳ EZK   8 ( 18 versículos)...   Audio: 205.3s, segmentos detectados: 109
+✓  (18/18 versículos, ~193s)
+  ⏳ EZK   9 ( 11 versículos)...   Audio: 135.5s, segmentos detectados: 70
+✓  (11/11 versículos, ~120s)
+  ⏳ EZK  10 ( 22 versículos)...   Audio: 211.2s, segmentos detectados: 107
+✓  (22/22 versículos, ~198s)
+  ⏳ EZK  11 ( 25 versículos)...   Audio: 237.6s, segmentos detectados: 128
+✓  (25/25 versículos, ~221s)
+  ⏳ EZK  12 ( 28 versículos)...   Audio: 255.5s, segmentos detectados: 145
+✓  (28/28 versículos, ~245s)
+  ⏳ EZK  13 ( 23 versículos)...   Audio: 237.5s, segmentos detectados: 130
+✓  (23/23 versículos, ~226s)
+  ⏳ EZK  14 ( 23 versículos)...   Audio: 244.5s, segmentos detectados: 132
+✓  (23/23 versículos, ~228s)
+  ⏳ EZK  15 (  8 versículos)...   Audio: 66.0s, segmentos detectados: 37
+✓  (8/8 versículos, ~56s)
+  ⏳ EZK  16 ( 63 versículos)...   Audio: 616.4s, segmentos detectados: 326
+✓  (63/63 versículos, ~605s)
+  ⏳ EZK  17 ( 24 versículos)...   Audio: 255.3s, segmentos detectados: 136
+✓  (24/24 versículos, ~242s)
+  ⏳ EZK  18 ( 32 versículos)...   Audio: 305.5s, segmentos detectados: 176
+✓  (32/32 versículos, ~297s)
+  ⏳ EZK  19 ( 14 versículos)...   Audio: 116.8s, segmentos detectados: 65
+✓  (14/14 versículos, ~108s)
+  ⏳ EZK  20 ( 49 versículos)...   Audio: 524.7s, segmentos detectados: 268
+✓  (49/49 versículos, ~518s)
+  ⏳ EZK  21 ( 32 versículos)...   Audio: 321.3s, segmentos detectados: 191
+✓  (32/32 versículos, ~310s)
+  ⏳ EZK  22 ( 31 versículos)...   Audio: 279.9s, segmentos detectados: 152
+✓  (31/31 versículos, ~270s)
+  ⏳ EZK  23 ( 49 versículos)...   Audio: 476.3s, segmentos detectados: 254
+✓  (49/49 versículos, ~463s)
+  ⏳ EZK  24 ( 27 versículos)...   Audio: 247.9s, segmentos detectados: 147
+✓  (27/27 versículos, ~238s)
+  ⏳ EZK  25 ( 17 versículos)...   Audio: 165.7s, segmentos detectados: 90
+✓  (17/17 versículos, ~152s)
+  ⏳ EZK  26 ( 21 versículos)...   Audio: 218.3s, segmentos detectados: 125
+✓  (21/21 versículos, ~210s)
+  ⏳ EZK  27 ( 36 versículos)...   Audio: 324.0s, segmentos detectados: 181
+✓  (36/36 versículos, ~312s)
+  ⏳ EZK  28 ( 26 versículos)...   Audio: 255.9s, segmentos detectados: 144
+✓  (26/26 versículos, ~243s)
+  ⏳ EZK  29 ( 21 versículos)...   Audio: 220.2s, segmentos detectados: 116
+✓  (21/21 versículos, ~207s)
+  ⏳ EZK  30 ( 26 versículos)...   Audio: 233.9s, segmentos detectados: 129
+✓  (26/26 versículos, ~223s)
+  ⏳ EZK  31 ( 18 versículos)...   Audio: 207.3s, segmentos detectados: 100
+✓  (18/18 versículos, ~190s)
+  ⏳ EZK  32 ( 32 versículos)...   Audio: 336.7s, segmentos detectados: 167
+✓  (32/32 versículos, ~323s)
+  ⏳ EZK  33 ( 33 versículos)...   Audio: 344.3s, segmentos detectados: 193
+✓  (33/33 versículos, ~334s)
+  ⏳ EZK  34 ( 31 versículos)...   Audio: 308.3s, segmentos detectados: 168
+✓  (31/31 versículos, ~301s)
+  ⏳ EZK  35 ( 15 versículos)...   Audio: 129.4s, segmentos detectados: 77
+✓  (15/15 versículos, ~121s)
+  ⏳ EZK  36 ( 38 versículos)...   Audio: 389.9s, segmentos detectados: 202
+✓  (38/38 versículos, ~375s)
+  ⏳ EZK  37 ( 28 versículos)...   Audio: 284.1s, segmentos detectados: 172
+✓  (28/28 versículos, ~270s)
+  ⏳ EZK  38 ( 23 versículos)...   Audio: 249.5s, segmentos detectados: 142
+✓  (23/23 versículos, ~237s)
+  ⏳ EZK  39 ( 29 versículos)...   Audio: 288.4s, segmentos detectados: 154
+✓  (29/29 versículos, ~275s)
+  ⏳ EZK  40 ( 49 versículos)...   Audio: 490.9s, segmentos detectados: 247
+✓  (49/49 versículos, ~480s)
+  ⏳ EZK  41 ( 26 versículos)...   Audio: 254.9s, segmentos detectados: 126
+✓  (26/26 versículos, ~246s)
+  ⏳ EZK  42 ( 20 versículos)...   Audio: 192.2s, segmentos detectados: 86
+✓  (20/20 versículos, ~181s)
+  ⏳ EZK  43 ( 27 versículos)...   Audio: 277.8s, segmentos detectados: 147
+✓  (27/27 versículos, ~266s)
+  ⏳ EZK  44 ( 31 versículos)...   Audio: 333.0s, segmentos detectados: 169
+✓  (31/31 versículos, ~318s)
+  ⏳ EZK  45 ( 25 versículos)...   Audio: 273.1s, segmentos detectados: 138
+✓  (25/25 versículos, ~264s)
+  ⏳ EZK  46 ( 24 versículos)...   Audio: 253.5s, segmentos detectados: 117
+✓  (24/24 versículos, ~242s)
+  ⏳ EZK  47 ( 23 versículos)...   Audio: 239.2s, segmentos detectados: 117
+✓  (23/23 versículos, ~224s)
+  ⏳ EZK  48 ( 35 versículos)...   Audio: 362.9s, segmentos detectados: 199
+✓  (35/35 versículos, ~351s)
+
+  ── Progreso: 850/1189 (849 exitosos) ──
+
+  ⏳ DAN   1 ( 21 versículos)...   Audio: 202.8s, segmentos detectados: 100
+✓  (21/21 versículos, ~188s)
+  ⏳ DAN   2 ( 49 versículos)...   Audio: 534.0s, segmentos detectados: 285
+✓  (49/49 versículos, ~523s)
+  ⏳ DAN   3 ( 30 versículos)...   Audio: 377.3s, segmentos detectados: 224
+✓  (30/30 versículos, ~363s)
+  ⏳ DAN   4 ( 37 versículos)...   Audio: 431.3s, segmentos detectados: 221
+✓  (37/37 versículos, ~420s)
+  ⏳ DAN   5 ( 31 versículos)...   Audio: 355.7s, segmentos detectados: 198
+✓  (31/31 versículos, ~341s)
+  ⏳ DAN   6 ( 28 versículos)...   Audio: 321.4s, segmentos detectados: 165
+✓  (28/28 versículos, ~308s)
+  ⏳ DAN   7 ( 28 versículos)...   Audio: 321.8s, segmentos detectados: 162
+✓  (28/28 versículos, ~311s)
+  ⏳ DAN   8 ( 27 versículos)...   Audio: 281.7s, segmentos detectados: 143
+✓  (27/27 versículos, ~270s)
+  ⏳ DAN   9 ( 27 versículos)...   Audio: 332.9s, segmentos detectados: 174
+✓  (27/27 versículos, ~312s)
+  ⏳ DAN  10 ( 21 versículos)...   Audio: 213.9s, segmentos detectados: 119
+✓  (21/21 versículos, ~200s)
+  ⏳ DAN  11 ( 45 versículos)...   Audio: 471.4s, segmentos detectados: 242
+✓  (45/45 versículos, ~458s)
+  ⏳ DAN  12 ( 13 versículos)...   Audio: 129.9s, segmentos detectados: 69
+✓  (13/13 versículos, ~118s)
+  ⏳ HOS   1 ( 11 versículos)...   Audio: 111.6s, segmentos detectados: 62
+✓  (11/11 versículos, ~99s)
+  ⏳ HOS   2 ( 23 versículos)...   Audio: 208.0s, segmentos detectados: 125
+✓  (23/23 versículos, ~199s)
+  ⏳ HOS   3 (  5 versículos)...   Audio: 47.4s, segmentos detectados: 28
+✓  (5/5 versículos, ~36s)
+  ⏳ HOS   4 ( 19 versículos)...   Audio: 161.1s, segmentos detectados: 94
+✓  (19/19 versículos, ~152s)
+  ⏳ HOS   5 ( 15 versículos)...   Audio: 123.6s, segmentos detectados: 73
+✓  (15/15 versículos, ~115s)
+  ⏳ HOS   6 ( 11 versículos)...   Audio: 84.0s, segmentos detectados: 50
+✓  (11/11 versículos, ~75s)
+  ⏳ HOS   7 ( 16 versículos)...   Audio: 135.6s, segmentos detectados: 75
+✓  (16/16 versículos, ~125s)
+  ⏳ HOS   8 ( 14 versículos)...   Audio: 111.2s, segmentos detectados: 67
+✓  (14/14 versículos, ~101s)
+  ⏳ HOS   9 ( 17 versículos)...   Audio: 159.3s, segmentos detectados: 91
+✓  (17/17 versículos, ~149s)
+  ⏳ HOS  10 ( 15 versículos)...   Audio: 143.8s, segmentos detectados: 71
+✓  (15/15 versículos, ~130s)
+  ⏳ HOS  11 ( 11 versículos)...   Audio: 97.8s, segmentos detectados: 57
+✓  (11/11 versículos, ~86s)
+  ⏳ HOS  12 ( 14 versículos)...   Audio: 114.6s, segmentos detectados: 64
+✓  (14/14 versículos, ~104s)
+  ⏳ HOS  13 ( 16 versículos)...   Audio: 136.5s, segmentos detectados: 78
+✓  (16/16 versículos, ~127s)
+  ⏳ HOS  14 (  9 versículos)...   Audio: 79.9s, segmentos detectados: 49
+✓  (9/9 versículos, ~68s)
+  ⏳ JOL   1 ( 20 versículos)...   Audio: 171.4s, segmentos detectados: 101
+✓  (20/20 versículos, ~157s)
+  ⏳ JOL   2 ( 32 versículos)...   Audio: 314.1s, segmentos detectados: 173
+✓  (32/32 versículos, ~302s)
+  ⏳ JOL   3 ( 21 versículos)...   Audio: 189.8s, segmentos detectados: 100
+✓  (21/21 versículos, ~179s)
+  ⏳ AMO   1 ( 15 versículos)...   Audio: 139.9s, segmentos detectados: 77
+✓  (15/15 versículos, ~128s)
+  ⏳ AMO   2 ( 16 versículos)...   Audio: 144.7s, segmentos detectados: 76
+✓  (16/16 versículos, ~134s)
+  ⏳ AMO   3 ( 15 versículos)...   Audio: 130.9s, segmentos detectados: 67
+✓  (15/15 versículos, ~122s)
+  ⏳ AMO   4 ( 13 versículos)...   Audio: 144.2s, segmentos detectados: 82
+✓  (13/13 versículos, ~133s)
+  ⏳ AMO   5 ( 27 versículos)...   Audio: 224.1s, segmentos detectados: 131
+✓  (27/27 versículos, ~213s)
+  ⏳ AMO   6 ( 14 versículos)...   Audio: 131.1s, segmentos detectados: 70
+✓  (14/14 versículos, ~120s)
+  ⏳ AMO   7 ( 17 versículos)...   Audio: 158.3s, segmentos detectados: 96
+✓  (17/17 versículos, ~145s)
+  ⏳ AMO   8 ( 14 versículos)...   Audio: 130.7s, segmentos detectados: 74
+✓  (14/14 versículos, ~123s)
+  ⏳ AMO   9 ( 15 versículos)...   Audio: 165.7s, segmentos detectados: 91
+✓  (15/15 versículos, ~153s)
+  ⏳ OBA   1 ( 21 versículos)...   Audio: 210.1s, segmentos detectados: 107
+✓  (21/21 versículos, ~197s)
+  ⏳ JON   1 ( 16 versículos)...   Audio: 158.9s, segmentos detectados: 96
+✓  (16/16 versículos, ~147s)
+  ⏳ JON   2 ( 10 versículos)...   Audio: 76.5s, segmentos detectados: 41
+✓  (10/10 versículos, ~65s)
+  ⏳ JON   3 ( 10 versículos)...   Audio: 89.8s, segmentos detectados: 52
+✓  (10/10 versículos, ~79s)
+  ⏳ JON   4 ( 11 versículos)...   Audio: 109.2s, segmentos detectados: 60
+✓  (11/11 versículos, ~93s)
+  ⏳ MIC   1 ( 16 versículos)...   Audio: 143.0s, segmentos detectados: 78
+✓  (16/16 versículos, ~130s)
+  ⏳ MIC   2 ( 13 versículos)...   Audio: 130.6s, segmentos detectados: 73
+✓  (13/13 versículos, ~117s)
+  ⏳ MIC   3 ( 12 versículos)...   Audio: 114.9s, segmentos detectados: 63
+✓  (12/12 versículos, ~103s)
+  ⏳ MIC   4 ( 13 versículos)...   Audio: 141.9s, segmentos detectados: 71
+✓  (13/13 versículos, ~130s)
+  ⏳ MIC   5 ( 15 versículos)...   Audio: 134.4s, segmentos detectados: 67
+✓  (15/15 versículos, ~124s)
+  ⏳ MIC   6 ( 16 versículos)...   Audio: 143.6s, segmentos detectados: 87
+✓  (16/16 versículos, ~129s)
+  ⏳ MIC   7 ( 20 versículos)...   Audio: 180.0s, segmentos detectados: 106
+✓  (20/20 versículos, ~166s)
+
+  ── Progreso: 900/1189 (899 exitosos) ──
+
+  ⏳ NAM   1 ( 15 versículos)...   Audio: 133.8s, segmentos detectados: 77
+✓  (15/15 versículos, ~126s)
+  ⏳ NAM   2 ( 13 versículos)...   Audio: 120.5s, segmentos detectados: 67
+✓  (13/13 versículos, ~106s)
+  ⏳ NAM   3 ( 19 versículos)...   Audio: 174.5s, segmentos detectados: 98
+✓  (19/19 versículos, ~164s)
+  ⏳ HAB   1 ( 17 versículos)...   Audio: 145.6s, segmentos detectados: 84
+✓  (17/17 versículos, ~136s)
+  ⏳ HAB   2 ( 20 versículos)...   Audio: 186.5s, segmentos detectados: 102
+✓  (20/20 versículos, ~174s)
+  ⏳ HAB   3 ( 19 versículos)...   Audio: 174.1s, segmentos detectados: 93
+✓  (19/19 versículos, ~162s)
+  ⏳ ZEP   1 ( 18 versículos)...   Audio: 177.6s, segmentos detectados: 90
+✓  (18/18 versículos, ~162s)
+  ⏳ ZEP   2 ( 15 versículos)...   Audio: 155.7s, segmentos detectados: 83
+✓  (15/15 versículos, ~146s)
+  ⏳ ZEP   3 ( 20 versículos)...   Audio: 197.4s, segmentos detectados: 106
+✓  (20/20 versículos, ~184s)
+  ⏳ HAG   1 ( 15 versículos)...   Audio: 156.4s, segmentos detectados: 94
+✓  (15/15 versículos, ~142s)
+  ⏳ HAG   2 ( 23 versículos)...   Audio: 240.2s, segmentos detectados: 141
+✓  (23/23 versículos, ~230s)
+  ⏳ ZEC   1 ( 21 versículos)...   Audio: 220.1s, segmentos detectados: 122
+✓  (21/21 versículos, ~206s)
+  ⏳ ZEC   2 ( 13 versículos)...   Audio: 103.7s, segmentos detectados: 63
+✓  (13/13 versículos, ~92s)
+  ⏳ ZEC   3 ( 10 versículos)...   Audio: 105.7s, segmentos detectados: 61
+✓  (10/10 versículos, ~92s)
+  ⏳ ZEC   4 ( 14 versículos)...   Audio: 124.1s, segmentos detectados: 72
+✓  (14/14 versículos, ~115s)
+  ⏳ ZEC   5 ( 11 versículos)...   Audio: 101.6s, segmentos detectados: 62
+✓  (11/11 versículos, ~89s)
+  ⏳ ZEC   6 ( 15 versículos)...   Audio: 137.9s, segmentos detectados: 79
+✓  (15/15 versículos, ~121s)
+  ⏳ ZEC   7 ( 14 versículos)...   Audio: 127.7s, segmentos detectados: 68
+✓  (14/14 versículos, ~115s)
+  ⏳ ZEC   8 ( 23 versículos)...   Audio: 231.4s, segmentos detectados: 113
+✓  (23/23 versículos, ~219s)
+  ⏳ ZEC   9 ( 17 versículos)...   Audio: 164.3s, segmentos detectados: 94
+✓  (17/17 versículos, ~151s)
+  ⏳ ZEC  10 ( 12 versículos)...   Audio: 119.4s, segmentos detectados: 65
+✓  (12/12 versículos, ~109s)
+  ⏳ ZEC  11 ( 17 versículos)...   Audio: 167.0s, segmentos detectados: 100
+✓  (17/17 versículos, ~155s)
+  ⏳ ZEC  12 ( 14 versículos)...   Audio: 146.4s, segmentos detectados: 69
+✓  (14/14 versículos, ~139s)
+  ⏳ ZEC  13 (  9 versículos)...   Audio: 100.4s, segmentos detectados: 53
+✓  (9/9 versículos, ~94s)
+  ⏳ ZEC  14 ( 21 versículos)...   Audio: 235.2s, segmentos detectados: 108
+✓  (21/21 versículos, ~220s)
+  ⏳ MAL   1 ( 14 versículos)...   Audio: 165.4s, segmentos detectados: 95
+✓  (14/14 versículos, ~153s)
+  ⏳ MAL   2 ( 17 versículos)...   Audio: 189.7s, segmentos detectados: 93
+✓  (17/17 versículos, ~179s)
+  ⏳ MAL   3 ( 18 versículos)...   Audio: 195.7s, segmentos detectados: 101
+✓  (18/18 versículos, ~181s)
+  ⏳ MAL   4 (  6 versículos)...   Audio: 59.2s, segmentos detectados: 31
+✓  (6/6 versículos, ~44s)
+  ⏳ MAT   1 ( 25 versículos)...   Audio: 192.0s, segmentos detectados: 106
+✓  (25/25 versículos, ~181s)
+  ⏳ MAT   2 ( 23 versículos)...   Audio: 208.7s, segmentos detectados: 120
+✓  (23/23 versículos, ~197s)
+  ⏳ MAT   3 ( 17 versículos)...   Audio: 140.9s, segmentos detectados: 71
+✓  (17/17 versículos, ~132s)
+  ⏳ MAT   4 ( 25 versículos)...   Audio: 193.6s, segmentos detectados: 118
+✓  (25/25 versículos, ~182s)
+  ⏳ MAT   5 ( 48 versículos)...   Audio: 383.5s, segmentos detectados: 209
+✓  (48/48 versículos, ~377s)
+  ⏳ MAT   6 ( 34 versículos)...   Audio: 291.9s, segmentos detectados: 159
+✓  (34/34 versículos, ~284s)
+  ⏳ MAT   7 ( 29 versículos)...   Audio: 220.3s, segmentos detectados: 135
+✓  (29/29 versículos, ~210s)
+  ⏳ MAT   8 ( 34 versículos)...   Audio: 275.6s, segmentos detectados: 180
+✓  (34/34 versículos, ~264s)
+  ⏳ MAT   9 ( 38 versículos)...   Audio: 318.7s, segmentos detectados: 192
+✓  (38/38 versículos, ~311s)
+  ⏳ MAT  10 ( 42 versículos)...   Audio: 332.0s, segmentos detectados: 186
+✓  (42/42 versículos, ~321s)
+  ⏳ MAT  11 ( 30 versículos)...   Audio: 248.3s, segmentos detectados: 140
+✓  (30/30 versículos, ~239s)
+  ⏳ MAT  12 ( 50 versículos)...   Audio: 408.3s, segmentos detectados: 230
+✓  (50/50 versículos, ~400s)
+  ⏳ MAT  13 ( 58 versículos)...   Audio: 482.9s, segmentos detectados: 287
+✓  (58/58 versículos, ~472s)
+  ⏳ MAT  14 ( 36 versículos)...   Audio: 269.0s, segmentos detectados: 166
+✓  (36/36 versículos, ~259s)
+  ⏳ MAT  15 ( 39 versículos)...   Audio: 302.3s, segmentos detectados: 184
+✓  (39/39 versículos, ~295s)
+  ⏳ MAT  16 ( 28 versículos)...   Audio: 245.8s, segmentos detectados: 140
+✓  (28/28 versículos, ~236s)
+  ⏳ MAT  17 ( 27 versículos)...   Audio: 233.2s, segmentos detectados: 149
+✓  (27/27 versículos, ~225s)
+  ⏳ MAT  18 ( 35 versículos)...   Audio: 293.1s, segmentos detectados: 163
+✓  (35/35 versículos, ~280s)
+  ⏳ MAT  19 ( 30 versículos)...   Audio: 255.3s, segmentos detectados: 161
+✓  (30/30 versículos, ~245s)
+  ⏳ MAT  20 ( 34 versículos)...   Audio: 278.3s, segmentos detectados: 159
+✓  (34/34 versículos, ~270s)
+  ⏳ MAT  21 ( 46 versículos)...   Audio: 409.6s, segmentos detectados: 259
+✓  (46/46 versículos, ~397s)
+
+  ── Progreso: 950/1189 (949 exitosos) ──
+
+  ⏳ MAT  22 ( 46 versículos)...   Audio: 322.7s, segmentos detectados: 194
+✓  (46/46 versículos, ~313s)
+  ⏳ MAT  23 ( 39 versículos)...   Audio: 333.1s, segmentos detectados: 194
+✓  (39/39 versículos, ~322s)
+  ⏳ MAT  24 ( 51 versículos)...   Audio: 377.4s, segmentos detectados: 208
+✓  (51/51 versículos, ~367s)
+  ⏳ MAT  25 ( 46 versículos)...   Audio: 365.9s, segmentos detectados: 227
+✓  (46/46 versículos, ~354s)
+  ⏳ MAT  26 ( 75 versículos)...   Audio: 621.5s, segmentos detectados: 371
+✓  (75/75 versículos, ~614s)
+  ⏳ MAT  27 ( 66 versículos)...   Audio: 532.2s, segmentos detectados: 308
+✓  (66/66 versículos, ~526s)
+  ⏳ MAT  28 ( 20 versículos)...   Audio: 166.5s, segmentos detectados: 104
+✓  (20/20 versículos, ~156s)
+  ⏳ MRK   1 ( 45 versículos)...   Audio: 338.0s, segmentos detectados: 205
+✓  (45/45 versículos, ~326s)
+  ⏳ MRK   2 ( 28 versículos)...   Audio: 245.7s, segmentos detectados: 135
+✓  (28/28 versículos, ~235s)
+  ⏳ MRK   3 ( 35 versículos)...   Audio: 252.4s, segmentos detectados: 148
+✓  (35/35 versículos, ~245s)
+  ⏳ MRK   4 ( 41 versículos)...   Audio: 319.2s, segmentos detectados: 198
+✓  (41/41 versículos, ~311s)
+  ⏳ MRK   5 ( 43 versículos)...   Audio: 336.0s, segmentos detectados: 199
+✓  (43/43 versículos, ~325s)
+  ⏳ MRK   6 ( 56 versículos)...   Audio: 476.4s, segmentos detectados: 275
+✓  (56/56 versículos, ~466s)
+  ⏳ MRK   7 ( 37 versículos)...   Audio: 300.4s, segmentos detectados: 185
+✓  (37/37 versículos, ~293s)
+  ⏳ MRK   8 ( 38 versículos)...   Audio: 306.0s, segmentos detectados: 181
+✓  (38/38 versículos, ~290s)
+  ⏳ MRK   9 ( 50 versículos)...   Audio: 411.8s, segmentos detectados: 250
+✓  (50/50 versículos, ~402s)
+  ⏳ MRK  10 ( 52 versículos)...   Audio: 437.8s, segmentos detectados: 278
+✓  (52/52 versículos, ~429s)
+  ⏳ MRK  11 ( 33 versículos)...   Audio: 277.4s, segmentos detectados: 166
+✓  (33/33 versículos, ~267s)
+  ⏳ MRK  12 ( 44 versículos)...   Audio: 389.1s, segmentos detectados: 235
+✓  (44/44 versículos, ~375s)
+  ⏳ MRK  13 ( 37 versículos)...   Audio: 291.1s, segmentos detectados: 164
+✓  (37/37 versículos, ~284s)
+  ⏳ MRK  14 ( 72 versículos)...   Audio: 597.1s, segmentos detectados: 340
+✓  (72/72 versículos, ~587s)
+  ⏳ MRK  15 ( 47 versículos)...   Audio: 354.7s, segmentos detectados: 212
+✓  (47/47 versículos, ~345s)
+  ⏳ MRK  16 ( 20 versículos)...   Audio: 159.6s, segmentos detectados: 94
+✓  (20/20 versículos, ~150s)
+  ⏳ LUK   1 ( 80 versículos)...   Audio: 566.4s, segmentos detectados: 293
+✓  (80/80 versículos, ~558s)
+  ⏳ LUK   2 ( 52 versículos)...   Audio: 399.1s, segmentos detectados: 212
+✓  (52/52 versículos, ~388s)
+  ⏳ LUK   3 ( 38 versículos)...   Audio: 311.3s, segmentos detectados: 205
+✓  (38/38 versículos, ~304s)
+  ⏳ LUK   4 ( 44 versículos)...   Audio: 358.0s, segmentos detectados: 207
+✓  (44/44 versículos, ~346s)
+  ⏳ LUK   5 ( 39 versículos)...   Audio: 342.9s, segmentos detectados: 203
+✓  (39/39 versículos, ~333s)
+  ⏳ LUK   6 ( 49 versículos)...   Audio: 427.3s, segmentos detectados: 246
+✓  (49/49 versículos, ~415s)
+  ⏳ LUK   7 ( 50 versículos)...   Audio: 432.9s, segmentos detectados: 265
+✓  (50/50 versículos, ~425s)
+  ⏳ LUK   8 ( 56 versículos)...   Audio: 511.6s, segmentos detectados: 305
+✓  (56/56 versículos, ~498s)
+  ⏳ LUK   9 ( 62 versículos)...   Audio: 547.5s, segmentos detectados: 318
+✓  (62/62 versículos, ~535s)
+  ⏳ LUK  10 ( 42 versículos)...   Audio: 358.8s, segmentos detectados: 223
+✓  (42/42 versículos, ~348s)
+  ⏳ LUK  11 ( 54 versículos)...   Audio: 478.4s, segmentos detectados: 280
+✓  (54/54 versículos, ~464s)
+  ⏳ LUK  12 ( 59 versículos)...   Audio: 484.4s, segmentos detectados: 280
+✓  (59/59 versículos, ~473s)
+  ⏳ LUK  13 ( 35 versículos)...   Audio: 302.8s, segmentos detectados: 179
+✓  (35/35 versículos, ~292s)
+  ⏳ LUK  14 ( 35 versículos)...   Audio: 284.6s, segmentos detectados: 168
+✓  (35/35 versículos, ~277s)
+  ⏳ LUK  15 ( 32 versículos)...   Audio: 251.6s, segmentos detectados: 153
+✓  (32/32 versículos, ~243s)
+  ⏳ LUK  16 ( 31 versículos)...   Audio: 270.3s, segmentos detectados: 154
+✓  (31/31 versículos, ~261s)
+  ⏳ LUK  17 ( 37 versículos)...   Audio: 283.7s, segmentos detectados: 180
+✓  (37/37 versículos, ~276s)
+  ⏳ LUK  18 ( 43 versículos)...   Audio: 321.5s, segmentos detectados: 205
+✓  (43/43 versículos, ~315s)
+  ⏳ LUK  19 ( 48 versículos)...   Audio: 365.6s, segmentos detectados: 223
+✓  (48/48 versículos, ~355s)
+  ⏳ LUK  20 ( 47 versículos)...   Audio: 357.6s, segmentos detectados: 214
+✓  (47/47 versículos, ~346s)
+  ⏳ LUK  21 ( 38 versículos)...   Audio: 287.0s, segmentos detectados: 144
+✓  (38/38 versículos, ~278s)
+  ⏳ LUK  22 ( 71 versículos)...   Audio: 534.9s, segmentos detectados: 327
+✓  (71/71 versículos, ~525s)
+  ⏳ LUK  23 ( 56 versículos)...   Audio: 440.9s, segmentos detectados: 252
+✓  (56/56 versículos, ~430s)
+  ⏳ LUK  24 ( 53 versículos)...   Audio: 411.9s, segmentos detectados: 220
+✓  (53/53 versículos, ~402s)
+  ⏳ JHN   1 ( 51 versículos)...   Audio: 387.0s, segmentos detectados: 244
+✓  (51/51 versículos, ~377s)
+  ⏳ JHN   2 ( 25 versículos)...   Audio: 184.8s, segmentos detectados: 104
+✓  (25/25 versículos, ~171s)
+  ⏳ JHN   3 ( 36 versículos)...   Audio: 280.1s, segmentos detectados: 171
+✓  (36/36 versículos, ~272s)
+
+  ── Progreso: 1000/1189 (999 exitosos) ──
+
+  ⏳ JHN   4 ( 54 versículos)...   Audio: 411.7s, segmentos detectados: 245
+✓  (54/54 versículos, ~402s)
+  ⏳ JHN   5 ( 47 versículos)...   Audio: 365.1s, segmentos detectados: 210
+✓  (47/47 versículos, ~356s)
+  ⏳ JHN   6 ( 71 versículos)...   Audio: 546.4s, segmentos detectados: 313
+✓  (71/71 versículos, ~538s)
+  ⏳ JHN   7 ( 53 versículos)...   Audio: 387.6s, segmentos detectados: 223
+✓  (53/53 versículos, ~376s)
+  ⏳ JHN   8 ( 59 versículos)...   Audio: 490.3s, segmentos detectados: 305
+✓  (59/59 versículos, ~481s)
+  ⏳ JHN   9 ( 41 versículos)...   Audio: 327.1s, segmentos detectados: 220
+✓  (41/41 versículos, ~318s)
+  ⏳ JHN  10 ( 42 versículos)...   Audio: 301.9s, segmentos detectados: 188
+✓  (42/42 versículos, ~293s)
+  ⏳ JHN  11 ( 57 versículos)...   Audio: 438.3s, segmentos detectados: 273
+✓  (57/57 versículos, ~429s)
+  ⏳ JHN  12 ( 50 versículos)...   Audio: 407.7s, segmentos detectados: 235
+✓  (50/50 versículos, ~401s)
+  ⏳ JHN  13 ( 38 versículos)...   Audio: 311.8s, segmentos detectados: 198
+✓  (38/38 versículos, ~302s)
+  ⏳ JHN  14 ( 31 versículos)...   Audio: 249.9s, segmentos detectados: 173
+✓  (31/31 versículos, ~240s)
+  ⏳ JHN  15 ( 27 versículos)...   Audio: 211.2s, segmentos detectados: 122
+✓  (27/27 versículos, ~201s)
+  ⏳ JHN  16 ( 33 versículos)...   Audio: 264.1s, segmentos detectados: 163
+✓  (33/33 versículos, ~255s)
+  ⏳ JHN  17 ( 26 versículos)...   Audio: 209.8s, segmentos detectados: 127
+✓  (26/26 versículos, ~201s)
+  ⏳ JHN  18 ( 40 versículos)...   Audio: 354.8s, segmentos detectados: 210
+✓  (40/40 versículos, ~346s)
+  ⏳ JHN  19 ( 42 versículos)...   Audio: 389.4s, segmentos detectados: 232
+✓  (42/42 versículos, ~380s)
+  ⏳ JHN  20 ( 31 versículos)...   Audio: 267.9s, segmentos detectados: 174
+✓  (31/31 versículos, ~258s)
+  ⏳ JHN  21 ( 25 versículos)...   Audio: 253.8s, segmentos detectados: 168
+✓  (25/25 versículos, ~237s)
+  ⏳ ACT   1 ( 26 versículos)...   Audio: 239.4s, segmentos detectados: 132
+✓  (26/26 versículos, ~228s)
+  ⏳ ACT   2 ( 47 versículos)...   Audio: 386.5s, segmentos detectados: 203
+✓  (47/47 versículos, ~373s)
+  ⏳ ACT   3 ( 26 versículos)...   Audio: 224.4s, segmentos detectados: 119
+✓  (26/26 versículos, ~215s)
+  ⏳ ACT   4 ( 37 versículos)...   Audio: 315.4s, segmentos detectados: 165
+✓  (37/37 versículos, ~308s)
+  ⏳ ACT   5 ( 42 versículos)...   Audio: 375.7s, segmentos detectados: 201
+✓  (42/42 versículos, ~364s)
+  ⏳ ACT   6 ( 15 versículos)...   Audio: 133.1s, segmentos detectados: 69
+✓  (15/15 versículos, ~121s)
+  ⏳ ACT   7 ( 60 versículos)...   Audio: 519.5s, segmentos detectados: 279
+✓  (60/60 versículos, ~512s)
+  ⏳ ACT   8 ( 40 versículos)...   Audio: 328.1s, segmentos detectados: 176
+✓  (40/40 versículos, ~320s)
+  ⏳ ACT   9 ( 43 versículos)...   Audio: 382.7s, segmentos detectados: 216
+✓  (43/43 versículos, ~370s)
+  ⏳ ACT  10 ( 48 versículos)...   Audio: 411.8s, segmentos detectados: 234
+✓  (48/48 versículos, ~396s)
+  ⏳ ACT  11 ( 30 versículos)...   Audio: 249.0s, segmentos detectados: 131
+✓  (30/30 versículos, ~236s)
+  ⏳ ACT  12 ( 25 versículos)...   Audio: 227.7s, segmentos detectados: 126
+✓  (25/25 versículos, ~213s)
+  ⏳ ACT  13 ( 52 versículos)...   Audio: 461.0s, segmentos detectados: 246
+✓  (52/52 versículos, ~450s)
+  ⏳ ACT  14 ( 28 versículos)...   Audio: 237.1s, segmentos detectados: 123
+✓  (28/28 versículos, ~224s)
+  ⏳ ACT  15 ( 41 versículos)...   Audio: 354.5s, segmentos detectados: 181
+✓  (41/41 versículos, ~344s)
+  ⏳ ACT  16 ( 40 versículos)...   Audio: 350.8s, segmentos detectados: 199
+✓  (40/40 versículos, ~343s)
+  ⏳ ACT  17 ( 34 versículos)...   Audio: 320.0s, segmentos detectados: 167
+✓  (34/34 versículos, ~311s)
+  ⏳ ACT  18 ( 28 versículos)...   Audio: 247.4s, segmentos detectados: 137
+✓  (28/28 versículos, ~235s)
+  ⏳ ACT  19 ( 40 versículos)...   Audio: 369.0s, segmentos detectados: 188
+✓  (40/40 versículos, ~357s)
+  ⏳ ACT  20 ( 38 versículos)...   Audio: 328.6s, segmentos detectados: 172
+✓  (38/38 versículos, ~318s)
+  ⏳ ACT  21 ( 40 versículos)...   Audio: 379.2s, segmentos detectados: 208
+✓  (40/40 versículos, ~370s)
+  ⏳ ACT  22 ( 30 versículos)...   Audio: 264.5s, segmentos detectados: 156
+✓  (30/30 versículos, ~251s)
+  ⏳ ACT  23 ( 35 versículos)...   Audio: 325.8s, segmentos detectados: 176
+✓  (35/35 versículos, ~315s)
+  ⏳ ACT  24 ( 27 versículos)...   Audio: 232.9s, segmentos detectados: 118
+✓  (27/27 versículos, ~221s)
+  ⏳ ACT  25 ( 27 versículos)...   Audio: 248.8s, segmentos detectados: 133
+✓  (27/27 versículos, ~239s)
+  ⏳ ACT  26 ( 32 versículos)...   Audio: 296.1s, segmentos detectados: 160
+✓  (32/32 versículos, ~287s)
+  ⏳ ACT  27 ( 44 versículos)...   Audio: 375.3s, segmentos detectados: 203
+✓  (44/44 versículos, ~366s)
+  ⏳ ACT  28 ( 31 versículos)...   Audio: 288.5s, segmentos detectados: 158
+✓  (31/31 versículos, ~274s)
+  ⏳ ROM   1 ( 32 versículos)...   Audio: 279.2s, segmentos detectados: 142
+✓  (32/32 versículos, ~269s)
+  ⏳ ROM   2 ( 29 versículos)...   Audio: 230.3s, segmentos detectados: 127
+✓  (29/29 versículos, ~222s)
+  ⏳ ROM   3 ( 31 versículos)...   Audio: 225.7s, segmentos detectados: 119
+✓  (31/31 versículos, ~219s)
+  ⏳ ROM   4 ( 25 versículos)...   Audio: 198.3s, segmentos detectados: 103
+✓  (25/25 versículos, ~186s)
+
+  ── Progreso: 1050/1189 (1049 exitosos) ──
+
+  ⏳ ROM   5 ( 21 versículos)...   Audio: 185.4s, segmentos detectados: 89
+✓  (21/21 versículos, ~173s)
+  ⏳ ROM   6 ( 23 versículos)...   Audio: 187.7s, segmentos detectados: 90
+✓  (23/23 versículos, ~178s)
+  ⏳ ROM   7 ( 25 versículos)...   Audio: 207.0s, segmentos detectados: 126
+✓  (25/25 versículos, ~196s)
+  ⏳ ROM   8 ( 39 versículos)...   Audio: 342.1s, segmentos detectados: 177
+✓  (39/39 versículos, ~333s)
+  ⏳ ROM   9 ( 33 versículos)...   Audio: 263.5s, segmentos detectados: 151
+✓  (33/33 versículos, ~255s)
+  ⏳ ROM  10 ( 21 versículos)...   Audio: 168.2s, segmentos detectados: 87
+✓  (21/21 versículos, ~156s)
+  ⏳ ROM  11 ( 36 versículos)...   Audio: 311.2s, segmentos detectados: 168
+✓  (36/36 versículos, ~303s)
+  ⏳ ROM  12 ( 21 versículos)...   Audio: 163.0s, segmentos detectados: 97
+✓  (21/21 versículos, ~154s)
+  ⏳ ROM  13 ( 14 versículos)...   Audio: 126.6s, segmentos detectados: 80
+✓  (14/14 versículos, ~114s)
+  ⏳ ROM  14 ( 23 versículos)...   Audio: 189.9s, segmentos detectados: 110
+✓  (23/23 versículos, ~183s)
+  ⏳ ROM  15 ( 33 versículos)...   Audio: 274.2s, segmentos detectados: 139
+✓  (33/33 versículos, ~262s)
+  ⏳ ROM  16 ( 27 versículos)...   Audio: 223.5s, segmentos detectados: 114
+✓  (27/27 versículos, ~212s)
+  ⏳ 1CO   1 ( 31 versículos)...   Audio: 239.9s, segmentos detectados: 126
+✓  (31/31 versículos, ~234s)
+  ⏳ 1CO   2 ( 16 versículos)...   Audio: 135.2s, segmentos detectados: 69
+✓  (16/16 versículos, ~125s)
+  ⏳ 1CO   3 ( 23 versículos)...   Audio: 177.4s, segmentos detectados: 114
+✓  (23/23 versículos, ~170s)
+  ⏳ 1CO   4 ( 21 versículos)...   Audio: 179.0s, segmentos detectados: 101
+✓  (21/21 versículos, ~171s)
+  ⏳ 1CO   5 ( 13 versículos)...   Audio: 113.9s, segmentos detectados: 59
+✓  (13/13 versículos, ~104s)
+  ⏳ 1CO   6 ( 20 versículos)...   Audio: 178.7s, segmentos detectados: 95
+✓  (20/20 versículos, ~168s)
+  ⏳ 1CO   7 ( 40 versículos)...   Audio: 339.0s, segmentos detectados: 195
+✓  (40/40 versículos, ~329s)
+  ⏳ 1CO   8 ( 13 versículos)...   Audio: 109.4s, segmentos detectados: 60
+✓  (13/13 versículos, ~100s)
+  ⏳ 1CO   9 ( 27 versículos)...   Audio: 226.7s, segmentos detectados: 126
+✓  (27/27 versículos, ~219s)
+  ⏳ 1CO  10 ( 33 versículos)...   Audio: 243.1s, segmentos detectados: 134
+✓  (33/33 versículos, ~234s)
+  ⏳ 1CO  11 ( 34 versículos)...   Audio: 257.0s, segmentos detectados: 142
+✓  (34/34 versículos, ~248s)
+  ⏳ 1CO  12 ( 31 versículos)...   Audio: 235.7s, segmentos detectados: 138
+✓  (31/31 versículos, ~225s)
+  ⏳ 1CO  13 ( 13 versículos)...   Audio: 101.1s, segmentos detectados: 62
+✓  (13/13 versículos, ~93s)
+  ⏳ 1CO  14 ( 40 versículos)...   Audio: 319.7s, segmentos detectados: 192
+✓  (40/40 versículos, ~311s)
+  ⏳ 1CO  15 ( 58 versículos)...   Audio: 451.9s, segmentos detectados: 244
+✓  (58/58 versículos, ~442s)
+  ⏳ 1CO  16 ( 24 versículos)...   Audio: 172.9s, segmentos detectados: 93
+✓  (24/24 versículos, ~166s)
+  ⏳ 2CO   1 ( 24 versículos)...   Audio: 213.5s, segmentos detectados: 102
+✓  (24/24 versículos, ~201s)
+  ⏳ 2CO   2 ( 17 versículos)...   Audio: 133.2s, segmentos detectados: 69
+✓  (17/17 versículos, ~125s)
+  ⏳ 2CO   3 ( 18 versículos)...   Audio: 148.4s, segmentos detectados: 71
+✓  (18/18 versículos, ~138s)
+  ⏳ 2CO   4 ( 18 versículos)...   Audio: 159.1s, segmentos detectados: 76
+✓  (18/18 versículos, ~149s)
+  ⏳ 2CO   5 ( 21 versículos)...   Audio: 177.1s, segmentos detectados: 94
+✓  (21/21 versículos, ~167s)
+  ⏳ 2CO   6 ( 18 versículos)...   Audio: 144.1s, segmentos detectados: 91
+✓  (18/18 versículos, ~133s)
+  ⏳ 2CO   7 ( 16 versículos)...   Audio: 166.8s, segmentos detectados: 89
+✓  (16/16 versículos, ~153s)
+  ⏳ 2CO   8 ( 24 versículos)...   Audio: 204.3s, segmentos detectados: 102
+✓  (24/24 versículos, ~192s)
+  ⏳ 2CO   9 ( 15 versículos)...   Audio: 135.2s, segmentos detectados: 67
+✓  (15/15 versículos, ~124s)
+  ⏳ 2CO  10 ( 18 versículos)...   Audio: 161.4s, segmentos detectados: 75
+✓  (18/18 versículos, ~153s)
+  ⏳ 2CO  11 ( 33 versículos)...   Audio: 267.7s, segmentos detectados: 147
+✓  (33/33 versículos, ~255s)
+  ⏳ 2CO  12 ( 21 versículos)...   Audio: 204.0s, segmentos detectados: 116
+✓  (21/21 versículos, ~190s)
+  ⏳ 2CO  13 ( 13 versículos)...   Audio: 126.0s, segmentos detectados: 61
+✓  (13/13 versículos, ~111s)
+  ⏳ GAL   1 ( 24 versículos)...   Audio: 171.2s, segmentos detectados: 91
+✓  (24/24 versículos, ~162s)
+  ⏳ GAL   2 ( 21 versículos)...   Audio: 201.9s, segmentos detectados: 97
+✓  (21/21 versículos, ~192s)
+  ⏳ GAL   3 ( 29 versículos)...   Audio: 235.8s, segmentos detectados: 125
+✓  (29/29 versículos, ~224s)
+  ⏳ GAL   4 ( 31 versículos)...   Audio: 231.9s, segmentos detectados: 131
+✓  (31/31 versículos, ~226s)
+  ⏳ GAL   5 ( 26 versículos)...   Audio: 190.4s, segmentos detectados: 114
+✓  (26/26 versículos, ~180s)
+  ⏳ GAL   6 ( 18 versículos)...   Audio: 138.6s, segmentos detectados: 74
+✓  (18/18 versículos, ~129s)
+  ⏳ EPH   1 ( 23 versículos)...   Audio: 181.8s, segmentos detectados: 83
+✓  (23/23 versículos, ~172s)
+  ⏳ EPH   2 ( 22 versículos)...   Audio: 173.6s, segmentos detectados: 81
+✓  (22/22 versículos, ~164s)
+  ⏳ EPH   3 ( 21 versículos)...   Audio: 152.4s, segmentos detectados: 61
+✓  (21/21 versículos, ~145s)
+
+  ── Progreso: 1100/1189 (1099 exitosos) ──
+
+  ⏳ EPH   4 ( 32 versículos)...   Audio: 240.6s, segmentos detectados: 126
+✓  (32/32 versículos, ~232s)
+  ⏳ EPH   5 ( 33 versículos)...   Audio: 227.9s, segmentos detectados: 123
+✓  (33/33 versículos, ~220s)
+  ⏳ EPH   6 ( 24 versículos)...   Audio: 184.7s, segmentos detectados: 97
+✓  (24/24 versículos, ~171s)
+  ⏳ PHP   1 ( 30 versículos)...   Audio: 230.6s, segmentos detectados: 117
+✓  (30/30 versículos, ~222s)
+  ⏳ PHP   2 ( 30 versículos)...   Audio: 224.8s, segmentos detectados: 114
+✓  (30/30 versículos, ~215s)
+  ⏳ PHP   3 ( 21 versículos)...   Audio: 176.9s, segmentos detectados: 98
+✓  (21/21 versículos, ~162s)
+  ⏳ PHP   4 ( 23 versículos)...   Audio: 190.1s, segmentos detectados: 100
+✓  (23/23 versículos, ~177s)
+  ⏳ COL   1 ( 29 versículos)...   Audio: 242.3s, segmentos detectados: 116
+✓  (29/29 versículos, ~235s)
+  ⏳ COL   2 ( 23 versículos)...   Audio: 193.1s, segmentos detectados: 95
+✓  (23/23 versículos, ~182s)
+  ⏳ COL   3 ( 25 versículos)...   Audio: 195.2s, segmentos detectados: 113
+✓  (25/25 versículos, ~186s)
+  ⏳ COL   4 ( 18 versículos)...   Audio: 147.8s, segmentos detectados: 80
+✓  (18/18 versículos, ~136s)
+  ⏳ 1TH   1 ( 10 versículos)...   Audio: 94.5s, segmentos detectados: 42
+✓  (10/10 versículos, ~86s)
+  ⏳ 1TH   2 ( 20 versículos)...   Audio: 182.8s, segmentos detectados: 97
+✓  (20/20 versículos, ~172s)
+  ⏳ 1TH   3 ( 13 versículos)...   Audio: 113.1s, segmentos detectados: 55
+✓  (13/13 versículos, ~99s)
+  ⏳ 1TH   4 ( 18 versículos)...   Audio: 145.3s, segmentos detectados: 74
+✓  (18/18 versículos, ~132s)
+  ⏳ 1TH   5 ( 28 versículos)...   Audio: 183.6s, segmentos detectados: 104
+✓  (28/28 versículos, ~173s)
+  ⏳ 2TH   1 ( 12 versículos)...   Audio: 106.9s, segmentos detectados: 48
+✓  (12/12 versículos, ~97s)
+  ⏳ 2TH   2 ( 17 versículos)...   Audio: 141.1s, segmentos detectados: 75
+✓  (17/17 versículos, ~131s)
+  ⏳ 2TH   3 ( 18 versículos)...   Audio: 136.3s, segmentos detectados: 71
+✓  (18/18 versículos, ~125s)
+  ⏳ 1TI   1 ( 20 versículos)...   Audio: 170.2s, segmentos detectados: 89
+✓  (20/20 versículos, ~161s)
+  ⏳ 1TI   2 ( 15 versículos)...   Audio: 104.7s, segmentos detectados: 63
+✓  (15/15 versículos, ~95s)
+  ⏳ 1TI   3 ( 16 versículos)...   Audio: 118.7s, segmentos detectados: 72
+✓  (16/16 versículos, ~109s)
+  ⏳ 1TI   4 ( 16 versículos)...   Audio: 120.7s, segmentos detectados: 62
+✓  (16/16 versículos, ~113s)
+  ⏳ 1TI   5 ( 25 versículos)...   Audio: 194.7s, segmentos detectados: 107
+✓  (25/25 versículos, ~184s)
+  ⏳ 1TI   6 ( 21 versículos)...   Audio: 194.8s, segmentos detectados: 103
+✓  (21/21 versículos, ~182s)
+  ⏳ 2TI   1 ( 18 versículos)...   Audio: 146.4s, segmentos detectados: 75
+✓  (18/18 versículos, ~136s)
+  ⏳ 2TI   2 ( 26 versículos)...   Audio: 194.6s, segmentos detectados: 105
+✓  (26/26 versículos, ~182s)
+  ⏳ 2TI   3 ( 17 versículos)...   Audio: 133.6s, segmentos detectados: 79
+✓  (17/17 versículos, ~124s)
+  ⏳ 2TI   4 ( 22 versículos)...   Audio: 173.0s, segmentos detectados: 98
+✓  (22/22 versículos, ~162s)
+  ⏳ TIT   1 ( 16 versículos)...   Audio: 139.7s, segmentos detectados: 82
+✓  (16/16 versículos, ~127s)
+  ⏳ TIT   2 ( 15 versículos)...   Audio: 111.5s, segmentos detectados: 64
+✓  (15/15 versículos, ~103s)
+  ⏳ TIT   3 ( 15 versículos)...   Audio: 133.1s, segmentos detectados: 69
+✓  (15/15 versículos, ~121s)
+  ⏳ PHM   1 ( 25 versículos)...   Audio: 169.1s, segmentos detectados: 100
+✓  (25/25 versículos, ~160s)
+  ⏳ HEB   1 ( 14 versículos)...   Audio: 118.5s, segmentos detectados: 66
+✓  (14/14 versículos, ~106s)
+  ⏳ HEB   2 ( 18 versículos)...   Audio: 164.9s, segmentos detectados: 81
+✓  (18/18 versículos, ~151s)
+  ⏳ HEB   3 ( 19 versículos)...   Audio: 139.8s, segmentos detectados: 71
+✓  (19/19 versículos, ~130s)
+  ⏳ HEB   4 ( 16 versículos)...   Audio: 136.1s, segmentos detectados: 67
+✓  (16/16 versículos, ~126s)
+  ⏳ HEB   5 ( 14 versículos)...   Audio: 110.5s, segmentos detectados: 53
+✓  (14/14 versículos, ~100s)
+  ⏳ HEB   6 ( 20 versículos)...   Audio: 161.4s, segmentos detectados: 78
+✓  (20/20 versículos, ~151s)
+  ⏳ HEB   7 ( 28 versículos)...   Audio: 233.6s, segmentos detectados: 114
+✓  (28/28 versículos, ~224s)
+  ⏳ HEB   8 ( 13 versículos)...   Audio: 126.4s, segmentos detectados: 62
+✓  (13/13 versículos, ~118s)
+  ⏳ HEB   9 ( 28 versículos)...   Audio: 262.7s, segmentos detectados: 116
+✓  (28/28 versículos, ~252s)
+  ⏳ HEB  10 ( 39 versículos)...   Audio: 303.8s, segmentos detectados: 155
+✓  (39/39 versículos, ~294s)
+  ⏳ HEB  11 ( 40 versículos)...   Audio: 338.1s, segmentos detectados: 174
+✓  (40/40 versículos, ~327s)
+  ⏳ HEB  12 ( 29 versículos)...   Audio: 257.0s, segmentos detectados: 130
+✓  (29/29 versículos, ~246s)
+  ⏳ HEB  13 ( 25 versículos)...   Audio: 198.3s, segmentos detectados: 102
+✓  (25/25 versículos, ~187s)
+  ⏳ JAS   1 ( 27 versículos)...   Audio: 209.8s, segmentos detectados: 112
+✓  (27/27 versículos, ~197s)
+  ⏳ JAS   2 ( 26 versículos)...   Audio: 205.2s, segmentos detectados: 113
+✓  (26/26 versículos, ~194s)
+  ⏳ JAS   3 ( 18 versículos)...   Audio: 153.2s, segmentos detectados: 80
+✓  (18/18 versículos, ~143s)
+  ⏳ JAS   4 ( 17 versículos)...   Audio: 144.2s, segmentos detectados: 85
+✓  (17/17 versículos, ~138s)
+
+  ── Progreso: 1150/1189 (1149 exitosos) ──
+
+  ⏳ JAS   5 ( 20 versículos)...   Audio: 181.5s, segmentos detectados: 98
+✓  (20/20 versículos, ~171s)
+  ⏳ 1PE   1 ( 25 versículos)...   Audio: 232.7s, segmentos detectados: 109
+✓  (25/25 versículos, ~221s)
+  ⏳ 1PE   2 ( 25 versículos)...   Audio: 226.3s, segmentos detectados: 123
+✓  (25/25 versículos, ~214s)
+  ⏳ 1PE   3 ( 22 versículos)...   Audio: 207.0s, segmentos detectados: 106
+✓  (22/22 versículos, ~199s)
+  ⏳ 1PE   4 ( 19 versículos)...   Audio: 174.2s, segmentos detectados: 84
+✓  (19/19 versículos, ~166s)
+  ⏳ 1PE   5 ( 14 versículos)...   Audio: 125.1s, segmentos detectados: 65
+✓  (14/14 versículos, ~114s)
+  ⏳ 2PE   1 ( 21 versículos)...   Audio: 189.5s, segmentos detectados: 82
+✓  (21/21 versículos, ~175s)
+  ⏳ 2PE   2 ( 22 versículos)...   Audio: 228.6s, segmentos detectados: 103
+✓  (22/22 versículos, ~216s)
+  ⏳ 2PE   3 ( 18 versículos)...   Audio: 180.4s, segmentos detectados: 82
+✓  (18/18 versículos, ~167s)
+  ⏳ 1JN   1 ( 10 versículos)...   Audio: 87.6s, segmentos detectados: 47
+✓  (10/10 versículos, ~75s)
+  ⏳ 1JN   2 ( 29 versículos)...   Audio: 268.9s, segmentos detectados: 149
+✓  (29/29 versículos, ~257s)
+  ⏳ 1JN   3 ( 24 versículos)...   Audio: 197.9s, segmentos detectados: 111
+✓  (24/24 versículos, ~188s)
+  ⏳ 1JN   4 ( 21 versículos)...   Audio: 177.9s, segmentos detectados: 98
+✓  (21/21 versículos, ~168s)
+  ⏳ 1JN   5 ( 21 versículos)...   Audio: 178.6s, segmentos detectados: 99
+✓  (21/21 versículos, ~172s)
+  ⏳ 2JN   1 ( 13 versículos)...   Audio: 113.1s, segmentos detectados: 61
+✓  (13/13 versículos, ~104s)
+  ⏳ 3JN   1 ( 14 versículos)...   Audio: 114.8s, segmentos detectados: 61
+✓  (14/14 versículos, ~104s)
+  ⏳ JUD   1 ( 25 versículos)...   Audio: 247.8s, segmentos detectados: 126
+✓  (25/25 versículos, ~238s)
+  ⏳ REV   1 ( 20 versículos)...   Audio: 203.1s, segmentos detectados: 111
+✓  (20/20 versículos, ~189s)
+  ⏳ REV   2 ( 29 versículos)...   Audio: 282.1s, segmentos detectados: 154
+✓  (29/29 versículos, ~270s)
+  ⏳ REV   3 ( 22 versículos)...   Audio: 214.5s, segmentos detectados: 121
+✓  (22/22 versículos, ~202s)
+  ⏳ REV   4 ( 11 versículos)...   Audio: 124.8s, segmentos detectados: 62
+✓  (11/11 versículos, ~111s)
+  ⏳ REV   5 ( 14 versículos)...   Audio: 145.8s, segmentos detectados: 81
+✓  (14/14 versículos, ~134s)
+  ⏳ REV   6 ( 17 versículos)...   Audio: 172.9s, segmentos detectados: 93
+✓  (17/17 versículos, ~160s)
+  ⏳ REV   7 ( 17 versículos)...   Audio: 182.4s, segmentos detectados: 100
+✓  (17/17 versículos, ~168s)
+  ⏳ REV   8 ( 13 versículos)...   Audio: 134.2s, segmentos detectados: 64
+✓  (13/13 versículos, ~126s)
+  ⏳ REV   9 ( 21 versículos)...   Audio: 199.5s, segmentos detectados: 100
+✓  (21/21 versículos, ~192s)
+  ⏳ REV  10 ( 11 versículos)...   Audio: 105.6s, segmentos detectados: 57
+✓  (11/11 versículos, ~93s)
+  ⏳ REV  11 ( 19 versículos)...   Audio: 203.2s, segmentos detectados: 105
+✓  (19/19 versículos, ~186s)
+  ⏳ REV  12 ( 17 versículos)...   Audio: 168.7s, segmentos detectados: 83
+✓  (17/17 versículos, ~156s)
+  ⏳ REV  13 ( 18 versículos)...   Audio: 174.8s, segmentos detectados: 87
+✓  (18/18 versículos, ~166s)
+  ⏳ REV  14 ( 20 versículos)...   Audio: 214.7s, segmentos detectados: 104
+✓  (20/20 versículos, ~198s)
+  ⏳ REV  15 (  8 versículos)...   Audio: 89.1s, segmentos detectados: 45
+✓  (8/8 versículos, ~75s)
+  ⏳ REV  16 ( 21 versículos)...   Audio: 191.5s, segmentos detectados: 98
+✓  (21/21 versículos, ~178s)
+  ⏳ REV  17 ( 18 versículos)...   Audio: 180.5s, segmentos detectados: 96
+✓  (18/18 versículos, ~167s)
+  ⏳ REV  18 ( 24 versículos)...   Audio: 270.1s, segmentos detectados: 159
+✓  (24/24 versículos, ~250s)
+  ⏳ REV  19 ( 21 versículos)...   Audio: 217.6s, segmentos detectados: 110
+✓  (21/21 versículos, ~197s)
+  ⏳ REV  20 ( 15 versículos)...   Audio: 154.3s, segmentos detectados: 77
+✓  (15/15 versículos, ~141s)
+  ⏳ REV  21 ( 27 versículos)...   Audio: 264.1s, segmentos detectados: 155
+✓  (27/27 versículos, ~250s)
+  ⏳ REV  22 ( 21 versículos)...   Audio: 205.5s, segmentos detectados: 110
+✓  (21/21 versículos, ~195s)
+
+✅ 1188/1189 capítulos procesados.
+📦 Tamaño del .db: 1808 KB (1.8 MB)
+
+Copiar al proyecto Android:
+  cp /home/willy/biblia/bible_timestamps.db ~/AndroidStudioProjects/BibliaReinaValera2/app/src/main/assets/

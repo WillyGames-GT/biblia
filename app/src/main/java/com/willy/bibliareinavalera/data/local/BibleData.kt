@@ -1,106 +1,84 @@
 package com.willy.bibliareinavalera.data.local
 
-import com.willy.bibliareinavalera.domain.model.Book
+import com.willy.bibliareinavalera.data.local.database.BibleBook
 
 object BibleData {
+    val allBooks = listOf(
+        // ANTIGUO TESTAMENTO (39)
+        BibleBook("GEN", "Génesis", "OT", 50),
+        BibleBook("EXO", "Éxodo", "OT", 40),
+        BibleBook("LEV", "Levítico", "OT", 27),
+        BibleBook("NUM", "Números", "OT", 36),
+        BibleBook("DEU", "Deuteronomio", "OT", 34),
+        BibleBook("JOS", "Josué", "OT", 24),
+        BibleBook("JDG", "Jueces", "OT", 21),
+        BibleBook("RUT", "Rut", "OT", 4),
+        BibleBook("1SA", "1 Samuel", "OT", 31),
+        BibleBook("2SA", "2 Samuel", "OT", 24),
+        BibleBook("1KI", "1 Reyes", "OT", 22),
+        BibleBook("2KI", "2 Reyes", "OT", 25),
+        BibleBook("1CH", "1 Crónicas", "OT", 29),
+        BibleBook("2CH", "2 Crónicas", "OT", 36),
+        BibleBook("EZR", "Esdras", "OT", 10),
+        BibleBook("NEH", "Nehemías", "OT", 13),
+        BibleBook("EST", "Ester", "OT", 10),
+        BibleBook("JOB", "Job", "OT", 42),
+        BibleBook("PSA", "Salmos", "OT", 150),
+        BibleBook("PRO", "Proverbios", "OT", 31),
+        BibleBook("ECC", "Eclesiastés", "OT", 12),
+        BibleBook("SNG", "Cantares", "OT", 8),
+        BibleBook("ISA", "Isaías", "OT", 66),
+        BibleBook("JER", "Jeremías", "OT", 52),
+        BibleBook("LAM", "Lamentaciones", "OT", 5),
+        BibleBook("EZK", "Ezequiel", "OT", 48),
+        BibleBook("DAN", "Daniel", "OT", 12),
+        BibleBook("HOS", "Oseas", "OT", 14),
+        BibleBook("JOL", "Joel", "OT", 3),
+        BibleBook("AMO", "Amós", "OT", 9),
+        BibleBook("OBA", "Abdías", "OT", 1),
+        BibleBook("JON", "Jonás", "OT", 4),
+        BibleBook("MIC", "Miqueas", "OT", 7),
+        BibleBook("NAH", "Nahúm", "OT", 3),
+        BibleBook("HAB", "Habacuc", "OT", 3),
+        BibleBook("ZEP", "Sofonías", "OT", 3),
+        BibleBook("HAG", "Hageo", "OT", 2),
+        BibleBook("ZEC", "Zacarías", "OT", 14),
+        BibleBook("MAL", "Malaquías", "OT", 4),
 
-    val allBooks: List<Book> = listOf(
-        // ANTIGUO TESTAMENTO
-        Book(1, "Genesis", "Génesis", 50, Book.Testament.OLD),
-        Book(2, "Exodus", "Éxodo", 40, Book.Testament.OLD),
-        Book(3, "Leviticus", "Levítico", 27, Book.Testament.OLD),
-        Book(4, "Numbers", "Números", 36, Book.Testament.OLD),
-        Book(5, "Deuteronomy", "Deuteronomio", 34, Book.Testament.OLD),
-        Book(6, "Joshua", "Josué", 24, Book.Testament.OLD),
-        Book(7, "Judges", "Jueces", 21, Book.Testament.OLD),
-        Book(8, "Ruth", "Rut", 4, Book.Testament.OLD),
-        Book(9, "1 Samuel", "1 Samuel", 31, Book.Testament.OLD),
-        Book(10, "2 Samuel", "2 Samuel", 24, Book.Testament.OLD),
-        Book(11, "1 Kings", "1 Reyes", 22, Book.Testament.OLD),
-        Book(12, "2 Kings", "2 Reyes", 25, Book.Testament.OLD),
-        Book(13, "1 Chronicles", "1 Crónicas", 29, Book.Testament.OLD),
-        Book(14, "2 Chronicles", "2 Crónicas", 36, Book.Testament.OLD),
-        Book(15, "Ezra", "Esdras", 10, Book.Testament.OLD),
-        Book(16, "Nehemiah", "Nehemías", 13, Book.Testament.OLD),
-        Book(17, "Esther", "Ester", 10, Book.Testament.OLD),
-        Book(18, "Job", "Job", 42, Book.Testament.OLD),
-        Book(19, "Psalms", "Salmos", 150, Book.Testament.OLD),
-        Book(20, "Proverbs", "Proverbios", 31, Book.Testament.OLD),
-        Book(21, "Ecclesiastes", "Eclesiastés", 12, Book.Testament.OLD),
-        Book(22, "Song of Solomon", "Cantares", 8, Book.Testament.OLD),
-        Book(23, "Isaiah", "Isaías", 66, Book.Testament.OLD),
-        Book(24, "Jeremiah", "Jeremías", 52, Book.Testament.OLD),
-        Book(25, "Lamentations", "Lamentaciones", 5, Book.Testament.OLD),
-        Book(26, "Ezekiel", "Ezequiel", 48, Book.Testament.OLD),
-        Book(27, "Daniel", "Daniel", 12, Book.Testament.OLD),
-        Book(28, "Hosea", "Oseas", 14, Book.Testament.OLD),
-        Book(29, "Joel", "Joel", 3, Book.Testament.OLD),
-        Book(30, "Amos", "Amós", 9, Book.Testament.OLD),
-        Book(31, "Obadiah", "Abdías", 1, Book.Testament.OLD),
-        Book(32, "Jonah", "Jonás", 4, Book.Testament.OLD),
-        Book(33, "Micah", "Miqueas", 7, Book.Testament.OLD),
-        Book(34, "Nahum", "Nahúm", 3, Book.Testament.OLD),
-        Book(35, "Habakkuk", "Habacuc", 3, Book.Testament.OLD),
-        Book(36, "Zephaniah", "Sofonías", 3, Book.Testament.OLD),
-        Book(37, "Haggai", "Hageo", 2, Book.Testament.OLD),
-        Book(38, "Zechariah", "Zacarías", 14, Book.Testament.OLD),
-        Book(39, "Malachi", "Malaquías", 4, Book.Testament.OLD),
-
-        // NUEVO TESTAMENTO
-        Book(40, "Matthew", "Mateo", 28, Book.Testament.NEW),
-        Book(41, "Mark", "Marcos", 16, Book.Testament.NEW),
-        Book(42, "Luke", "Lucas", 24, Book.Testament.NEW),
-        Book(43, "John", "Juan", 21, Book.Testament.NEW),
-        Book(44, "Acts", "Hechos", 28, Book.Testament.NEW),
-        Book(45, "Romans", "Romanos", 16, Book.Testament.NEW),
-        Book(46, "1 Corinthians", "1 Corintios", 16, Book.Testament.NEW),
-        Book(47, "2 Corinthians", "2 Corintios", 13, Book.Testament.NEW),
-        Book(48, "Galatians", "Gálatas", 6, Book.Testament.NEW),
-        Book(49, "Ephesians", "Efesios", 6, Book.Testament.NEW),
-        Book(50, "Philippians", "Filipenses", 4, Book.Testament.NEW),
-        Book(51, "Colossians", "Colosenses", 4, Book.Testament.NEW),
-        Book(52, "1 Thessalonians", "1 Tesalonicenses", 5, Book.Testament.NEW),
-        Book(53, "2 Thessalonians", "2 Tesalonicenses", 3, Book.Testament.NEW),
-        Book(54, "1 Timothy", "1 Timoteo", 6, Book.Testament.NEW),
-        Book(55, "2 Timothy", "2 Timoteo", 4, Book.Testament.NEW),
-        Book(56, "Titus", "Tito", 3, Book.Testament.NEW),
-        Book(57, "Philemon", "Filemón", 1, Book.Testament.NEW),
-        Book(58, "Hebrews", "Hebreos", 13, Book.Testament.NEW),
-        Book(59, "James", "Santiago", 5, Book.Testament.NEW),
-        Book(60, "1 Peter", "1 Pedro", 5, Book.Testament.NEW),
-        Book(61, "2 Peter", "2 Pedro", 3, Book.Testament.NEW),
-        Book(62, "1 John", "1 Juan", 5, Book.Testament.NEW),
-        Book(63, "2 John", "2 Juan", 1, Book.Testament.NEW),
-        Book(64, "3 John", "3 Juan", 1, Book.Testament.NEW),
-        Book(65, "Jude", "Judas", 1, Book.Testament.NEW),
-        Book(66, "Revelation", "Apocalipsis", 22, Book.Testament.NEW)
+        // NUEVO TESTAMENTO (27)
+        BibleBook("MAT", "Mateo", "NT", 28),
+        BibleBook("MRK", "Marcos", "NT", 16),
+        BibleBook("LUK", "Lucas", "NT", 24),
+        BibleBook("JHN", "Juan", "NT", 21),
+        BibleBook("ACT", "Hechos", "NT", 28),
+        BibleBook("ROM", "Romanos", "NT", 16),
+        BibleBook("1CO", "1 Corintios", "NT", 16),
+        BibleBook("2CO", "2 Corintios", "NT", 13),
+        BibleBook("GAL", "Gálatas", "NT", 6),
+        BibleBook("EPH", "Efesios", "NT", 6),
+        BibleBook("PHP", "Filipenses", "NT", 4),
+        BibleBook("COL", "Colosenses", "NT", 4),
+        BibleBook("1TH", "1 Tesalonicenses", "NT", 5),
+        BibleBook("2TH", "2 Tesalonicenses", "NT", 3),
+        BibleBook("1TI", "1 Timoteo", "NT", 6),
+        BibleBook("2TI", "2 Timoteo", "NT", 4),
+        BibleBook("TIT", "Tito", "NT", 3),
+        BibleBook("PHM", "Filemón", "NT", 1),
+        BibleBook("HEB", "Hebreos", "NT", 13),
+        BibleBook("JAS", "Santiago", "NT", 5),
+        BibleBook("1PE", "1 Pedro", "NT", 5),
+        BibleBook("2PE", "2 Pedro", "NT", 3),
+        BibleBook("1JN", "1 Juan", "NT", 5),
+        BibleBook("2JN", "2 Juan", "NT", 1),
+        BibleBook("3JN", "3 Juan", "NT", 1),
+        BibleBook("JUD", "Judas", "NT", 1),
+        BibleBook("REV", "Apocalipsis", "NT", 22)
     )
 
-    val oldTestamentBooks: List<Book>
-        get() = allBooks.filter { it.testament == Book.Testament.OLD }
+    val oldTestamentBooks = allBooks.filter { it.testament == "OT" }
+    val newTestamentBooks = allBooks.filter { it.testament == "NT" }
 
-    val newTestamentBooks: List<Book>
-        get() = allBooks.filter { it.testament == Book.Testament.NEW }
-
-    fun getBookById(id: Int): Book? {
+    fun getBookById(id: String): BibleBook? {
         return allBooks.find { it.id == id }
-    }
-
-    fun getBookFileName(book: Book, chapter: Int): String {
-        // Para libros con número (1 Samuel, 2 Reyes, etc.)
-        // Formato: samuel_1_13.txt, kings_2_25.txt
-        val bookName = book.name
-        val parts = bookName.split(" ", limit = 2)
-        
-        return if (parts.size == 2 && parts[0].toIntOrNull() != null) {
-            // Es un libro con número: "1 Samuel" -> "samuel_1_13.txt"
-            val number = parts[0]
-            val name = parts[1].lowercase().replace(" ", "_")
-            "${name}_${number}_${chapter}.txt"
-        } else {
-            // Libro sin número: "Genesis" -> "genesis_1.txt"
-            val name = bookName.lowercase().replace(" ", "_")
-            "${name}_${chapter}.txt"
-        }
     }
 }
