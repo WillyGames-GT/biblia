@@ -3,26 +3,42 @@ package com.willy.bibliareinavalera.viewmodel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.willy.bibliareinavalera.data.local.BibleData
+import com.willy.bibliareinavalera.data.local.database.BibleBook
 import com.willy.bibliareinavalera.data.local.database.BibleDatabase
-import com.willy.bibliareinavalera.data.local.database.BookDao
-import kotlinx.coroutines.flow.SharingStarted
-import kotlinx.coroutines.flow.stateIn
+import com.willy.bibliareinavalera.data.local.database.LastPosition
+import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 
 class BibleViewModel(application: Application) : AndroidViewModel(application) {
-    private val bookDao: BookDao = BibleDatabase.getDatabase(application).bookDao()
 
-    val oldTestamentBooks = bookDao.getBooksByTestament("OT")
+    private val db = BibleDatabase.getDatabase(application)
+    
+    private val _allBooks = MutableStateFlow<List<BibleBook>>(emptyList())
+    
+    // Para BooksScreen (Claude style)
+    val oldTestamentBooks: StateFlow<List<BibleBook>> = _allBooks
+        .map { books -> books.filter { it.testament == "antiguo" } }
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
-    val newTestamentBooks = bookDao.getBooksByTestament("NT")
+    val newTestamentBooks: StateFlow<List<BibleBook>> = _allBooks
+        .map { books -> books.filter { it.testament == "nuevo" } }
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
+
+    // Para compatibilidad con BookListScreen original
+    val books = _allBooks.asStateFlow()
+
+    val lastPosition: StateFlow<LastPosition?> = db.lastPositionDao().getLatestAsFlow()
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), null)
 
     init {
-        // Población inicial de la base de datos de libros
+        loadBooks()
+    }
+
+    private fun loadBooks() {
         viewModelScope.launch {
-            bookDao.insertBooks(BibleData.allBooks)
+            db.bookDao().getAllBooks().collect { bookList ->
+                _allBooks.value = bookList
+            }
         }
     }
 }

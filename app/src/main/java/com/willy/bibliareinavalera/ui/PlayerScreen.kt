@@ -1,9 +1,12 @@
 package com.willy.bibliareinavalera.ui
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
-import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.*
@@ -11,12 +14,87 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.foundation.BorderStroke
+import androidx.compose.ui.window.Dialog
+import androidx.compose.ui.window.DialogProperties
+import com.willy.bibliareinavalera.presentation.theme.*
+import com.willy.bibliareinavalera.data.local.BibleData
+import com.willy.bibliareinavalera.data.local.database.BibleBook
+import com.willy.bibliareinavalera.data.local.database.VerseTimestamp
 import com.willy.bibliareinavalera.viewmodel.PlayerViewModel
 import kotlinx.coroutines.launch
+
+private val VerseButtonContainer = Color(0xFFFFE0B2)
+private val VerseButtonColor = Color(0xFFE65100)
+
+data class BibleReference(
+    val book: BibleBook,
+    val chapter: Int,
+    val verseStart: Int,
+    val verseEnd: Int? = null
+)
+
+fun parseBibleReference(
+    input: String,
+    currentBook: BibleBook,
+    currentChapter: Int
+): BibleReference? {
+    val trimmed = input.trim()
+    if (trimmed.isEmpty()) return null
+    val numbers = Regex("\\d+").findAll(trimmed).map { it.value.toInt() }.toList()
+    if (numbers.isEmpty()) return null
+    val textOnly = trimmed
+        .replace(Regex("\\d+"), "")
+        .replace(":", "")
+        .replace("-", "")
+        .trim()
+    val matchedBook: BibleBook? = if (textOnly.isNotBlank()) {
+        BibleData.allBooks.find { book ->
+            val bookNorm = normalize(book.name)
+            val inputNorm = normalize(textOnly)
+            bookNorm == inputNorm || inputNorm.contains(bookNorm) || bookNorm.contains(inputNorm)
+        }
+    } else null
+    val targetBook = matchedBook ?: currentBook
+
+    val bookNameStartsWithNumber = matchedBook != null &&
+            matchedBook.name.first().isDigit()
+    val refNumbers = if (bookNameStartsWithNumber) numbers.drop(1) else numbers
+
+    return when (refNumbers.size) {
+        0 -> BibleReference(targetBook, currentChapter, 1)
+        1 -> BibleReference(targetBook, currentChapter, refNumbers[0])
+        2 -> {
+            val chapter = refNumbers[0]
+            val verse = refNumbers[1]
+            if (chapter !in 1..targetBook.chapterCount || verse < 1) return null
+            BibleReference(targetBook, chapter, verse)
+        }
+        else -> {
+            val chapter = refNumbers[0]
+            val verseStart = refNumbers[1]
+            val verseEnd = refNumbers[2]
+            if (chapter !in 1..targetBook.chapterCount || verseStart < 1 || verseEnd < verseStart) return null
+            BibleReference(targetBook, chapter, verseStart, verseEnd)
+        }
+    }
+}
+
+fun normalize(text: String): String {
+    return text.lowercase()
+        .replace("á", "a").replace("é", "e").replace("í", "i")
+        .replace("ó", "o").replace("ú", "u").replace("ü", "u")
+        .trim()
+}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -24,42 +102,110 @@ fun PlayerScreen(
     bookCode: String,
     bookName: String,
     chapter: Int,
+    startVerse: Int,
+    endVerse: Int,
+    initialPosition: Long,
+    isResume: Boolean,
+    fromSearch: Boolean,
     viewModel: PlayerViewModel,
-    onBack: () -> Unit
+    onBack: () -> Unit,
+    onNavigate: (
+        bookCode: String,
+        bookName: String,
+        chapter: Int,
+        verseStart: Int?,
+        verseEnd: Int?
+    ) -> Unit
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val sheetState = rememberModalBottomSheetState()
     val scope = rememberCoroutineScope()
+    val scrollState = rememberScrollState()
     var showVersePicker by remember { mutableStateOf(false) }
+    var showTextScreen by remember { mutableStateOf(false) }
 
-    LaunchedEffect(bookCode, chapter) {
-        viewModel.initController(bookCode, bookName, chapter)
+    val displayBookName = uiState.bookName.ifEmpty { bookName }
+    val displayChapter = if (uiState.chapter > 0) uiState.chapter else chapter
+    val currentBook = remember(uiState.bookCode, bookCode) {
+        BibleData.allBooks.find { it.id == uiState.bookCode }
+            ?: BibleData.allBooks.find { it.id == bookCode }
+            ?: BibleData.allBooks[0]
+    }
+
+    LaunchedEffect(bookCode, chapter, startVerse, endVerse, initialPosition, isResume, fromSearch) {
+        viewModel.initController(
+            bookCode = bookCode,
+            bookName = bookName,
+            chapter = chapter,
+            startVerse = startVerse,
+            endVerse = endVerse,
+            initialPositionMs = initialPosition,
+            isResume = isResume,
+            fromSearch = fromSearch
+        )
+    }
+
+    if (showTextScreen) {
+        Dialog(
+            onDismissRequest = { showTextScreen = false },
+            properties = DialogProperties(
+                usePlatformDefaultWidth = false,
+                dismissOnBackPress = true,
+                dismissOnClickOutside = false
+            )
+        ) {
+            Surface(
+                modifier = Modifier.fillMaxSize(),
+                color = Background
+            ) {
+                BibleTextScreen(
+                    bookCode = uiState.bookCode.ifEmpty { bookCode },
+                    bookName = displayBookName,
+                    chapter = displayChapter,
+                    currentVerse = uiState.currentVerse,
+                    onClose = { showTextScreen = false }
+                )
+            }
+        }
     }
 
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { 
+                title = {
                     Text(
-                        "$bookName $chapter",
+                        "$displayBookName $displayChapter",
                         fontWeight = FontWeight.Bold,
-                        color = androidx.compose.ui.graphics.Color.White
-                    ) 
+                        color = Color.White
+                    )
                 },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    IconButton(onClick = { onBack() }) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "Volver",
-                            tint = androidx.compose.ui.graphics.Color.White
+                            tint = Color.White
                         )
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = androidx.compose.ui.graphics.Color(0xFF2E7D32),  // Verde vibrante
-                    titleContentColor = androidx.compose.ui.graphics.Color.White,
-                    navigationIconContentColor = androidx.compose.ui.graphics.Color.White
+                    containerColor = PrimaryColor,
+                    titleContentColor = Color.White,
+                    navigationIconContentColor = Color.White
                 )
+            )
+        },
+        bottomBar = {
+            VoiceBar(
+                onVoiceNavigate = { ctx ->
+                    onNavigate(
+                        ctx.bookCode,
+                        ctx.bookName,
+                        ctx.chapter,
+                        ctx.startVerse,
+                        ctx.endVerse
+                    )
+                }
             )
         }
     ) { padding ->
@@ -67,128 +213,264 @@ fun PlayerScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding)
-                .padding(24.dp),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center
         ) {
-            // Nombre del Libro y Capítulo
-            Text(bookName, fontSize = 32.sp, fontWeight = FontWeight.Bold)
-            Text("Capítulo $chapter", fontSize = 24.sp, color = MaterialTheme.colorScheme.secondary)
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(horizontal = 24.dp)
+                    .verticalScroll(scrollState),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Top
+            ) {
+                Spacer(modifier = Modifier.height(16.dp))
 
-            Spacer(modifier = Modifier.height(48.dp))
+                Text(displayBookName, fontSize = 26.sp, fontWeight = FontWeight.Bold)
 
-            // Botón de Versículo Activo - Visible cuando hay timestamps disponibles
-            if (uiState.chapterTimestamps.isNotEmpty()) {
-                Button(
-                    onClick = { showVersePicker = true },
-                    colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.tertiaryContainer, contentColor = MaterialTheme.colorScheme.onTertiaryContainer)
-                ) {
-                    Icon(Icons.Default.FormatListNumbered, contentDescription = null)
-                    Spacer(Modifier.width(8.dp))
-                    Text("Versículo ${uiState.currentVerse}", fontWeight = FontWeight.Bold)
-                }
-            }
+                Text(
+                    "Capítulo $displayChapter",
+                    fontSize = 20.sp,
+                    color = MaterialTheme.colorScheme.secondary
+                )
 
-            Spacer(modifier = Modifier.height(48.dp))
-
-            // Barra de Progreso
-            Slider(
-                value = uiState.currentPosition.toFloat(),
-                onValueChange = { viewModel.seekTo(it.toLong()) },
-                valueRange = 0f..(uiState.duration.toFloat().coerceAtLeast(1f)),
-                modifier = Modifier.fillMaxWidth()
-            )
-            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                Text(formatTime(uiState.currentPosition))
-                Text(formatTime(uiState.duration))
-            }
-
-            Spacer(modifier = Modifier.height(32.dp))
-
-            // Indicador de carga
-            if (uiState.isLoading) {
-                Column(
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    Text(
-                        "Descargando audio...",
-                        style = MaterialTheme.typography.labelMedium,
-                        color = MaterialTheme.colorScheme.primary,
-                        fontWeight = FontWeight.Bold
-                    )
-                    Spacer(modifier = Modifier.height(12.dp))
-                    LinearProgressIndicator(
+                // --- AVISO DE RETOMAR PROGRESO ---
+                if (uiState.resumePromptVisible) {
+                    Card(
                         modifier = Modifier
-                            .fillMaxWidth(0.7f)
-                            .height(4.dp)
+                            .fillMaxWidth()
+                            .padding(vertical = 12.dp),
+                        colors = CardDefaults.cardColors(containerColor = LightGold),
+                        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
+                        shape = RoundedCornerShape(8.dp)
+                    ) {
+                        Row(
+                            modifier = Modifier.padding(8.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.SpaceBetween
+                        ) {
+                            Text(
+                                text = "¿Retomar desde el versículo ${uiState.resumeVerse}?",
+                                fontSize = 14.sp,
+                                fontWeight = FontWeight.Medium,
+                                color = OnSecondary,
+                                modifier = Modifier.weight(1f).padding(start = 8.dp)
+                            )
+                            Row {
+                                TextButton(onClick = { viewModel.resumeProgress() }) {
+                                    Text("REPRODUCIR", fontWeight = FontWeight.Bold, color = PrimaryColor)
+                                }
+                                IconButton(onClick = { viewModel.dismissResumePrompt() }) {
+                                    Icon(Icons.Default.Close, contentDescription = "Cerrar", tint = PrimaryColor)
+                                }
+                            }
+                        }
+                    }
+                }
+
+                if (uiState.isRangeActive) {
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(
+                        text = "Rango: ${uiState.rangeStartVerse}-${uiState.rangeEndVerse}",
+                        fontSize = 16.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = AccentGold
                     )
                 }
-            } else {
-                // Controles Principales - Solo visible cuando no está cargando
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.SpaceEvenly,
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    // Retroceder 30s
-                    IconButton(onClick = { viewModel.skipBackward() }) {
-                        Icon(Icons.Default.Replay30, contentDescription = "-30s", modifier = Modifier.size(32.dp))
+
+                Spacer(modifier = Modifier.height(16.dp))
+
+                // --- FILA: VERSÍCULO ACTUAL + VER TEXTO + GUARDAR CITA ---
+                if (uiState.chapterTimestamps.isNotEmpty() && !uiState.isLoading) {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(56.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.SpaceBetween
+                    ) {
+                        Text(
+                            text = "Versículo ${uiState.currentVerse}",
+                            fontSize = 16.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = AccentGold
+                        )
+
+                        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                            Button(
+                                onClick = { showTextScreen = true },
+                                modifier = Modifier.height(40.dp),
+                                colors = ButtonDefaults.buttonColors(
+                                    containerColor = AccentGold,
+                                    contentColor = Color.White
+                                ),
+                                contentPadding = PaddingValues(horizontal = 12.dp)
+                            ) {
+                                Icon(
+                                    Icons.Default.MenuBook,
+                                    contentDescription = null,
+                                    modifier = Modifier.size(16.dp)
+                                )
+                                Spacer(Modifier.width(4.dp))
+                                Text(
+                                    text = "Ver Texto",
+                                    fontSize = 14.sp,
+                                    fontWeight = FontWeight.Bold
+                                )
+                            }
+
+                            IconButton(
+                                onClick = { viewModel.saveCurrentPositionAsBookmark() },
+                                modifier = Modifier.size(40.dp)
+                            ) {
+                                Icon(
+                                    if (uiState.bookmarkSaved) Icons.Default.Star else Icons.Default.StarBorder,
+                                    contentDescription = "Guardar cita",
+                                    tint = AccentGold,
+                                    modifier = Modifier.size(28.dp)
+                                )
+                            }
+                        }
                     }
 
-                    // Play / Pause
-                    LargeFloatingActionButton(
+                    if (uiState.bookmarkSaved) {
+                        Text(
+                            text = "✓ Cita guardada",
+                            fontSize = 12.sp,
+                            color = SuccessGreen,
+                            fontWeight = FontWeight.Medium,
+                            modifier = Modifier.align(Alignment.End)
+                        )
+                    }
+
+                } else {
+                    Spacer(modifier = Modifier.height(56.dp))
+                }
+
+                Spacer(modifier = Modifier.height(12.dp))
+
+                Slider(
+                    value = uiState.currentPosition.toFloat(),
+                    onValueChange = { viewModel.seekTo(it.toLong()) },
+                    valueRange = 0f..(uiState.duration.toFloat().coerceAtLeast(1f)),
+                    modifier = Modifier.fillMaxWidth(),
+                    colors = SliderDefaults.colors(
+                        thumbColor = PrimaryColor,
+                        activeTrackColor = PrimaryColor,
+                        inactiveTrackColor = DividerColor
+                    )
+                )
+
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Text(formatTime(uiState.currentPosition))
+                    Text(formatTime(uiState.duration))
+                }
+
+                Spacer(modifier = Modifier.height(12.dp))
+
+                if (uiState.isLoading && !uiState.audioReady) {
+                    Column(
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        modifier = Modifier.padding(bottom = 12.dp)
+                    ) {
+                        CircularProgressIndicator(
+                            modifier = Modifier.size(24.dp),
+                            color = PrimaryColor,
+                            strokeWidth = 3.dp
+                        )
+                        Spacer(modifier = Modifier.height(8.dp))
+                        Text(
+                            text = "Descargando capítulo, espera...",
+                            fontSize = 20.sp,
+                            color = SuccessGreen,
+                            fontWeight = FontWeight.ExtraBold,
+                            textAlign = TextAlign.Center
+                        )
+                    }
+                }
+
+                Box(
+                    modifier = Modifier.fillMaxWidth(),
+                    contentAlignment = Alignment.Center
+                ) {
+                    FloatingActionButton(
                         onClick = { viewModel.togglePlayPause() },
-                        containerColor = androidx.compose.ui.graphics.Color(0xFF2E7D32)  // Verde vibrante
+                        containerColor = PrimaryColor,
+                        shape = CircleShape
                     ) {
                         Icon(
                             if (uiState.isPlaying) Icons.Default.Pause else Icons.Default.PlayArrow,
                             contentDescription = "Play/Pause",
-                            modifier = Modifier.size(48.dp),
-                            tint = androidx.compose.ui.graphics.Color.White
+                            modifier = Modifier.size(32.dp),
+                            tint = Color.White
                         )
                     }
+                }
 
-                    // Avanzar 30s
-                    IconButton(onClick = { viewModel.skipForward() }) {
-                        Icon(Icons.Default.Forward30, contentDescription = "+30s", modifier = Modifier.size(32.dp))
-                    }
+                Spacer(modifier = Modifier.height(16.dp))
+
+                FilledTonalButton(
+                    onClick = { viewModel.stop() },
+                    modifier = Modifier
+                        .height(40.dp)
+                        .fillMaxWidth(0.5f)
+                ) {
+                    Icon(Icons.Default.Stop, contentDescription = null, modifier = Modifier.size(20.dp))
+                    Spacer(Modifier.width(6.dp))
+                    Text("DETENER", fontSize = 14.sp, fontWeight = FontWeight.Bold)
                 }
 
                 Spacer(modifier = Modifier.height(24.dp))
 
-                // Botón Stop - Más visible y grande
-                FilledTonalButton(
-                    onClick = { viewModel.stop() },
+                Button(
+                    onClick = { showVersePicker = true },
                     modifier = Modifier
                         .height(48.dp)
-                        .fillMaxWidth(0.6f),
-                    colors = ButtonDefaults.filledTonalButtonColors(
-                        containerColor = MaterialTheme.colorScheme.errorContainer,
-                        contentColor = MaterialTheme.colorScheme.onErrorContainer
+                        .fillMaxWidth(0.75f)
+                        .padding(bottom = 4.dp),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = LightGold,
+                        contentColor = AccentGold
                     )
                 ) {
-                    Icon(Icons.Default.Stop, contentDescription = null, modifier = Modifier.size(24.dp))
-                    Spacer(Modifier.width(8.dp))
-                    Text("DETENER", fontSize = 16.sp, fontWeight = FontWeight.Bold)
+                    Icon(Icons.Default.Search, contentDescription = null, modifier = Modifier.size(20.dp))
+                    Spacer(Modifier.width(6.dp))
+                    Text("Escribir una Cita", fontSize = 15.sp, fontWeight = FontWeight.Bold)
                 }
+
+                Spacer(modifier = Modifier.height(16.dp))
             }
         }
 
-        // Bottom Sheet para Selector de Versículos
         if (showVersePicker) {
             ModalBottomSheet(
                 onDismissRequest = { showVersePicker = false },
-                sheetState = sheetState
+                sheetState = sheetState,
+                containerColor = Background
             ) {
                 VersePickerContent(
                     timestamps = uiState.chapterTimestamps,
                     currentVerse = uiState.currentVerse,
+                    currentBook = currentBook,
+                    currentChapter = displayChapter,
                     onVerseSelected = { verse ->
                         val ts = uiState.chapterTimestamps.find { it.verse == verse }
                         ts?.let { viewModel.seekTo(it.startMs) }
                         scope.launch { sheetState.hide() }.invokeOnCompletion {
                             showVersePicker = false
+                        }
+                    },
+                    onNavigate = { targetBook, targetChapter, targetVerseStart, targetVerseEnd ->
+                        scope.launch { sheetState.hide() }.invokeOnCompletion {
+                            showVersePicker = false
+                            onNavigate(
+                                targetBook.id,
+                                targetBook.name,
+                                targetChapter,
+                                targetVerseStart,
+                                targetVerseEnd
+                            )
                         }
                     }
                 )
@@ -199,45 +481,86 @@ fun PlayerScreen(
 
 @Composable
 fun VersePickerContent(
-    timestamps: List<com.willy.bibliareinavalera.data.local.database.VerseTimestamp>,
+    timestamps: List<VerseTimestamp>,
     currentVerse: Int,
-    onVerseSelected: (Int) -> Unit
+    currentBook: BibleBook,
+    currentChapter: Int,
+    onVerseSelected: (Int) -> Unit,
+    onNavigate: (book: BibleBook, chapter: Int, verseStart: Int, verseEnd: Int?) -> Unit
 ) {
-    Column(modifier = Modifier.fillMaxWidth().padding(16.dp)) {
-        Text("Seleccionar versículo", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold, modifier = Modifier.padding(bottom = 16.dp))
-        LazyVerticalGrid(
-            columns = GridCells.Adaptive(minSize = 56.dp),
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp),
-            modifier = Modifier.fillMaxHeight(0.5f)
-        ) {
-            items(timestamps) { ts ->
-                FilterChip(
-                    selected = ts.verse == currentVerse,
-                    onClick = { onVerseSelected(ts.verse) },
-                    label = { 
-                        Text(
-                            ts.verse.toString(), 
-                            modifier = Modifier.fillMaxWidth(), 
-                            textAlign = androidx.compose.ui.text.style.TextAlign.Center,
-                            fontWeight = FontWeight.Bold,
-                            color = androidx.compose.ui.graphics.Color.White
-                        ) 
-                    },
-                    colors = FilterChipDefaults.filterChipColors(
-                        containerColor = androidx.compose.ui.graphics.Color(0xFF4CAF50),  // Verde vibrante como pantalla principal
-                        labelColor = androidx.compose.ui.graphics.Color.White,
-                        selectedContainerColor = androidx.compose.ui.graphics.Color(0xFF2E7D32),  // Verde más oscuro cuando seleccionado
-                        selectedLabelColor = androidx.compose.ui.graphics.Color.White
-                    ),
-                    border = BorderStroke(
-                        width = 2.dp,
-                        color = androidx.compose.ui.graphics.Color(0xFF1B5E20)  // Borde verde oscuro
-                    )
-                )
-            }
+    var searchText by remember { mutableStateOf("") }
+    var errorMessage by remember { mutableStateOf("") }
+    val focusRequester = remember { FocusRequester() }
+
+    fun handleSearch() {
+        val ref = parseBibleReference(searchText, currentBook, currentChapter)
+        if (ref == null) {
+            errorMessage = "No se reconoció. Ej: 5 o Santiago 1:5 o 1 Corintios 13:4-7"
+            return
         }
-        Spacer(modifier = Modifier.height(32.dp))
+        errorMessage = ""
+        if (ref.book.id == currentBook.id && ref.chapter == currentChapter && ref.verseEnd == null) {
+            onVerseSelected(ref.verseStart)
+        } else {
+            onNavigate(ref.book, ref.chapter, ref.verseStart, ref.verseEnd)
+        }
+    }
+
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp)
+    ) {
+        OutlinedTextField(
+            value = searchText,
+            onValueChange = { searchText = it; errorMessage = "" },
+            label = { Text("Escribe una cita bíblica..", fontSize = 18.sp) },
+            textStyle = MaterialTheme.typography.bodyLarge.copy(fontSize = 20.sp),
+            singleLine = true,
+            isError = errorMessage.isNotEmpty(),
+            supportingText = {
+                if (errorMessage.isNotEmpty()) {
+                    Text(errorMessage, color = MaterialTheme.colorScheme.error)
+                }
+            },
+            trailingIcon = {
+                if (searchText.isNotEmpty()) {
+                    IconButton(onClick = { searchText = ""; errorMessage = "" }) {
+                        Icon(Icons.Default.Clear, contentDescription = "Limpiar")
+                    }
+                }
+            },
+            keyboardOptions = KeyboardOptions(
+                keyboardType = KeyboardType.Text,
+                imeAction = ImeAction.Go
+            ),
+            keyboardActions = KeyboardActions(onGo = { handleSearch() }),
+            modifier = Modifier
+                .fillMaxWidth()
+                .focusRequester(focusRequester)
+        )
+
+        Text(
+            "También puedes escribir un rango.\nEjemplo: 1 Corintios 13:4-7",
+            fontSize = 17.sp,
+            fontWeight = FontWeight.Bold,
+            color = Color(0xFF880E4F),
+            modifier = Modifier.padding(top = 8.dp, bottom = 4.dp)
+        )
+
+        Button(
+            onClick = { handleSearch() },
+            enabled = searchText.isNotEmpty(),
+            modifier = Modifier
+                .align(Alignment.End)
+                .padding(top = 4.dp, bottom = 16.dp)
+        ) {
+            Icon(Icons.Default.Search, contentDescription = null)
+            Spacer(Modifier.width(4.dp))
+            Text("Ir")
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
     }
 }
 

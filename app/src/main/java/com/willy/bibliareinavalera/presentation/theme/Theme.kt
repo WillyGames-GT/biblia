@@ -21,17 +21,17 @@ private val LightColorScheme = lightColorScheme(
     onPrimary = OnPrimary,
     primaryContainer = PrimaryDark,
     onPrimaryContainer = OnPrimary,
-    secondary = SecondaryColor,
+    secondary = AccentGold,
     onSecondary = OnSecondary,
-    secondaryContainer = SecondaryDark,
+    secondaryContainer = SoftGray,
     onSecondaryContainer = OnSecondary,
-    tertiary = AccentGold,
+    tertiary = SuccessGreen,
     onTertiary = OnPrimary,
     background = Background,
     onBackground = OnBackground,
     surface = Surface,
     onSurface = OnSurface,
-    surfaceVariant = Cream,
+    surfaceVariant = LightGold,
     onSurfaceVariant = OnSurface,
     error = Error,
     onError = OnPrimary,
@@ -40,22 +40,22 @@ private val LightColorScheme = lightColorScheme(
 )
 
 private val DarkColorScheme = darkColorScheme(
-    primary = AccentGold,
-    onPrimary = DarkBrown,
+    primary = PrimaryColor,
+    onPrimary = OnPrimary,
     primaryContainer = PrimaryDark,
-    onPrimaryContainer = AccentGold,
-    secondary = LightBrown,
+    onPrimaryContainer = OnPrimary,
+    secondary = AccentGold,
     onSecondary = OnSecondary,
-    secondaryContainer = SecondaryDark,
+    secondaryContainer = SoftGray,
     onSecondaryContainer = OnSecondary,
-    tertiary = PrimaryColor,
+    tertiary = SuccessGreen,
     onTertiary = OnPrimary,
-    background = DarkBrown,
-    onBackground = Surface,
-    surface = SurfaceDark,
-    onSurface = Surface,
-    surfaceVariant = SurfaceVariantDark,
-    onSurfaceVariant = Cream,
+    background = Background,
+    onBackground = OnBackground,
+    surface = Surface,
+    onSurface = OnSurface,
+    surfaceVariant = LightGold,
+    onSurfaceVariant = OnSurface,
     error = Error,
     onError = OnPrimary,
     errorContainer = Error,
@@ -73,7 +73,9 @@ fun BibliaReinaValeraTheme(
             val context = LocalContext.current
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
-        darkTheme -> DarkColorScheme
+        // Forzamos LightColorScheme por ahora para mantener la estética editorial 
+        // consistentemente mientras se define el Dark Mode editorial.
+        darkTheme -> LightColorScheme
         else -> LightColorScheme
     }
 
