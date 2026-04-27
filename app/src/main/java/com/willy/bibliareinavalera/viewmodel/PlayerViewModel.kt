@@ -24,7 +24,6 @@ import com.willy.bibliareinavalera.data.repository.TimestampResult
 import com.willy.bibliareinavalera.service.AudioService
 import com.willy.bibliareinavalera.service.ChapterPreloader
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -80,16 +79,17 @@ class PlayerViewModel(application: Application) : AndroidViewModel(application) 
     private var stopCalledDirectly = false
     private var lastKnownPosition: Long = 0L
     private var sessionStartMs: Long = 0L
+    private var isCurrentChapterInHistory: Boolean = false
 
     private var originalRangeStartVerse: Int = 0
     private var originalRangeEndVerse: Int = 0
 
+    // Flag que indica que el usuario detuvo explícitamente la reproducción.
+    private var stoppedByUser = false
+
     private val _uiState = MutableStateFlow(PlayerUiState())
     val uiState = _uiState.asStateFlow()
 
-    /**
-     * Verifica si el capítulo ya fue descargado chequeando si el JSON de texto existe en disco.
-     */
     private fun isChapterCached(bookCode: String, chapter: Int): Boolean {
         return try {
             val fileName = BibleBookCodes.codeToFileName[bookCode] ?: return false
@@ -116,7 +116,7 @@ class PlayerViewModel(application: Application) : AndroidViewModel(application) 
         fromSearch: Boolean = false,
         isResume: Boolean = false
     ) {
-        Log.d("PlayerViewModel", "initController: bookCode=$bookCode chapter=$chapter startVerse=$startVerse endVerse=$endVerse")
+        Log.d("PlayerViewModel", "initController: bookCode=$bookCode chapter=$chapter startVerse=$startVerse endVerse=$endVerse stoppedByUser=$stoppedByUser isResume=$isResume")
         preloadTriggered = false
         ChapterPreloader.cancel()
 
@@ -124,7 +124,26 @@ class PlayerViewModel(application: Application) : AndroidViewModel(application) 
         pendingEndVerse = endVerse
         pendingPositionMs = initialPositionMs
         rangeFinished = false
-        shouldAutoPlay = autoPlay
+
+        // Si viene de "Continuar escuchando" (isResume=true) o de una navegación
+        // explícita del usuario, resetear stoppedByUser para permitir autoPlay
+        if (isResume || initialPositionMs > 0L || !fromSearch && (bookCode != _uiState.value.bookCode || chapter != _uiState.value.chapter)) {
+            stoppedByUser = false
+        }
+
+        // Si el usuario detuvo explícitamente y es el mismo capítulo, no reproducir
+        val isSameChapter = bookCode == _uiState.value.bookCode && chapter == _uiState.value.chapter
+
+        // --- PROTECCIÓN CONTRA REINICIOS AL VOLVER ---
+        // Si es el mismo capítulo y no traemos una posición nueva ni es un cambio de rango,
+        // no reiniciamos para evitar que el audio salte al principio al presionar "atrás".
+        if (isSameChapter && initialPositionMs == 0L && startVerse <= 1 && !isResume && !fromSearch) {
+            Log.d("PlayerViewModel", "initController: Mismo capítulo detectado, ignorando reinicio.")
+            return
+        }
+
+        shouldAutoPlay = if (stoppedByUser && isSameChapter) false else autoPlay
+
         lastSavedVerse = -1
         userHasInteracted = false
         userRequestedStop = false
@@ -161,12 +180,14 @@ class PlayerViewModel(application: Application) : AndroidViewModel(application) 
 
     private fun checkForResumeProgress(bookCode: String, chapter: Int) {
         viewModelScope.launch {
-            val progress = bookmarkDao.getForChapter(bookCode, chapter)
-            if (progress != null && progress.verseStart > 1 && pendingStartVerse == 0 && pendingPositionMs == 0L) {
+            // Usar lastPositionDao para ver el progreso real del historial
+            val progress = lastPositionDao.getForChapter(bookCode, chapter)
+            isCurrentChapterInHistory = progress != null
+            if (progress != null && progress.startVerse > 1 && pendingStartVerse == 0 && pendingPositionMs == 0L) {
                 _uiState.update {
                     it.copy(
                         resumePromptVisible = true,
-                        resumeVerse = progress.verseStart,
+                        resumeVerse = progress.startVerse,
                         resumePositionMs = progress.positionMs
                     )
                 }
@@ -221,20 +242,19 @@ class PlayerViewModel(application: Application) : AndroidViewModel(application) 
     }
 
     private fun downloadAndPrepare(bookCode: String, bookName: String, chapter: Int) {
+        // Precargar texto en paralelo, sin bloquear el inicio del audio
         viewModelScope.launch {
-            // Precargar texto (se guarda en filesDir para uso offline)
             try {
                 bibleTextRepository.getChapterText(bookCode, chapter)
             } catch (e: Exception) {
                 Log.e("PlayerViewModel", "Error precargando texto: ${e.message}")
             }
-
-            // Conectar al reproductor
-            if (mediaController != null) {
-                loadAudio(bookCode, chapter)
-            } else {
-                connectControllerAndLoad(bookCode, chapter)
-            }
+        }
+        // Conectar al reproductor inmediatamente, sin esperar la precarga del texto
+        if (mediaController != null) {
+            loadAudio(bookCode, chapter)
+        } else {
+            connectControllerAndLoad(bookCode, chapter)
         }
     }
 
@@ -257,10 +277,10 @@ class PlayerViewModel(application: Application) : AndroidViewModel(application) 
                         if (sessionStartMs == 0L) sessionStartMs = System.currentTimeMillis()
                         startProgressTracking()
                     } else {
-                        if (!rangeFinished && userRequestedStop && !stopCalledDirectly) {
-                            userRequestedStop = false
+                        if (!stopCalledDirectly) {
                             maybeSaveProgress()
                         }
+                        sessionStartMs = 0L
                         stopProgressTracking()
                     }
                 }
@@ -282,7 +302,7 @@ class PlayerViewModel(application: Application) : AndroidViewModel(application) 
                         }
                         Player.STATE_ENDED -> {
                             _uiState.update { it.copy(isPlaying = false, isLoading = false) }
-                            maybeSaveProgress()
+                            saveProgress(force = true)
                             if (!rangeFinished) {
                                 playNextChapter()
                             }
@@ -299,8 +319,9 @@ class PlayerViewModel(application: Application) : AndroidViewModel(application) 
     }
 
     private fun maybeSaveProgress() {
+        // Guardamos si se ha escuchado al menos 2 segundos en esta sesión (para capturar pausas rápidas)
         val listenedMs = if (sessionStartMs > 0L) System.currentTimeMillis() - sessionStartMs else 0L
-        if (listenedMs >= 30_000L) {
+        if (listenedMs >= 2_000L) {
             saveProgress(force = true)
         }
     }
@@ -388,9 +409,11 @@ class PlayerViewModel(application: Application) : AndroidViewModel(application) 
         mediaController?.let { controller ->
             val currentUri = controller.currentMediaItem?.localConfiguration?.uri?.toString()
             if (currentUri == url) {
-                if (pendingStartVerse <= 0 && pendingPositionMs <= 0L && lastKnownPosition > 0) {
-                    controller.seekTo(lastKnownPosition)
+                // Incluso si es el mismo audio, si traemos una posición pendiente (del historial), la aplicamos
+                if (pendingPositionMs > 0L || pendingStartVerse > 0) {
+                    trySeekToPendingVerse()
                 }
+
                 if (shouldAutoPlay) controller.play()
                 _uiState.update {
                     val newIsRangeActive = if (pendingStartVerse > 0) {
@@ -432,6 +455,7 @@ class PlayerViewModel(application: Application) : AndroidViewModel(application) 
     private fun startProgressTracking() {
         progressJob?.cancel()
         progressJob = viewModelScope.launch {
+            var lastPeriodicSave = System.currentTimeMillis()
             while (true) {
                 mediaController?.let { controller ->
                     val pos = controller.currentPosition
@@ -441,10 +465,22 @@ class PlayerViewModel(application: Application) : AndroidViewModel(application) 
                     _uiState.update { it.copy(currentPosition = pos, currentVerse = verse) }
 
                     if (verse != lastSavedVerse) {
+                        if (lastSavedVerse != -1) {
+                            saveProgress(force = true)
+                        }
                         lastSavedVerse = verse
                     }
 
                     maybeStopAtRangeEnd(pos)
+
+                    // Si ya está en el historial, actualizamos cada 3 segundos.
+                    // Si es nuevo, intentamos guardar (el método saveProgress filtrará los 30s)
+                    val now = System.currentTimeMillis()
+                    val interval = if (isCurrentChapterInHistory) 3_000L else 5_000L
+                    if (now - lastPeriodicSave >= interval) {
+                        saveProgress()
+                        lastPeriodicSave = now
+                    }
 
                     val duration = _uiState.value.duration
                     if (duration > 0 && pos >= duration * 0.8) {
@@ -507,15 +543,18 @@ class PlayerViewModel(application: Application) : AndroidViewModel(application) 
         mediaController?.let {
             when {
                 it.playbackState == Player.STATE_IDLE -> {
+                    stoppedByUser = false
                     it.prepare()
                     it.play()
                 }
                 it.isPlaying -> {
                     userRequestedStop = true
+                    stoppedByUser = true // ✅ Marcar que el usuario pausó intencionalmente
                     it.pause()
                 }
                 else -> {
                     rangeFinished = false
+                    stoppedByUser = false // ✅ Marcar que el usuario quiere reproducir
                     it.play()
                 }
             }
@@ -545,8 +584,9 @@ class PlayerViewModel(application: Application) : AndroidViewModel(application) 
         userHasInteracted = true
         stopCalledDirectly = true
         userRequestedStop = false
+        stoppedByUser = true
 
-        maybeSaveProgress()
+        saveProgress(force = true)
 
         mediaController?.let {
             try {
@@ -572,25 +612,47 @@ class PlayerViewModel(application: Application) : AndroidViewModel(application) 
         val state = _uiState.value
         if (state.bookCode.isEmpty()) return
 
-        if (state.currentPosition < 2000L && !force) return
+        // Obtenemos los valores directos del controlador para máxima precisión
+        val controller = mediaController ?: return
+        val positionToSave = controller.currentPosition
+        val verseToSave = calculateCurrentVerse(positionToSave)
+
+        // Lógica de umbrales solicitada:
+        val sessionDuration = if (sessionStartMs > 0) System.currentTimeMillis() - sessionStartMs else 0L
+
+        if (!isCurrentChapterInHistory) {
+            // Si es nuevo, solo guardamos si han pasado 30 segundos de reproducción
+            if (sessionDuration < 30_000L && !force) return
+        }
+
+        if (positionToSave < 1000L && !force) return
 
         val now = System.currentTimeMillis()
-        if (!force && now - lastProgressSaveAt < 2000L) return
+        // Si ya está en historial, permitimos guardado frecuente (cada 3s), si no, mantenemos el throttle normal
+        val throttle = if (isCurrentChapterInHistory) 2800L else 5000L
+        if (!force && now - lastProgressSaveAt < throttle) return
         lastProgressSaveAt = now
 
         viewModelScope.launch {
-            val existing = lastPositionDao.getForChapter(state.bookCode, state.chapter)
+            // Limpiamos CUALQUIER registro previo de este mismo capítulo.
+            // Esto asegura que la última escucha siempre sea la que manda y no se bloquee por lógica "forward-only"
+            // si el usuario decide volver a escuchar desde el principio o reajustar.
+            val existing = lastPositionDao.getAllForChapter(state.bookCode, state.chapter)
+            existing.forEach { lastPositionDao.deleteById(it.id) }
+
             lastPositionDao.save(
                 LastPosition(
-                    id = existing?.id ?: 0L,
                     bookCode = state.bookCode,
                     bookName = state.bookName,
                     chapter = state.chapter,
-                    startVerse = if (state.currentVerse <= 0) 1 else state.currentVerse,
+                    startVerse = verseToSave,
                     endVerse = 0,
-                    positionMs = state.currentPosition
+                    positionMs = positionToSave,
+                    savedAt = System.currentTimeMillis()
                 )
             )
+            isCurrentChapterInHistory = true // Marcamos que ya existe tras el primer guardado
+            Log.d("PlayerViewModel", "Progreso actualizado (Sobrescribiendo): ${state.bookCode} $verseToSave at $positionToSave ms")
         }
     }
 

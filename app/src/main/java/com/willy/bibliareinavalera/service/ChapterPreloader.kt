@@ -34,10 +34,9 @@ object ChapterPreloader {
 
     fun buildUrl(bookCode: String, chapter: Int): String {
         val chapterStr = chapter.toString().padStart(3, '0')
-        val bookFolder = BibleBookCodes.codeToFileName[bookCode] ?: bookCode.lowercase()
-        // Probamos con el nombre de la carpeta (ej. genesis_001.mp3)
-        val fileName = "${bookFolder}_$chapterStr.mp3"
-        return "$BASE_URL/$bookFolder/$fileName"
+        // El servidor R2 usa la estructura: /GEN/GEN_001.mp3 (todo en mayúsculas)
+        val fileName = "${bookCode}_$chapterStr.mp3"
+        return "$BASE_URL/$bookCode/$fileName"
     }
 
     /**

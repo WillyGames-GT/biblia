@@ -58,7 +58,7 @@ import com.willy.bibliareinavalera.viewmodel.HistoryViewModel
 fun HistoryScreen(
     viewModel: HistoryViewModel,
     onBack: () -> Unit,
-    onNavigateToChapter: (String, String, Int, Int, Int) -> Unit  // ✅ agregado endVerse
+    onNavigateToChapter: (String, String, Int, Int, Int, Long) -> Unit  // ✅ agregado positionMs
 ) {
     val favoriteQuotes by viewModel.favoriteQuotes.collectAsState()
     val continueListeningList by viewModel.continueListeningList.collectAsState()
@@ -132,7 +132,8 @@ fun HistoryScreen(
                                 pos.bookName,
                                 pos.chapter,
                                 pos.startVerse,
-                                0  // ✅ escucha continua no tiene rango
+                                0, // escucha continua no tiene rango
+                                pos.positionMs // ✅ pasar la posición real
                             )
                         },
                         onDelete = {
@@ -163,7 +164,8 @@ fun HistoryScreen(
                                 item.bookmark.bookName,
                                 item.bookmark.chapter,
                                 item.bookmark.verseStart,
-                                item.bookmark.verseEnd ?: 0  // ✅ pasar verseEnd correctamente
+                                item.bookmark.verseEnd ?: 0,
+                                item.bookmark.positionMs // ✅ pasar la posición guardada
                             )
                         },
                         onDelete = {

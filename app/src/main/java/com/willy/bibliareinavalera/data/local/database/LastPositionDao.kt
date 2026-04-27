@@ -21,6 +21,9 @@ interface LastPositionDao {
     @Query("SELECT * FROM last_position WHERE bookCode = :bookCode AND chapter = :chapter LIMIT 1")
     suspend fun getForChapter(bookCode: String, chapter: Int): LastPosition?
 
+    @Query("SELECT * FROM last_position WHERE bookCode = :bookCode AND chapter = :chapter ORDER BY savedAt DESC")
+    suspend fun getAllForChapter(bookCode: String, chapter: Int): List<LastPosition>
+
     @Query("DELETE FROM last_position WHERE id = :id")
     suspend fun deleteById(id: Long)
 

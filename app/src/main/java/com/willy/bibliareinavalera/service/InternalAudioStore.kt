@@ -19,7 +19,7 @@ object InternalAudioStore {
         if (!folder.exists()) {
             folder.mkdirs()
         }
-        val fileName = "${bookCode.lowercase()}_${chapter.toString().padStart(3, '0')}.mp3"
+        val fileName = "${bookCode}_${chapter.toString().padStart(3, '0')}.mp3"
         return File(folder, fileName)
     }
 

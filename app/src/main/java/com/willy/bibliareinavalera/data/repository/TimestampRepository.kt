@@ -38,9 +38,9 @@ class TimestampRepository(
     private val baseUrl = "https://pub-c11ab78c10c244e0823b22b3301dce5b.r2.dev"
 
     companion object {
-        private const val MAX_RETRIES = 3
-        private const val TIMEOUT_MS = 4000
-        private const val RETRY_DELAY_MS = 1000L
+        private const val MAX_RETRIES = 2
+        private const val TIMEOUT_MS = 2000
+        private const val RETRY_DELAY_MS = 500L
     }
 
     suspend fun getTimestamps(book: String, chapter: Int): TimestampResult =
@@ -57,8 +57,8 @@ class TimestampRepository(
                 Log.e("TimestampRepo", "Error leyendo Room: ${e.message}")
             }
 
-            // 2. Descargar de R2 con reintentos
-            repeat(MAX_RETRIES) { attempt ->
+            // 2. Descargar de R2 con reintentos optimizados
+            for (attempt in 0 until MAX_RETRIES) {
                 try {
                     val urlString = "$baseUrl/$book/${book}_${chapter.toString().padStart(3, '0')}_timestamps.json"
                     Log.d("TimestampRepo", "Intento ${attempt + 1}/$MAX_RETRIES: $urlString")
@@ -67,7 +67,8 @@ class TimestampRepository(
                     connection.connectTimeout = TIMEOUT_MS
                     connection.readTimeout = TIMEOUT_MS
 
-                    if (connection.responseCode == HttpURLConnection.HTTP_OK) {
+                    val responseCode = connection.responseCode
+                    if (responseCode == HttpURLConnection.HTTP_OK) {
                         val responseText = connection.inputStream.bufferedReader().use { it.readText() }
                         val data = json.decodeFromString<TimestampJson>(responseText)
                         val entities = data.verses.map {
@@ -85,6 +86,9 @@ class TimestampRepository(
                             Log.e("TimestampRepo", "Error guardando Room: ${e.message}")
                         }
                         return@withContext TimestampResult.Real(entities)
+                    } else if (responseCode == 404) {
+                        Log.w("TimestampRepo", "404 - No existen timestamps para $book $chapter. Saltando reintentos.")
+                        break // Si no existe, no pierdas tiempo reintentando
                     }
                 } catch (e: Exception) {
                     Log.w("TimestampRepo", "Intento ${attempt + 1} fallido: ${e.message}")

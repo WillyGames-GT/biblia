@@ -91,9 +91,10 @@ fun AppNavigation() {
             HistoryScreen(
                 viewModel = historyViewModel,
                 onBack = { navController.popBackStack() },
-                onNavigateToChapter = { bookCode, bookName, chapter, verse, endVerse ->
+                onNavigateToChapter = { bookCode, bookName, chapter, verse, endVerse, positionMs ->
                     val safeVerse = if (verse <= 0) 1 else verse
-                    navController.navigate("player/$bookCode/${encode(bookName)}/$chapter/$safeVerse/$endVerse/0/false/true/${System.currentTimeMillis()}") {
+                    // ✅ Marcamos isResume = true y fromSearch = false para que el ViewModel sepa que es una reanudación
+                    navController.navigate("player/$bookCode/${encode(bookName)}/$chapter/$safeVerse/$endVerse/$positionMs/true/false/${System.currentTimeMillis()}") {
                         popUpTo("books") { inclusive = false }
                     }
                 }
@@ -207,6 +208,9 @@ fun AppNavigation() {
                     navController.navigate("books") {
                         popUpTo("books") { inclusive = true }
                     }
+                },
+                onHistoryClick = {
+                    navController.navigate("history")
                 },
                 onNavigate = { bCode, bName, chap, verseStart, verseEnd ->
                     val safeStart = if ((verseStart ?: 0) <= 0) 1 else verseStart!!

@@ -1,5 +1,6 @@
 package com.willy.bibliareinavalera.ui
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
@@ -18,10 +19,12 @@ import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
@@ -109,6 +112,7 @@ fun PlayerScreen(
     fromSearch: Boolean,
     viewModel: PlayerViewModel,
     onBack: () -> Unit,
+    onHistoryClick: () -> Unit,
     onNavigate: (
         bookCode: String,
         bookName: String,
@@ -123,6 +127,8 @@ fun PlayerScreen(
     val scrollState = rememberScrollState()
     var showVersePicker by remember { mutableStateOf(false) }
     var showTextScreen by remember { mutableStateOf(false) }
+    var showInfoDialog by remember { mutableStateOf(false) }
+    val uriHandler = LocalUriHandler.current
 
     val displayBookName = uiState.bookName.ifEmpty { bookName }
     val displayChapter = if (uiState.chapter > 0) uiState.chapter else chapter
@@ -163,10 +169,82 @@ fun PlayerScreen(
                     bookName = displayBookName,
                     chapter = displayChapter,
                     currentVerse = uiState.currentVerse,
-                    onClose = { showTextScreen = false }
+                    isPlaying = uiState.isPlaying,
+                    bookmarkSaved = uiState.bookmarkSaved,
+                    onTogglePlayPause = { viewModel.togglePlayPause() },
+                    onSaveBookmark = { viewModel.saveCurrentPositionAsBookmark() },
+                    onClose = { showTextScreen = false },
+                    // NUEVO: al tocar un versículo, salta al timestamp y arranca si estaba pausado
+                    onVerseClick = { verseNumber ->
+                        val ts = uiState.chapterTimestamps.find { it.verse == verseNumber }
+                        ts?.let { viewModel.seekTo(it.startMs) }
+                        if (!uiState.isPlaying) viewModel.togglePlayPause()
+                    }
                 )
             }
         }
+    }
+
+    // --- DIÁLOGO INFO ---
+    if (showInfoDialog) {
+        AlertDialog(
+            onDismissRequest = { showInfoDialog = false },
+            title = {
+                Text("Reina Valera 1909 en Audio", fontWeight = FontWeight.Bold)
+            },
+            text = {
+                Column(
+                    modifier = Modifier
+                        .verticalScroll(rememberScrollState())
+                        .padding(vertical = 8.dp),
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                ) {
+                    Text(
+                        text = "Esta aplicación ha sido creada para ofrecer una experiencia única de escucha de las Sagradas Escrituras. Mi objetivo es que la Palabra de Dios te acompañe en todo momento con una navegación fluida y precisa.",
+                        fontSize = 15.sp
+                    )
+
+                    HorizontalDivider()
+
+                    Text(
+                        text = "Desarrollador",
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.primary
+                    )
+                    Text(text = "Willy De León", fontSize = 15.sp)
+
+                    Text(
+                        text = "Tecnologías y Agradecimientos",
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.primary
+                    )
+                    Text(
+                        text = "Desarrollada con Kotlin y Jetpack Compose. El texto bíblico fue extraído de eBible.org y es de dominio público. Los audios fueron generados con la voz gratuita es-MX-JorgeNeural de Microsoft Edge TTS, y están alojados con alta disponibilidad en Cloudflare R2.",
+                        fontSize = 14.sp
+                    )
+
+                    Text(
+                        text = "Contacto",
+                        fontWeight = FontWeight.Bold,
+                        color = PrimaryColor
+                    )
+                    Text(
+                        text = "https://willygames-gt.github.io/",
+                        fontSize = 15.sp,
+                        color = PrimaryColor,
+                        textDecoration = TextDecoration.Underline,
+                        modifier = Modifier.clickable {
+                            uriHandler.openUri("https://willygames-gt.github.io/")
+                        }
+                    )
+                }
+            },
+            confirmButton = {
+                TextButton(onClick = { showInfoDialog = false }) {
+                    Text("Cerrar", color = PrimaryColor)
+                }
+            }
+        )
     }
 
     Scaffold(
@@ -184,6 +262,22 @@ fun PlayerScreen(
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "Volver",
+                            tint = Color.White
+                        )
+                    }
+                },
+                actions = {
+                    IconButton(onClick = onHistoryClick) {
+                        Icon(
+                            Icons.Default.History,
+                            contentDescription = "Historial",
+                            tint = Color.White
+                        )
+                    }
+                    IconButton(onClick = { showInfoDialog = true }) {
+                        Icon(
+                            Icons.Default.Info,
+                            contentDescription = "Información",
                             tint = Color.White
                         )
                     }
@@ -317,14 +411,15 @@ fun PlayerScreen(
                                 )
                             }
 
+                            // Botón Guardar cita (diskette)
                             IconButton(
                                 onClick = { viewModel.saveCurrentPositionAsBookmark() },
                                 modifier = Modifier.size(40.dp)
                             ) {
                                 Icon(
-                                    if (uiState.bookmarkSaved) Icons.Default.Star else Icons.Default.StarBorder,
+                                    Icons.Default.Save,
                                     contentDescription = "Guardar cita",
-                                    tint = AccentGold,
+                                    tint = if (uiState.bookmarkSaved) SuccessGreen else AccentGold,
                                     modifier = Modifier.size(28.dp)
                                 )
                             }
@@ -406,19 +501,6 @@ fun PlayerScreen(
                             tint = Color.White
                         )
                     }
-                }
-
-                Spacer(modifier = Modifier.height(16.dp))
-
-                FilledTonalButton(
-                    onClick = { viewModel.stop() },
-                    modifier = Modifier
-                        .height(40.dp)
-                        .fillMaxWidth(0.5f)
-                ) {
-                    Icon(Icons.Default.Stop, contentDescription = null, modifier = Modifier.size(20.dp))
-                    Spacer(Modifier.width(6.dp))
-                    Text("DETENER", fontSize = 14.sp, fontWeight = FontWeight.Bold)
                 }
 
                 Spacer(modifier = Modifier.height(24.dp))
