@@ -1,7 +1,6 @@
 package com.willy.bibliareinavalera.ui
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -9,21 +8,24 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Clear
 import androidx.compose.material.icons.filled.History
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.PlayArrow
-import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Stop
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -33,10 +35,6 @@ import com.willy.bibliareinavalera.data.local.database.BibleBook
 import com.willy.bibliareinavalera.viewmodel.BibleViewModel
 import com.willy.bibliareinavalera.viewmodel.PlayerUiState
 import com.willy.bibliareinavalera.viewmodel.PlayerViewModel
-import kotlinx.coroutines.launch
-
-private val CitaButtonContainer = Color(0xFFFFE0B2)
-private val CitaButtonColor = Color(0xFFE65100)
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -56,18 +54,27 @@ fun BookListScreen(
     ) -> Unit,
     onMiniPlayerTap: () -> Unit
 ) {
-    val context = LocalContext.current
     val lastPos by viewModel.lastPosition.collectAsState()
     val otBooks = BibleData.allBooks.take(39)
     val ntBooks = BibleData.allBooks.takeLast(27)
     var selectedTestament by remember { mutableStateOf("antiguo") }
     var showInfoDialog by remember { mutableStateOf(false) }
-    var showCitaPicker by remember { mutableStateOf(false) }
-    val sheetState = rememberModalBottomSheetState()
-    val scope = rememberCoroutineScope()
+    var citaText by remember { mutableStateOf("") }
+    var citaError by remember { mutableStateOf("") }
     val uriHandler = LocalUriHandler.current
 
     val defaultBook = remember { BibleData.allBooks[0] }
+
+    fun handleCitaSearch() {
+        val ref = parseBibleReference(citaText, defaultBook, 1)
+        if (ref == null) {
+            citaError = "No se reconoció. Ej: Juan 3:16 o 1 Corintios 13:4-7"
+            return
+        }
+        citaError = ""
+        citaText = ""
+        onVoiceNavigate(ref.book.id, ref.book.name, ref.chapter, ref.verseStart, ref.verseEnd)
+    }
 
     Scaffold(
         topBar = {
@@ -150,6 +157,62 @@ fun BookListScreen(
                 }
             }
 
+            // --- CAMPO DE CITA ---
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp, vertical = 4.dp),
+                verticalAlignment = Alignment.Top,
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                OutlinedTextField(
+                    value = citaText,
+                    onValueChange = { citaText = it; citaError = "" },
+                    label = { Text("Ir a una cita...", fontSize = 14.sp) },
+                    singleLine = true,
+                    isError = citaError.isNotEmpty(),
+                    supportingText = {
+                        if (citaError.isNotEmpty()) {
+                            Text(citaError, color = MaterialTheme.colorScheme.error, fontSize = 12.sp)
+                        }
+                    },
+                    trailingIcon = {
+                        if (citaText.isNotEmpty()) {
+                            IconButton(onClick = { citaText = ""; citaError = "" }) {
+                                Icon(Icons.Default.Clear, contentDescription = "Limpiar")
+                            }
+                        }
+                    },
+                    keyboardOptions = KeyboardOptions(
+                        keyboardType = KeyboardType.Text,
+                        imeAction = ImeAction.Go
+                    ),
+                    keyboardActions = KeyboardActions(onGo = { handleCitaSearch() }),
+                    modifier = Modifier.weight(1f),
+                    colors = OutlinedTextFieldDefaults.colors(
+                        focusedBorderColor = AccentGold,
+                        focusedLabelColor = AccentGold,
+                        cursorColor = AccentGold
+                    )
+                )
+                Button(
+                    onClick = { handleCitaSearch() },
+                    enabled = citaText.isNotEmpty(),
+                    modifier = Modifier
+                        .height(56.dp)
+                        .align(Alignment.CenterVertically),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = AccentGold,
+                        contentColor = Color.White
+                    ),
+                    contentPadding = PaddingValues(horizontal = 16.dp)
+                ) {
+                    Icon(Icons.Default.PlayArrow, contentDescription = null, modifier = Modifier.size(20.dp))
+                    Spacer(Modifier.width(4.dp))
+                    Text("Ir", fontWeight = FontWeight.Bold)
+                }
+            }
+
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -194,32 +257,6 @@ fun BookListScreen(
                 }
             }
 
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 24.dp, vertical = 8.dp),
-                contentAlignment = Alignment.Center
-            ) {
-                Button(
-                    onClick = { showCitaPicker = true },
-                    modifier = Modifier
-                        .fillMaxWidth(0.75f)
-                        .height(48.dp),
-                    colors = ButtonDefaults.buttonColors(
-                        containerColor = CitaButtonContainer,
-                        contentColor = CitaButtonColor
-                    )
-                ) {
-                    Icon(
-                        Icons.Default.Search,
-                        contentDescription = null,
-                        modifier = Modifier.size(20.dp)
-                    )
-                    Spacer(Modifier.width(6.dp))
-                    Text("Escribir una Cita", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                }
-            }
-
             if (playerUiState.isPlaying) {
                 TextButton(
                     onClick = { playerViewModel.stop() },
@@ -240,38 +277,6 @@ fun BookListScreen(
         }
     }
 
-    if (showCitaPicker) {
-        ModalBottomSheet(
-            onDismissRequest = { showCitaPicker = false },
-            sheetState = sheetState,
-            containerColor = Background
-        ) {
-            VersePickerContent(
-                timestamps = emptyList(),
-                currentVerse = 0,
-                currentBook = defaultBook,
-                currentChapter = 1,
-                onVerseSelected = {
-                    scope.launch { sheetState.hide() }.invokeOnCompletion {
-                        showCitaPicker = false
-                    }
-                },
-                onNavigate = { targetBook, targetChapter, targetVerseStart, targetVerseEnd ->
-                    scope.launch { sheetState.hide() }.invokeOnCompletion {
-                        showCitaPicker = false
-                        onVoiceNavigate(
-                            targetBook.id,
-                            targetBook.name,
-                            targetChapter,
-                            targetVerseStart,
-                            targetVerseEnd
-                        )
-                    }
-                }
-            )
-        }
-    }
-
     if (showInfoDialog) {
         AlertDialog(
             onDismissRequest = { showInfoDialog = false },
@@ -289,16 +294,13 @@ fun BookListScreen(
                         text = "Esta aplicación ha sido creada para ofrecer una experiencia única de escucha de las Sagradas Escrituras. Mi objetivo es que la Palabra de Dios te acompañe en todo momento con una navegación fluida y precisa.",
                         fontSize = 15.sp
                     )
-
                     HorizontalDivider()
-
                     Text(
                         text = "Desarrollador",
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.primary
                     )
                     Text(text = "Willy De León", fontSize = 15.sp)
-
                     Text(
                         text = "Tecnologías y Agradecimientos",
                         fontWeight = FontWeight.Bold,
@@ -308,7 +310,6 @@ fun BookListScreen(
                         text = "Desarrollada con Kotlin y Jetpack Compose. El texto bíblico fue extraído de eBible.org y es de dominio público. Los audios fueron generados con la voz gratuita es-MX-JorgeNeural de Microsoft Edge TTS, y están alojados con alta disponibilidad en Cloudflare R2.",
                         fontSize = 14.sp
                     )
-
                     Text(
                         text = "Contacto",
                         fontWeight = FontWeight.Bold,
