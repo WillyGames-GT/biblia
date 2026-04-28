@@ -66,14 +66,15 @@ fun BookListScreen(
     val defaultBook = remember { BibleData.allBooks[0] }
 
     fun handleCitaSearch() {
-        val ref = parseBibleReference(citaText, defaultBook, 1)
-        if (ref == null) {
-            citaError = "No se reconoció. Ej: Juan 3:16 o 1 Corintios 13:4-7"
-            return
+        when (val result = parseBibleReferenceWithError(citaText, defaultBook, 1)) {
+            is ParseResult.Error -> citaError = result.message
+            is ParseResult.Success -> {
+                citaError = ""
+                citaText = ""
+                val ref = result.reference
+                onVoiceNavigate(ref.book.id, ref.book.name, ref.chapter, ref.verseStart, ref.verseEnd)
+            }
         }
-        citaError = ""
-        citaText = ""
-        onVoiceNavigate(ref.book.id, ref.book.name, ref.chapter, ref.verseStart, ref.verseEnd)
     }
 
     Scaffold(

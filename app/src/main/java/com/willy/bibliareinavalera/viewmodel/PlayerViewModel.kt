@@ -210,7 +210,8 @@ class PlayerViewModel(application: Application) : AndroidViewModel(application) 
         if (state.bookCode.isEmpty()) return
 
         viewModelScope.launch {
-            val verseStart = if (state.currentVerse <= 0) 1 else state.currentVerse
+            val verseStart = if (state.isRangeActive && state.rangeStartVerse > 0) state.rangeStartVerse
+            else if (state.currentVerse <= 0) 1 else state.currentVerse
             val verseEnd = if (state.isRangeActive && state.rangeEndVerse > verseStart) {
                 state.rangeEndVerse
             } else null

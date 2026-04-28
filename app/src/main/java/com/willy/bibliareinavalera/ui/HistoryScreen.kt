@@ -20,6 +20,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.PlayArrow
+import androidx.compose.material.icons.filled.Stop
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -52,13 +53,17 @@ import com.willy.bibliareinavalera.presentation.theme.*
 import com.willy.bibliareinavalera.data.local.database.LastPosition
 import com.willy.bibliareinavalera.viewmodel.FavoriteQuoteUiItem
 import com.willy.bibliareinavalera.viewmodel.HistoryViewModel
+import com.willy.bibliareinavalera.viewmodel.PlayerUiState
+import com.willy.bibliareinavalera.viewmodel.PlayerViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HistoryScreen(
     viewModel: HistoryViewModel,
+    playerViewModel: PlayerViewModel,       // NUEVO
+    playerUiState: PlayerUiState,           // NUEVO
     onBack: () -> Unit,
-    onNavigateToChapter: (String, String, Int, Int, Int, Long) -> Unit  // ✅ agregado positionMs
+    onNavigateToChapter: (String, String, Int, Int, Int, Long) -> Unit
 ) {
     val favoriteQuotes by viewModel.favoriteQuotes.collectAsState()
     val continueListeningList by viewModel.continueListeningList.collectAsState()
@@ -111,6 +116,25 @@ fun HistoryScreen(
             contentPadding = PaddingValues(12.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
+            // --- BOTÓN DETENER AUDIO ---
+            if (playerUiState.isPlaying) {
+                item(key = "stop_audio") {
+                    TextButton(
+                        onClick = { playerViewModel.stop() },
+                        modifier = Modifier.fillMaxWidth(),
+                        colors = ButtonDefaults.textButtonColors(contentColor = Color(0xFFB71C1C))
+                    ) {
+                        Icon(
+                            Icons.Default.Stop,
+                            contentDescription = null,
+                            modifier = Modifier.size(20.dp)
+                        )
+                        Spacer(modifier = Modifier.padding(start = 6.dp))
+                        Text("Detener audio", fontSize = 14.sp, fontWeight = FontWeight.Bold)
+                    }
+                }
+            }
+
             item(key = "section_continue") {
                 SectionTitle("Escucha continua")
             }
@@ -132,8 +156,8 @@ fun HistoryScreen(
                                 pos.bookName,
                                 pos.chapter,
                                 pos.startVerse,
-                                0, // escucha continua no tiene rango
-                                pos.positionMs // ✅ pasar la posición real
+                                0,
+                                pos.positionMs
                             )
                         },
                         onDelete = {
@@ -165,7 +189,7 @@ fun HistoryScreen(
                                 item.bookmark.chapter,
                                 item.bookmark.verseStart,
                                 item.bookmark.verseEnd ?: 0,
-                                item.bookmark.positionMs // ✅ pasar la posición guardada
+                                if ((item.bookmark.verseEnd ?: 0) > 0) 0L else item.bookmark.positionMs
                             )
                         },
                         onDelete = {
@@ -225,9 +249,7 @@ private fun ContinueListeningCard(
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(12.dp),
-        colors = CardDefaults.cardColors(
-            containerColor = SoftGray
-        ),
+        colors = CardDefaults.cardColors(containerColor = SoftGray),
         elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
     ) {
         Row(
@@ -250,12 +272,8 @@ private fun ContinueListeningCard(
                     color = Color.Gray
                 )
             }
-
             Row {
-                IconButton(
-                    onClick = onClick,
-                    modifier = Modifier.size(40.dp)
-                ) {
+                IconButton(onClick = onClick, modifier = Modifier.size(40.dp)) {
                     Box(
                         modifier = Modifier
                             .background(PrimaryColor, CircleShape)
@@ -270,15 +288,8 @@ private fun ContinueListeningCard(
                         )
                     }
                 }
-                IconButton(
-                    onClick = onDelete,
-                    modifier = Modifier.size(40.dp)
-                ) {
-                    Icon(
-                        Icons.Default.Delete,
-                        contentDescription = "Eliminar",
-                        tint = Error
-                    )
+                IconButton(onClick = onDelete, modifier = Modifier.size(40.dp)) {
+                    Icon(Icons.Default.Delete, contentDescription = "Eliminar", tint = Error)
                 }
             }
         }
@@ -300,9 +311,7 @@ private fun FavoriteQuoteCard(
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(12.dp),
-        colors = CardDefaults.cardColors(
-            containerColor = LightGold
-        ),
+        colors = CardDefaults.cardColors(containerColor = LightGold),
         elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
     ) {
         Column(
@@ -310,12 +319,7 @@ private fun FavoriteQuoteCard(
                 .fillMaxWidth()
                 .padding(horizontal = 12.dp, vertical = 10.dp)
         ) {
-            Text(
-                text = refText,
-                fontSize = 17.sp,
-                fontWeight = FontWeight.Bold,
-                color = AccentGold
-            )
+            Text(text = refText, fontSize = 17.sp, fontWeight = FontWeight.Bold, color = AccentGold)
 
             if (item.previewText.isNotBlank()) {
                 Spacer(modifier = Modifier.padding(top = 3.dp))
