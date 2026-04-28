@@ -77,7 +77,7 @@ fun VoiceBar(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .background(Background)
+            .background(MaterialTheme.colorScheme.background)
             .padding(horizontal = 16.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(8.dp)
@@ -85,7 +85,7 @@ fun VoiceBar(
         Text(
             text = "Ej: \"Juan 3 16\"",
             fontSize = 13.sp,
-            color = OnBackground,
+            color = MaterialTheme.colorScheme.onBackground,
             modifier = Modifier.weight(1f)
         )
         Button(
@@ -104,7 +104,7 @@ fun VoiceBar(
             },
             modifier = Modifier.height(36.dp),
             colors = ButtonDefaults.buttonColors(
-                containerColor = AccentGold
+                containerColor = MaterialTheme.colorScheme.secondary
             ),
             shape = RoundedCornerShape(18.dp),
             contentPadding = PaddingValues(horizontal = 12.dp)
@@ -112,7 +112,7 @@ fun VoiceBar(
             Icon(
                 imageVector = Icons.Default.Mic,
                 contentDescription = null,
-                tint = Color.White,
+                tint = MaterialTheme.colorScheme.onSecondary,
                 modifier = Modifier.size(16.dp)
             )
             Spacer(modifier = Modifier.width(6.dp))
@@ -120,7 +120,7 @@ fun VoiceBar(
                 text = "Buscar por voz",
                 fontSize = 13.sp,
                 fontWeight = FontWeight.Bold,
-                color = Color.White
+                color = MaterialTheme.colorScheme.onSecondary
             )
         }
     }

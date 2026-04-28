@@ -17,6 +17,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalConfiguration
+import android.content.res.Configuration
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
@@ -38,9 +40,12 @@ fun BibleTextScreen(
     onTogglePlayPause: () -> Unit,
     onSaveBookmark: () -> Unit,
     onClose: () -> Unit,
-    onVerseClick: (Int) -> Unit = {}  // NUEVO: tap en versículo para reproducirlo
+    onVerseClick: (Int) -> Unit = {}
 ) {
     val context = LocalContext.current
+    val configuration = LocalConfiguration.current
+    val isLandscape = configuration.orientation == Configuration.ORIENTATION_LANDSCAPE
+    
     val repository = remember { BibleTextRepository(context) }
     var verses by remember { mutableStateOf<List<VerseText>>(emptyList()) }
     var isLoading by remember { mutableStateOf(true) }
@@ -73,29 +78,31 @@ fun BibleTextScreen(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFFFFDE7))
+            .background(MaterialTheme.colorScheme.surface)
     ) {
-        // Barra superior
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .background(Color(0xFF2E7D32))
-                .padding(horizontal = 16.dp, vertical = 12.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceBetween
-        ) {
-            Text(
-                text = "$bookName $chapter",
-                fontWeight = FontWeight.Bold,
-                fontSize = 18.sp,
-                color = Color.White
-            )
-            IconButton(onClick = onClose) {
-                Icon(
-                    Icons.Default.Close,
-                    contentDescription = "Cerrar",
-                    tint = Color.White
+        // Barra superior - Se oculta en landscape para dar más espacio al texto
+        if (!isLandscape) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(MaterialTheme.colorScheme.primary)
+                    .padding(horizontal = 16.dp, vertical = 12.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Text(
+                    text = "$bookName $chapter",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 18.sp,
+                    color = MaterialTheme.colorScheme.onPrimary
                 )
+                IconButton(onClick = onClose) {
+                    Icon(
+                        Icons.Default.Close,
+                        contentDescription = "Cerrar",
+                        tint = MaterialTheme.colorScheme.onPrimary
+                    )
+                }
             }
         }
 
@@ -107,9 +114,9 @@ fun BibleTextScreen(
                     contentAlignment = Alignment.Center
                 ) {
                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                        CircularProgressIndicator(color = Color(0xFF2E7D32))
+                        CircularProgressIndicator(color = MaterialTheme.colorScheme.primary)
                         Spacer(modifier = Modifier.height(16.dp))
-                        Text("Cargando texto...", color = Color(0xFF2E7D32))
+                        Text("Cargando texto...", color = MaterialTheme.colorScheme.primary)
                     }
                 }
             } else if (verses.isEmpty()) {
@@ -117,7 +124,7 @@ fun BibleTextScreen(
                     modifier = Modifier.fillMaxSize(),
                     contentAlignment = Alignment.Center
                 ) {
-                    Text("Texto no disponible", color = Color.Gray)
+                    Text("Texto no disponible", color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
             } else {
                 LazyColumn(
@@ -133,14 +140,14 @@ fun BibleTextScreen(
                         Surface(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .clickable { onVerseClick(verse.number) },  // NUEVO: tap para reproducir
-                            color = if (isCurrentVerse) Color(0xFFE8F5E9) else Color.Transparent,
+                                .clickable { onVerseClick(verse.number) },
+                            color = if (isCurrentVerse) MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f) else Color.Transparent,
                             shape = MaterialTheme.shapes.small
                         ) {
                             Text(
                                 text = buildAnnotatedString {
                                     withStyle(SpanStyle(
-                                        color = Color(0xFF2E7D32),
+                                        color = MaterialTheme.colorScheme.primary,
                                         fontWeight = FontWeight.Bold,
                                         fontSize = 17.sp
                                     )) {
@@ -148,7 +155,7 @@ fun BibleTextScreen(
                                     }
                                     withStyle(SpanStyle(
                                         fontSize = 20.sp,
-                                        color = if (isCurrentVerse) Color(0xFF1B5E20) else Color(0xFF212121)
+                                        color = if (isCurrentVerse) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface
                                     )) {
                                         append(verse.text)
                                     }
@@ -162,6 +169,20 @@ fun BibleTextScreen(
                         }
                     }
                 }
+                
+                // Botón de cerrar flotante si estamos en landscape y no hay barra superior
+                if (isLandscape) {
+                    Box(modifier = Modifier.fillMaxSize().padding(16.dp), contentAlignment = Alignment.TopEnd) {
+                        FilledIconButton(
+                            onClick = onClose,
+                            colors = IconButtonDefaults.filledIconButtonColors(
+                                containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.7f)
+                            )
+                        ) {
+                            Icon(Icons.Default.Close, contentDescription = "Cerrar")
+                        }
+                    }
+                }
             }
         }
 
@@ -169,34 +190,34 @@ fun BibleTextScreen(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(Color(0xFF2E7D32))
-                .padding(horizontal = 24.dp, vertical = 8.dp),
+                .background(MaterialTheme.colorScheme.primary)
+                .padding(horizontal = 24.dp, vertical = if (isLandscape) 4.dp else 8.dp),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(16.dp, Alignment.CenterHorizontally)
         ) {
             // Botón Play/Pausa
             IconButton(
                 onClick = onTogglePlayPause,
-                modifier = Modifier.size(48.dp)
+                modifier = Modifier.size(if (isLandscape) 40.dp else 48.dp)
             ) {
                 Icon(
                     imageVector = if (isPlaying) Icons.Default.Pause else Icons.Default.PlayArrow,
                     contentDescription = if (isPlaying) "Pausar" else "Reproducir",
-                    tint = Color.White,
-                    modifier = Modifier.size(32.dp)
+                    tint = MaterialTheme.colorScheme.onPrimary,
+                    modifier = Modifier.size(if (isLandscape) 28.dp else 32.dp)
                 )
             }
 
             // Botón Guardar cita (diskette)
             IconButton(
                 onClick = onSaveBookmark,
-                modifier = Modifier.size(48.dp)
+                modifier = Modifier.size(if (isLandscape) 40.dp else 48.dp)
             ) {
                 Icon(
                     imageVector = Icons.Default.Save,
                     contentDescription = "Guardar cita",
-                    tint = if (bookmarkSaved) Color(0xFFFFD54F) else Color.White,
-                    modifier = Modifier.size(32.dp)
+                    tint = if (bookmarkSaved) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.onPrimary,
+                    modifier = Modifier.size(if (isLandscape) 28.dp else 32.dp)
                 )
             }
 
@@ -204,7 +225,7 @@ fun BibleTextScreen(
                 Text(
                     text = "✓ Cita guardada",
                     fontSize = 13.sp,
-                    color = Color(0xFFFFD54F),
+                    color = MaterialTheme.colorScheme.secondary,
                     fontWeight = FontWeight.Medium
                 )
             }

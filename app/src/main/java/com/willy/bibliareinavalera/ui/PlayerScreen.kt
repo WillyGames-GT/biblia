@@ -19,6 +19,9 @@ import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.foundation.background
+import android.content.res.Configuration
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
@@ -166,6 +169,8 @@ fun PlayerScreen(
     var citaText by remember { mutableStateOf("") }
     var citaError by remember { mutableStateOf("") }
     val uriHandler = LocalUriHandler.current
+    val configuration = LocalConfiguration.current
+    val isLandscape = configuration.orientation == Configuration.ORIENTATION_LANDSCAPE
 
     val displayBookName = uiState.bookName.ifEmpty { bookName }
     val displayChapter = if (uiState.chapter > 0) uiState.chapter else chapter
@@ -263,48 +268,76 @@ fun PlayerScreen(
 
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = { Text("$displayBookName $displayChapter", fontWeight = FontWeight.Bold, color = Color.White) },
-                navigationIcon = {
-                    IconButton(onClick = { onBack() }) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Volver", tint = Color.White)
-                    }
-                },
-                actions = {
-                    IconButton(onClick = onHistoryClick) { Icon(Icons.Default.History, contentDescription = "Historial", tint = Color.White) }
-                    IconButton(onClick = { showInfoDialog = true }) { Icon(Icons.Default.Info, contentDescription = "Información", tint = Color.White) }
-                },
-                colors = TopAppBarDefaults.topAppBarColors(containerColor = PrimaryColor, titleContentColor = Color.White, navigationIconContentColor = Color.White)
-            )
+            if (!isLandscape) {
+                TopAppBar(
+                    title = { Text("$displayBookName $displayChapter", fontWeight = FontWeight.Bold, color = Color.White) },
+                    navigationIcon = {
+                        IconButton(onClick = { onBack() }) {
+                            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Volver", tint = Color.White)
+                        }
+                    },
+                    actions = {
+                        IconButton(onClick = onHistoryClick) { Icon(Icons.Default.History, contentDescription = "Historial", tint = Color.White) }
+                        IconButton(onClick = { showInfoDialog = true }) { Icon(Icons.Default.Info, contentDescription = "Información", tint = Color.White) }
+                    },
+                    colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.primary, titleContentColor = Color.White, navigationIconContentColor = Color.White)
+                )
+            }
         },
         bottomBar = {
-            VoiceBar(onVoiceNavigate = { ctx ->
-                onNavigate(ctx.bookCode, ctx.bookName, ctx.chapter, ctx.startVerse, ctx.endVerse)
-            })
+            if (!isLandscape) {
+                VoiceBar(onVoiceNavigate = { ctx ->
+                    onNavigate(ctx.bookCode, ctx.bookName, ctx.chapter, ctx.startVerse, ctx.endVerse)
+                })
+            }
         }
     ) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding)) {
+        Column(modifier = Modifier.fillMaxSize().padding(if (isLandscape) PaddingValues(0.dp) else padding)) {
+            // En landscape añadimos un botón flotante para volver si ocultamos la barra
+            if (isLandscape) {
+                Box(modifier = Modifier.fillMaxWidth().padding(16.dp)) {
+                    IconButton(
+                        onClick = { onBack() },
+                        modifier = Modifier.background(MaterialTheme.colorScheme.primary.copy(alpha = 0.7f), CircleShape)
+                    ) {
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Volver", tint = Color.White)
+                    }
+                    
+                    Row(modifier = Modifier.align(Alignment.TopEnd), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        IconButton(
+                            onClick = onHistoryClick,
+                            modifier = Modifier.background(MaterialTheme.colorScheme.primary.copy(alpha = 0.7f), CircleShape)
+                        ) { Icon(Icons.Default.History, contentDescription = "Historial", tint = Color.White) }
+                        IconButton(
+                            onClick = { showInfoDialog = true },
+                            modifier = Modifier.background(MaterialTheme.colorScheme.primary.copy(alpha = 0.7f), CircleShape)
+                        ) { Icon(Icons.Default.Info, contentDescription = "Información", tint = Color.White) }
+                    }
+                }
+            }
+
             Column(
                 modifier = Modifier.fillMaxSize().padding(horizontal = 24.dp).verticalScroll(scrollState),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Top
             ) {
-                Spacer(modifier = Modifier.height(16.dp))
-                Text(displayBookName, fontSize = 26.sp, fontWeight = FontWeight.Bold)
-                Text("Capítulo $displayChapter", fontSize = 20.sp, color = MaterialTheme.colorScheme.secondary)
+                if (!isLandscape) Spacer(modifier = Modifier.height(16.dp))
+                
+                Text(displayBookName, fontSize = if (isLandscape) 22.sp else 26.sp, fontWeight = FontWeight.Bold)
+                Text("Capítulo $displayChapter", fontSize = if (isLandscape) 18.sp else 20.sp, color = MaterialTheme.colorScheme.secondary)
 
                 if (uiState.resumePromptVisible) {
                     Card(
                         modifier = Modifier.fillMaxWidth().padding(vertical = 12.dp),
-                        colors = CardDefaults.cardColors(containerColor = LightGold),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
                         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                         shape = RoundedCornerShape(8.dp)
                     ) {
                         Row(modifier = Modifier.padding(8.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceBetween) {
-                            Text("¿Retomar desde el versículo ${uiState.resumeVerse}?", fontSize = 14.sp, fontWeight = FontWeight.Medium, color = OnSecondary, modifier = Modifier.weight(1f).padding(start = 8.dp))
+                            Text("¿Retomar desde el versículo ${uiState.resumeVerse}?", fontSize = 14.sp, fontWeight = FontWeight.Medium, color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.weight(1f).padding(start = 8.dp))
                             Row {
-                                TextButton(onClick = { viewModel.resumeProgress() }) { Text("REPRODUCIR", fontWeight = FontWeight.Bold, color = PrimaryColor) }
-                                IconButton(onClick = { viewModel.dismissResumePrompt() }) { Icon(Icons.Default.Close, contentDescription = "Cerrar", tint = PrimaryColor) }
+                                TextButton(onClick = { viewModel.resumeProgress() }) { Text("REPRODUCIR", fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary) }
+                                IconButton(onClick = { viewModel.dismissResumePrompt() }) { Icon(Icons.Default.Close, contentDescription = "Cerrar", tint = MaterialTheme.colorScheme.primary) }
                             }
                         }
                     }
@@ -312,30 +345,30 @@ fun PlayerScreen(
 
                 if (uiState.isRangeActive) {
                     Spacer(modifier = Modifier.height(8.dp))
-                    Text("Rango: ${uiState.rangeStartVerse}-${uiState.rangeEndVerse}", fontSize = 16.sp, fontWeight = FontWeight.Bold, color = AccentGold)
+                    Text("Rango: ${uiState.rangeStartVerse}-${uiState.rangeEndVerse}", fontSize = 16.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.secondary)
                 }
 
                 Spacer(modifier = Modifier.height(16.dp))
 
                 if (uiState.chapterTimestamps.isNotEmpty() && !uiState.isLoading) {
-                    Row(modifier = Modifier.fillMaxWidth().height(56.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceBetween) {
-                        Text("Versículo ${uiState.currentVerse}", fontSize = 16.sp, fontWeight = FontWeight.Bold, color = AccentGold)
+                    Row(modifier = Modifier.fillMaxWidth().height(if (isLandscape) 48.dp else 56.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceBetween) {
+                        Text("Versículo ${uiState.currentVerse}", fontSize = 16.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.secondary)
                         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                            Button(onClick = { showTextScreen = true }, modifier = Modifier.height(40.dp), colors = ButtonDefaults.buttonColors(containerColor = AccentGold, contentColor = Color.White), contentPadding = PaddingValues(horizontal = 12.dp)) {
+                            Button(onClick = { showTextScreen = true }, modifier = Modifier.height(if (isLandscape) 36.dp else 40.dp), colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.secondary, contentColor = Color.White), contentPadding = PaddingValues(horizontal = 12.dp)) {
                                 Icon(Icons.Default.MenuBook, contentDescription = null, modifier = Modifier.size(16.dp))
                                 Spacer(Modifier.width(4.dp))
                                 Text("Ver Texto", fontSize = 14.sp, fontWeight = FontWeight.Bold)
                             }
                             IconButton(onClick = { viewModel.saveCurrentPositionAsBookmark() }, modifier = Modifier.size(40.dp)) {
-                                Icon(Icons.Default.Save, contentDescription = "Guardar cita", tint = if (uiState.bookmarkSaved) SuccessGreen else AccentGold, modifier = Modifier.size(28.dp))
+                                Icon(Icons.Default.Save, contentDescription = "Guardar cita", tint = if (uiState.bookmarkSaved) MaterialTheme.colorScheme.tertiary else MaterialTheme.colorScheme.secondary, modifier = Modifier.size(28.dp))
                             }
                         }
                     }
                     if (uiState.bookmarkSaved) {
-                        Text("✓ Cita guardada", fontSize = 12.sp, color = SuccessGreen, fontWeight = FontWeight.Medium, modifier = Modifier.align(Alignment.End))
+                        Text("✓ Cita guardada", fontSize = 12.sp, color = MaterialTheme.colorScheme.tertiary, fontWeight = FontWeight.Medium, modifier = Modifier.align(Alignment.End))
                     }
                 } else {
-                    Spacer(modifier = Modifier.height(56.dp))
+                    Spacer(modifier = Modifier.height(if (isLandscape) 48.dp else 56.dp))
                 }
 
                 Spacer(modifier = Modifier.height(12.dp))
@@ -345,7 +378,7 @@ fun PlayerScreen(
                     onValueChange = { viewModel.seekTo(it.toLong()) },
                     valueRange = 0f..(uiState.duration.toFloat().coerceAtLeast(1f)),
                     modifier = Modifier.fillMaxWidth(),
-                    colors = SliderDefaults.colors(thumbColor = PrimaryColor, activeTrackColor = PrimaryColor, inactiveTrackColor = DividerColor)
+                    colors = SliderDefaults.colors(thumbColor = MaterialTheme.colorScheme.primary, activeTrackColor = MaterialTheme.colorScheme.primary, inactiveTrackColor = MaterialTheme.colorScheme.outlineVariant)
                 )
 
                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
@@ -357,19 +390,19 @@ fun PlayerScreen(
 
                 if (uiState.isLoading && !uiState.audioReady) {
                     Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(bottom = 12.dp)) {
-                        CircularProgressIndicator(modifier = Modifier.size(24.dp), color = PrimaryColor, strokeWidth = 3.dp)
+                        CircularProgressIndicator(modifier = Modifier.size(24.dp), color = MaterialTheme.colorScheme.primary, strokeWidth = 3.dp)
                         Spacer(modifier = Modifier.height(8.dp))
-                        Text("Descargando capítulo, espera...", fontSize = 20.sp, color = SuccessGreen, fontWeight = FontWeight.ExtraBold, textAlign = TextAlign.Center)
+                        Text("Descargando capítulo, espera...", fontSize = if (isLandscape) 18.sp else 20.sp, color = MaterialTheme.colorScheme.tertiary, fontWeight = FontWeight.ExtraBold, textAlign = TextAlign.Center)
                     }
                 }
 
                 Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
-                    FloatingActionButton(onClick = { viewModel.togglePlayPause() }, containerColor = PrimaryColor, shape = CircleShape) {
+                    FloatingActionButton(onClick = { viewModel.togglePlayPause() }, containerColor = MaterialTheme.colorScheme.primary, shape = CircleShape) {
                         Icon(if (uiState.isPlaying) Icons.Default.Pause else Icons.Default.PlayArrow, contentDescription = "Play/Pause", modifier = Modifier.size(32.dp), tint = Color.White)
                     }
                 }
 
-                Spacer(modifier = Modifier.height(20.dp))
+                Spacer(modifier = Modifier.height(if (isLandscape) 16.dp else 20.dp))
 
                 Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.Top, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     OutlinedTextField(
@@ -387,13 +420,13 @@ fun PlayerScreen(
                         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text, imeAction = ImeAction.Go),
                         keyboardActions = KeyboardActions(onGo = { handleCitaSearch() }),
                         modifier = Modifier.weight(1f),
-                        colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = AccentGold, focusedLabelColor = AccentGold, cursorColor = AccentGold)
+                        colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = MaterialTheme.colorScheme.secondary, focusedLabelColor = MaterialTheme.colorScheme.secondary, cursorColor = MaterialTheme.colorScheme.secondary)
                     )
                     Button(
                         onClick = { handleCitaSearch() },
                         enabled = citaText.isNotEmpty(),
                         modifier = Modifier.height(56.dp).align(Alignment.CenterVertically),
-                        colors = ButtonDefaults.buttonColors(containerColor = AccentGold, contentColor = Color.White),
+                        colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.secondary, contentColor = Color.White),
                         contentPadding = PaddingValues(horizontal = 16.dp)
                     ) {
                         Icon(Icons.Default.PlayArrow, contentDescription = null, modifier = Modifier.size(20.dp))
@@ -402,7 +435,7 @@ fun PlayerScreen(
                     }
                 }
 
-                Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(24.dp))
             }
         }
     }

@@ -212,9 +212,14 @@ class PlayerViewModel(application: Application) : AndroidViewModel(application) 
         viewModelScope.launch {
             val verseStart = if (state.isRangeActive && state.rangeStartVerse > 0) state.rangeStartVerse
             else if (state.currentVerse <= 0) 1 else state.currentVerse
+            
             val verseEnd = if (state.isRangeActive && state.rangeEndVerse > verseStart) {
                 state.rangeEndVerse
             } else null
+
+            // Buscamos el timestamp exacto de inicio para ese versículo
+            val startTimeMs = state.chapterTimestamps.find { it.verse == verseStart }?.startMs 
+                ?: state.currentPosition
 
             val bookmark = Bookmark(
                 bookCode = state.bookCode,
@@ -222,7 +227,7 @@ class PlayerViewModel(application: Application) : AndroidViewModel(application) 
                 chapter = state.chapter,
                 verseStart = verseStart,
                 verseEnd = verseEnd,
-                positionMs = state.currentPosition
+                positionMs = startTimeMs
             )
 
             val existing = bookmarkDao.findExisting(

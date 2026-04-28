@@ -90,9 +90,9 @@ fun BookListScreen(
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = PrimaryColor,
-                    titleContentColor = Color.White,
-                    actionIconContentColor = Color.White
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    titleContentColor = MaterialTheme.colorScheme.onPrimary,
+                    actionIconContentColor = MaterialTheme.colorScheme.onPrimary
                 )
             )
         },
@@ -122,7 +122,7 @@ fun BookListScreen(
                                 pos.positionMs
                             )
                         },
-                    colors = CardDefaults.cardColors(containerColor = LightGold),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
                     elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                     shape = RoundedCornerShape(12.dp)
                 ) {
@@ -137,22 +137,22 @@ fun BookListScreen(
                             Text(
                                 "Continuar escuchando",
                                 style = MaterialTheme.typography.labelMedium,
-                                color = AccentGold
+                                color = MaterialTheme.colorScheme.secondary
                             )
                             Text(
                                 "${pos.bookName} ${pos.chapter}:${pos.startVerse}",
                                 style = MaterialTheme.typography.titleLarge,
                                 fontWeight = FontWeight.Bold,
-                                color = PrimaryColor
+                                color = MaterialTheme.colorScheme.primary
                             )
                         }
                         Box(
                             modifier = Modifier
                                 .size(48.dp)
-                                .background(AccentGold, CircleShape),
+                                .background(MaterialTheme.colorScheme.secondary, CircleShape),
                             contentAlignment = Alignment.Center
                         ) {
-                            Icon(Icons.Default.PlayArrow, contentDescription = null, tint = Color.White)
+                            Icon(Icons.Default.PlayArrow, contentDescription = null, tint = MaterialTheme.colorScheme.onSecondary)
                         }
                     }
                 }
@@ -191,9 +191,9 @@ fun BookListScreen(
                     keyboardActions = KeyboardActions(onGo = { handleCitaSearch() }),
                     modifier = Modifier.weight(1f),
                     colors = OutlinedTextFieldDefaults.colors(
-                        focusedBorderColor = AccentGold,
-                        focusedLabelColor = AccentGold,
-                        cursorColor = AccentGold
+                        focusedBorderColor = MaterialTheme.colorScheme.secondary,
+                        focusedLabelColor = MaterialTheme.colorScheme.secondary,
+                        cursorColor = MaterialTheme.colorScheme.secondary
                     )
                 )
                 Button(
@@ -203,8 +203,8 @@ fun BookListScreen(
                         .height(56.dp)
                         .align(Alignment.CenterVertically),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = AccentGold,
-                        contentColor = Color.White
+                        containerColor = MaterialTheme.colorScheme.secondary,
+                        contentColor = MaterialTheme.colorScheme.onSecondary
                     ),
                     contentPadding = PaddingValues(horizontal = 16.dp)
                 ) {
@@ -226,8 +226,8 @@ fun BookListScreen(
                     label = { Text("Antiguo T.") },
                     modifier = Modifier.weight(1f),
                     colors = FilterChipDefaults.filterChipColors(
-                        selectedContainerColor = PrimaryColor,
-                        selectedLabelColor = Color.White
+                        selectedContainerColor = MaterialTheme.colorScheme.primary,
+                        selectedLabelColor = MaterialTheme.colorScheme.onPrimary
                     )
                 )
                 FilterChip(
@@ -236,8 +236,8 @@ fun BookListScreen(
                     label = { Text("Nuevo T.") },
                     modifier = Modifier.weight(1f),
                     colors = FilterChipDefaults.filterChipColors(
-                        selectedContainerColor = PrimaryColor,
-                        selectedLabelColor = Color.White
+                        selectedContainerColor = MaterialTheme.colorScheme.primary,
+                        selectedLabelColor = MaterialTheme.colorScheme.onPrimary
                     )
                 )
             }
@@ -264,7 +264,7 @@ fun BookListScreen(
                     modifier = Modifier
                         .align(Alignment.CenterHorizontally)
                         .padding(bottom = 4.dp),
-                    colors = ButtonDefaults.textButtonColors(contentColor = Color(0xFFB71C1C))
+                    colors = ButtonDefaults.textButtonColors(contentColor = MaterialTheme.colorScheme.error)
                 ) {
                     Icon(
                         Icons.Default.Stop,
@@ -314,12 +314,12 @@ fun BookListScreen(
                     Text(
                         text = "Contacto",
                         fontWeight = FontWeight.Bold,
-                        color = PrimaryColor
+                        color = MaterialTheme.colorScheme.primary
                     )
                     Text(
                         text = "https://willygames-gt.github.io/",
                         fontSize = 15.sp,
-                        color = PrimaryColor,
+                        color = MaterialTheme.colorScheme.primary,
                         textDecoration = TextDecoration.Underline,
                         modifier = Modifier.clickable {
                             uriHandler.openUri("https://willygames-gt.github.io/")
@@ -329,7 +329,7 @@ fun BookListScreen(
             },
             confirmButton = {
                 TextButton(onClick = { showInfoDialog = false }) {
-                    Text("Cerrar", color = PrimaryColor)
+                    Text("Cerrar", color = MaterialTheme.colorScheme.primary)
                 }
             }
         )
@@ -345,7 +345,7 @@ fun BookItem(book: BibleBook, onBookSelected: (String, String, Int) -> Unit) {
             .clickable { onBookSelected(book.id, book.name, book.chapterCount) },
         elevation = CardDefaults.cardElevation(defaultElevation = 0.dp),
         shape = RoundedCornerShape(8.dp),
-        colors = CardDefaults.cardColors(containerColor = SoftGray)
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.secondaryContainer)
     ) {
         Row(
             modifier = Modifier
@@ -358,18 +358,18 @@ fun BookItem(book: BibleBook, onBookSelected: (String, String, Int) -> Unit) {
                     text = book.name,
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Bold,
-                    color = PrimaryColor
+                    color = MaterialTheme.colorScheme.primary
                 )
                 Text(
                     text = "${book.chapterCount} capítulos",
                     fontSize = 14.sp,
-                    color = Color.Gray
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
             Icon(
                 Icons.Default.PlayArrow,
                 contentDescription = null,
-                tint = PrimaryColor.copy(alpha = 0.3f),
+                tint = MaterialTheme.colorScheme.primary.copy(alpha = 0.3f),
                 modifier = Modifier.size(20.dp)
             )
         }

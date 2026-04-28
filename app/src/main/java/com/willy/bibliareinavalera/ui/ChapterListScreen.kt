@@ -52,9 +52,9 @@ fun ChapterListScreen(
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = PrimaryColor,
-                    titleContentColor = Color.White,
-                    navigationIconContentColor = Color.White
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    titleContentColor = MaterialTheme.colorScheme.onPrimary,
+                    navigationIconContentColor = MaterialTheme.colorScheme.onPrimary
                 )
             )
         },
@@ -74,7 +74,7 @@ fun ChapterListScreen(
                 "Selecciona un capítulo",
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
-                color = PrimaryColor,
+                color = MaterialTheme.colorScheme.primary,
                 modifier = Modifier.padding(bottom = 12.dp)
             )
 
@@ -99,7 +99,7 @@ fun ChapterItem(chapter: Int, onClick: () -> Unit) {
         modifier = Modifier
             .aspectRatio(1f)
             .clickable { onClick() },
-        colors = CardDefaults.cardColors(containerColor = SoftGray),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.secondaryContainer),
         elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
     ) {
         Box(
@@ -110,7 +110,7 @@ fun ChapterItem(chapter: Int, onClick: () -> Unit) {
                 text = chapter.toString(),
                 fontSize = 20.sp,
                 fontWeight = FontWeight.Bold,
-                color = PrimaryColor
+                color = MaterialTheme.colorScheme.primary
             )
         }
     }

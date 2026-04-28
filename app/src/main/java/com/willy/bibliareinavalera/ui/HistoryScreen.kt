@@ -101,7 +101,7 @@ fun HistoryScreen(
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = PrimaryColor,
+                    containerColor = MaterialTheme.colorScheme.primary,
                     titleContentColor = Color.White,
                     navigationIconContentColor = Color.White,
                     actionIconContentColor = Color.White
@@ -122,7 +122,7 @@ fun HistoryScreen(
                     TextButton(
                         onClick = { playerViewModel.stop() },
                         modifier = Modifier.fillMaxWidth(),
-                        colors = ButtonDefaults.textButtonColors(contentColor = Color(0xFFB71C1C))
+                        colors = ButtonDefaults.textButtonColors(contentColor = MaterialTheme.colorScheme.error)
                     ) {
                         Icon(
                             Icons.Default.Stop,
@@ -219,7 +219,7 @@ fun HistoryScreen(
             },
             dismissButton = {
                 TextButton(onClick = { showClearAllDialog.value = false }) {
-                    Text("Cancelar", color = PrimaryColor)
+                    Text("Cancelar", color = MaterialTheme.colorScheme.primary)
                 }
             }
         )
@@ -233,10 +233,10 @@ private fun SectionTitle(text: String) {
             text = text,
             fontSize = 17.sp,
             fontWeight = FontWeight.Bold,
-            color = PrimaryColor
+            color = MaterialTheme.colorScheme.primary
         )
         Spacer(modifier = Modifier.padding(top = 2.dp))
-        HorizontalDivider(color = DividerColor)
+        HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant)
     }
 }
 
@@ -249,7 +249,7 @@ private fun ContinueListeningCard(
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(12.dp),
-        colors = CardDefaults.cardColors(containerColor = SoftGray),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
         elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
     ) {
         Row(
@@ -264,32 +264,32 @@ private fun ContinueListeningCard(
                     text = "${pos.bookName} ${pos.chapter}:${pos.startVerse}",
                     fontSize = 17.sp,
                     fontWeight = FontWeight.Bold,
-                    color = PrimaryColor
+                    color = MaterialTheme.colorScheme.primary
                 )
                 Text(
                     text = "Posición: ${formatHistoryTime(pos.positionMs)}",
                     fontSize = 12.sp,
-                    color = Color.Gray
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
             Row {
                 IconButton(onClick = onClick, modifier = Modifier.size(40.dp)) {
                     Box(
                         modifier = Modifier
-                            .background(PrimaryColor, CircleShape)
+                            .background(MaterialTheme.colorScheme.primary, CircleShape)
                             .padding(8.dp),
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(
                             Icons.Default.PlayArrow,
                             contentDescription = "Reproducir",
-                            tint = Color.White,
+                            tint = MaterialTheme.colorScheme.onPrimary,
                             modifier = Modifier.size(20.dp)
                         )
                     }
                 }
                 IconButton(onClick = onDelete, modifier = Modifier.size(40.dp)) {
-                    Icon(Icons.Default.Delete, contentDescription = "Eliminar", tint = Error)
+                    Icon(Icons.Default.Delete, contentDescription = "Eliminar", tint = MaterialTheme.colorScheme.error)
                 }
             }
         }
@@ -311,7 +311,7 @@ private fun FavoriteQuoteCard(
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(12.dp),
-        colors = CardDefaults.cardColors(containerColor = LightGold),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
         elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
     ) {
         Column(
@@ -319,14 +319,14 @@ private fun FavoriteQuoteCard(
                 .fillMaxWidth()
                 .padding(horizontal = 12.dp, vertical = 10.dp)
         ) {
-            Text(text = refText, fontSize = 17.sp, fontWeight = FontWeight.Bold, color = AccentGold)
+            Text(text = refText, fontSize = 17.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.secondary)
 
             if (item.previewText.isNotBlank()) {
                 Spacer(modifier = Modifier.padding(top = 3.dp))
                 Text(
                     text = item.previewText,
                     fontSize = 13.sp,
-                    color = OnSecondary,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                     maxLines = 4,
                     overflow = TextOverflow.Ellipsis
                 )
@@ -336,7 +336,7 @@ private fun FavoriteQuoteCard(
             Text(
                 text = "Posición guardada: ${formatHistoryTime(item.bookmark.positionMs)}",
                 fontSize = 11.sp,
-                color = Color.Gray
+                color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f)
             )
 
             Spacer(modifier = Modifier.padding(top = 6.dp))
@@ -349,8 +349,8 @@ private fun FavoriteQuoteCard(
                     onClick = onOpen,
                     modifier = Modifier.weight(1f),
                     colors = ButtonDefaults.filledTonalButtonColors(
-                        containerColor = AccentGold,
-                        contentColor = Color.White
+                        containerColor = MaterialTheme.colorScheme.secondary,
+                        contentColor = MaterialTheme.colorScheme.onSecondary
                     )
                 ) {
                     Icon(Icons.Default.PlayArrow, contentDescription = null)
@@ -362,8 +362,8 @@ private fun FavoriteQuoteCard(
                     onClick = onDelete,
                     modifier = Modifier.weight(1f),
                     colors = ButtonDefaults.filledTonalButtonColors(
-                        containerColor = Error.copy(alpha = 0.1f),
-                        contentColor = Error
+                        containerColor = MaterialTheme.colorScheme.error.copy(alpha = 0.1f),
+                        contentColor = MaterialTheme.colorScheme.error
                     )
                 ) {
                     Icon(Icons.Default.Delete, contentDescription = null)
@@ -380,14 +380,14 @@ private fun EmptyCard(text: String) {
     Surface(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(12.dp),
-        color = Color(0xFFF5F5F5),
+        color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
         tonalElevation = 1.dp
     ) {
         Text(
             text = text,
             modifier = Modifier.padding(14.dp),
             fontSize = 13.sp,
-            color = Color(0xFF616161)
+            color = MaterialTheme.colorScheme.onSurfaceVariant
         )
     }
 }

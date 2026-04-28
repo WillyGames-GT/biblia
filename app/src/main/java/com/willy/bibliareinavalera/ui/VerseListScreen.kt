@@ -141,9 +141,9 @@ fun VerseListScreen(
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = PrimaryColor,
-                    titleContentColor = Color.White,
-                    navigationIconContentColor = Color.White
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    titleContentColor = MaterialTheme.colorScheme.onPrimary,
+                    navigationIconContentColor = MaterialTheme.colorScheme.onPrimary
                 )
             )
         },
@@ -160,11 +160,11 @@ fun VerseListScreen(
                     contentAlignment = Alignment.Center
                 ) {
                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                        CircularProgressIndicator(color = PrimaryColor)
+                        CircularProgressIndicator(color = MaterialTheme.colorScheme.primary)
                         Spacer(modifier = Modifier.height(16.dp))
                         Text(
                             "Cargando versículos...",
-                            color = PrimaryColor,
+                            color = MaterialTheme.colorScheme.primary,
                             fontWeight = FontWeight.Bold
                         )
                     }
@@ -183,12 +183,12 @@ fun VerseListScreen(
                         Text(
                             "No se pudieron cargar los versículos.",
                             textAlign = TextAlign.Center,
-                            color = Color.Gray
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                         Spacer(modifier = Modifier.height(16.dp))
                         Button(
                             onClick = { viewModel.loadVerses(bookCode, chapter) },
-                            colors = ButtonDefaults.buttonColors(containerColor = PrimaryColor)
+                            colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
                         ) {
                             Icon(Icons.Default.Refresh, contentDescription = null)
                             Spacer(Modifier.width(8.dp))
@@ -197,7 +197,7 @@ fun VerseListScreen(
                         TextButton(
                             onClick = { onVerseSelected(bookCode, bookName, chapter, 1) }
                         ) {
-                            Text("Escuchar desde el inicio", color = PrimaryColor)
+                            Text("Escuchar desde el inicio", color = MaterialTheme.colorScheme.primary)
                         }
                     }
                 }
@@ -217,9 +217,9 @@ fun VerseListScreen(
                                 .fillMaxWidth()
                                 .padding(bottom = 10.dp),
                             colors = CardDefaults.cardColors(
-                                containerColor = LightGold
+                                containerColor = MaterialTheme.colorScheme.surfaceVariant
                             ),
-                            border = BorderStroke(1.dp, AccentGold)
+                            border = BorderStroke(1.dp, MaterialTheme.colorScheme.secondary)
                         ) {
                             Row(
                                 modifier = Modifier.padding(10.dp),
@@ -228,14 +228,14 @@ fun VerseListScreen(
                                 Icon(
                                     Icons.Default.WifiOff,
                                     contentDescription = null,
-                                    tint = AccentGold,
+                                    tint = MaterialTheme.colorScheme.secondary,
                                     modifier = Modifier.size(18.dp)
                                 )
                                 Spacer(Modifier.width(8.dp))
                                 Text(
                                     "Sin conexión: los versículos iniciarán desde el principio del capítulo.",
                                     fontSize = 12.sp,
-                                    color = OnBackground
+                                    color = MaterialTheme.colorScheme.onBackground
                                 )
                             }
                         }
@@ -245,7 +245,7 @@ fun VerseListScreen(
                         "Selecciona un versículo",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = SuccessGreen,
+                        color = MaterialTheme.colorScheme.tertiary,
                         modifier = Modifier.padding(bottom = 12.dp)
                     )
 
@@ -263,7 +263,7 @@ fun VerseListScreen(
                                         onVerseSelected(bookCode, bookName, chapter, verse)
                                     },
                                 colors = CardDefaults.cardColors(
-                                    containerColor = SoftGray
+                                    containerColor = MaterialTheme.colorScheme.secondaryContainer
                                 ),
                                 elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
                             ) {
@@ -275,7 +275,7 @@ fun VerseListScreen(
                                         text = verse.toString(),
                                         fontSize = 20.sp,
                                         fontWeight = FontWeight.Bold,
-                                        color = SuccessGreen
+                                        color = MaterialTheme.colorScheme.tertiary
                                     )
                                 }
                             }

@@ -40,26 +40,22 @@ private val LightColorScheme = lightColorScheme(
 )
 
 private val DarkColorScheme = darkColorScheme(
-    primary = PrimaryColor,
-    onPrimary = OnPrimary,
-    primaryContainer = PrimaryDark,
-    onPrimaryContainer = OnPrimary,
+    primary = Color(0xFF9FA8DA),
+    onPrimary = Color(0xFF1A237E),
+    primaryContainer = Color(0xFF283593),
+    onPrimaryContainer = Color(0xFFE8EAF6),
     secondary = AccentGold,
-    onSecondary = OnSecondary,
-    secondaryContainer = SoftGray,
-    onSecondaryContainer = OnSecondary,
+    onSecondary = Color(0xFF212121),
     tertiary = SuccessGreen,
-    onTertiary = OnPrimary,
-    background = Background,
-    onBackground = OnBackground,
-    surface = Surface,
-    onSurface = OnSurface,
-    surfaceVariant = LightGold,
-    onSurfaceVariant = OnSurface,
-    error = Error,
-    onError = OnPrimary,
-    errorContainer = Error,
-    onErrorContainer = OnPrimary
+    onTertiary = Color.White,
+    background = Color(0xFF121212),
+    onBackground = Color(0xFFE1E1E1),
+    surface = Color(0xFF121212),
+    onSurface = Color(0xFFE1E1E1),
+    surfaceVariant = Color(0xFF2C2C2C),
+    onSurfaceVariant = Color(0xFFE1E1E1),
+    error = Color(0xFFCF6679),
+    onError = Color.Black
 )
 
 @Composable
@@ -73,9 +69,7 @@ fun BibliaReinaValeraTheme(
             val context = LocalContext.current
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
-        // Forzamos LightColorScheme por ahora para mantener la estética editorial 
-        // consistentemente mientras se define el Dark Mode editorial.
-        darkTheme -> LightColorScheme
+        darkTheme -> DarkColorScheme
         else -> LightColorScheme
     }
 
