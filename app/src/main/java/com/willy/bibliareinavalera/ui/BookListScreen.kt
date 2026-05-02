@@ -325,6 +325,23 @@ fun BookListScreen(
                             uriHandler.openUri("https://willygames-gt.github.io/")
                         }
                     )
+
+                    Spacer(Modifier.height(8.dp))
+                    HorizontalDivider()
+                    Text(
+                        text = "Legal",
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.primary
+                    )
+                    Text(
+                        text = "Política de Privacidad",
+                        fontSize = 15.sp,
+                        color = MaterialTheme.colorScheme.primary,
+                        textDecoration = TextDecoration.Underline,
+                        modifier = Modifier.clickable {
+                            uriHandler.openUri("https://willygames-gt.github.io/privacy-policy.html")
+                        }
+                    )
                 }
             },
             confirmButton = {

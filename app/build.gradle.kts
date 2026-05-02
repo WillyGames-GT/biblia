@@ -20,10 +20,19 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        create("release") {
+            storeFile = file(project.findProperty("RELEASE_STORE_FILE") as String? ?: "debug.keystore")
+            storePassword = project.findProperty("RELEASE_STORE_PASSWORD") as String? ?: "android"
+            keyAlias = project.findProperty("RELEASE_KEY_ALIAS") as String? ?: "androiddebugkey"
+            keyPassword = project.findProperty("RELEASE_KEY_PASSWORD") as String? ?: "android"
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = true
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = signingConfigs.getByName("release")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
